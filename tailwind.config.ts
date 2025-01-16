@@ -10,9 +10,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "hero": "url('hero.png')",
+        hero: "url('hero.png')",
         "footer-texture": "url('/img/footer-texture.png')",
       },
+
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -20,17 +21,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        primary: {
+          DEFAULT: "#4f46e5",
+          light: "#6366f1",
+          dark: "#4338ca",
+        },
+        secondary: {
+          DEFAULT: "#f59e0b",
+          light: "#fbbf24",
+          dark: "#d97706",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
