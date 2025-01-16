@@ -4,15 +4,11 @@ import Heading from "./reusables/Heading";
 
 export default function AITeamSection() {
   const productData = {
-    images: [
-      "/meetai.png",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-    ],
-    title: "Premium Sneakers Collection",
+    images: ["/meetai.png", "/meetai.png", "/meetai.png"],
+    title: "Clio AI",
     description:
-      "Explore our latest collection of comfortable and stylish sneakers",
-    buttonText: "Shop Now",
+      "Seamlessly transform meaningful customer interactions into sales with your store's AI concierge",
+    buttonText: "Explore Lomi",
   };
   return (
     <section className="bg-gradient-to-b from-[#C7CFD2] to-white">
@@ -20,7 +16,7 @@ export default function AITeamSection() {
         <Tag />
         <Heading text="Meet your AI Team" />
       </div>
-      <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="p-6 flex lg:flex-row flex-col justify-center gap-20">
         <ReusableCard {...productData} />
         <ReusableCard {...productData} />
       </div>
