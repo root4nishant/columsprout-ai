@@ -1,29 +1,46 @@
-import Image from "next/image";
+import { Button } from "../ui/button";
+import { Sparkles } from "lucide-react";
+import Navbar from "./nav";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center text-center py-20 bg-blue-50">
-      <h1 className="text-4xl font-extrabold text-gray-800 md:text-6xl">
-        Your Stores AI Concierge
-      </h1>
-      <p className="mt-4 text-lg text-gray-600 md:text-xl">
-        Elevate your storefront with AI-powered solutions.
-      </p>
-      <div className="mt-6 flex gap-4">
-        <button className="px-6 py-3 text-white bg-blue-600 rounded-md hover:bg-blue-700">
-          Learn More
-        </button>
-        <button className="px-6 py-3 text-blue-600 bg-white border border-blue-600 rounded-md hover:bg-blue-50">
-          Get Started
-        </button>
+    <main className="flex-1 flex-col items-center justify-center bg-[url('/hero.png')] bg-no-repeat bg-cover">
+      <div className="" />
+      <Navbar />
+      <div className=" mx-auto px-4 py-20 md:py-32 z-10">
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="space-y-2">
+            <p className="text-lg text-primary font-bold">Introducing</p>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-gray-900">
+              Your Stores
+            </h1>
+            <div className="flex gap-2 items-center text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight justify-center  ">
+              <span className="text-indigo-600">AI Concierge</span>
+              <span className=" text-primary-dark items-center">
+                <Sparkles />
+              </span>
+            </div>
+          </div>
+
+          <p className="text-gray-600 text-lg md:text-xl max-w-5xl mx-auto">
+            Unleash the power of AI to automate repetitive tasks, enhance your
+            storefront experience, personalize customer interactions, and drive
+            higher sales conversions effortlessly.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white"
+            >
+              Start for free
+            </Button>
+            <Button size="lg" variant="outline" className="border-2">
+              Book Demo
+            </Button>
+          </div>
+        </div>
       </div>
-      <Image
-        src="/hero-image.jpg"
-        alt="Hero Image"
-        className="absolute bottom-0 w-full max-w-6xl"
-        width={1920}
-        height={1080}
-      />
-    </section>
+    </main>
   );
 }

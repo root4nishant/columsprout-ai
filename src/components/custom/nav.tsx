@@ -12,20 +12,30 @@ export default function Navbar() {
     <header className="w-[90%] mx-auto lg:w-[70%] border-b bg-[#1a1a1a] mt-5 rounded-md shadow-lg py-4 z-40">
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-white font-semibold text-xl">
-          <Image src="/logo.png" alt="Logo" width={200} height={200} />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="#" className="text-gray-300 hover:text-white text-sm">
+        <div className="flex items-center gap-12">
+          <Link href="/" className="text-white font-semibold text-xl">
+            <Image src="/logo.png" alt="Logo" width={200} height={200} />
+          </Link>
+          <Link
+            href="#"
+            className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
+          >
             Products
           </Link>
-          <Button
-            variant="outline"
-            className="text-sm bg-transparent text-white border-white/20 hover:bg-white/10"
+        </div>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-6">
+          <Link
+            href="#"
+            className="text-gray-300 hover:text-white text-md font-bold"
           >
-            Sign in & Use
+            Start for free
+          </Link>
+          <Button
+            variant="default"
+            className="text-md bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-gray-300 "
+          >
+            Contact Us
           </Button>
         </nav>
 
@@ -59,7 +69,7 @@ export default function Navbar() {
           <li>
             <Link
               href="#"
-              className="text-gray-300 hover:text-white text-lg"
+              className="text-gray-300 hover:text-white text-lg font-bold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Products
@@ -68,7 +78,7 @@ export default function Navbar() {
           <li>
             <Button
               variant="outline"
-              className="text-lg bg-transparent text-white border-white/20 hover:bg-white/10"
+              className="text-lg bg-transparent text-white border-white/20 hover:bg-white/10 font-bold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Sign in & Use

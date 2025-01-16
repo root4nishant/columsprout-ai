@@ -14,6 +14,9 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
+  embla-carousel-react:
+    specifier: ^8.5.2
+    version: 8.5.2(react@19.0.0)
   lucide-react:
     specifier: ^0.471.1
     version: 0.471.1(react@19.0.0)
@@ -26,6 +29,9 @@ dependencies:
   react-dom:
     specifier: ^19.0.0
     version: 19.0.0(react@19.0.0)
+  react-icons:
+    specifier: ^5.4.0
+    version: 5.4.0(react@19.0.0)
   tailwind-merge:
     specifier: ^2.6.0
     version: 2.6.0
@@ -1130,6 +1136,28 @@ packages:
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
+
+  /embla-carousel-react@8.5.2(react@19.0.0):
+    resolution: {integrity: sha512-Tmx+uY3MqseIGdwp0ScyUuxpBgx5jX1f7od4Cm5mDwg/dptEiTKf9xp6tw0lZN2VA9JbnVMl/aikmbc53c6QFA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    dependencies:
+      embla-carousel: 8.5.2
+      embla-carousel-reactive-utils: 8.5.2(embla-carousel@8.5.2)
+      react: 19.0.0
+    dev: false
+
+  /embla-carousel-reactive-utils@8.5.2(embla-carousel@8.5.2):
+    resolution: {integrity: sha512-QC8/hYSK/pEmqEdU1IO5O+XNc/Ptmmq7uCB44vKplgLKhB/l0+yvYx0+Cv0sF6Ena8Srld5vUErZkT+yTahtDg==}
+    peerDependencies:
+      embla-carousel: 8.5.2
+    dependencies:
+      embla-carousel: 8.5.2
+    dev: false
+
+  /embla-carousel@8.5.2:
+    resolution: {integrity: sha512-xQ9oVLrun/eCG/7ru3R+I5bJ7shsD8fFwLEY7yPe27/+fDHCNj0OT5EoG5ZbFyOxOcG6yTwW8oTz/dWyFnyGpg==}
+    dev: false
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2509,6 +2537,14 @@ packages:
     dependencies:
       react: 19.0.0
       scheduler: 0.25.0
+    dev: false
+
+  /react-icons@5.4.0(react@19.0.0):
+    resolution: {integrity: sha512-7eltJxgVt7X64oHh6wSWNwwbKTCtMfK35hcjvJS0yxEAhPM8oUKdS3+kqaW1vicIltw+kR2unHaa12S9pPALoQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 19.0.0
     dev: false
 
   /react-is@16.13.1:
