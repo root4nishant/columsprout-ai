@@ -19,7 +19,7 @@ const Benefits = () => {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1000);
     };
 
     checkMobile();
@@ -34,7 +34,7 @@ const Benefits = () => {
       title: "Lower Operational Costs",
       description:
         "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
-      icon: <DollarSign  className="w-6 h-6 text-blue-600" />,
+      icon: <DollarSign className="w-6 h-6 text-blue-600" />,
       image: "/benefits.png",
     },
     {
@@ -150,7 +150,9 @@ const Benefits = () => {
                 </h3>
               </div>
             </div>
-            <p className="mt-2 text-gray-600 text-justify">{stat.description}</p>
+            <p className="mt-2 text-gray-600 text-justify">
+              {stat.description}
+            </p>
           </div>
         ))}
       </div>
