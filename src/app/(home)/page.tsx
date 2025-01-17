@@ -1,15 +1,12 @@
 import AITeamSection from "@/components/custom/Ait";
 import Benefits from "@/components/custom/Benefits";
-import Footer from "@/components/custom/Footer";
 import HeroSection from "@/components/custom/Hero";
-import Navbar from "@/components/custom/nav";
 import Banner from "@/components/custom/reusables/Banner";
 
 export default function Home() {
   return (
     <main className="">
       <div className="">
-        <Navbar />
         <HeroSection />
       </div>
       <div>
@@ -21,7 +18,6 @@ export default function Home() {
           buttonLink="/"
         />
       </div>
-      <Footer />
     </main>
   );
 }
