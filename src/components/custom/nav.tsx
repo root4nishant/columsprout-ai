@@ -9,8 +9,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-[90%] mx-auto lg:w-[70%] border-b bg-[#1a1a1a] mt-5 rounded-md shadow-lg py-4 z-40">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+    <header className="fixed w-full mx-auto flex justify-center items-center lg:px-24 px-10  mt-5 z-40">
+      <div className="w-full border-b bg-[#1a1a1a] mx-auto  rounded-md shadow-lg py-4 px-5 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-12">
           <Link href="/" className="text-white font-semibold text-xl">

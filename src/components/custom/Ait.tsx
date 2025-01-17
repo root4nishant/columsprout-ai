@@ -16,7 +16,7 @@ export default function AITeamSection() {
         <Tag />
         <Heading text="Meet your AI Team" />
       </div>
-      <div className="p-6 flex lg:flex-row  flex-col justify-center items-center lg:gap-20 gap-10">
+      <div className="flex lg:flex-row  flex-col justify-center items-center lg:gap-20 gap-10">
         <ReusableCard {...productData} />
         <ReusableCard {...productData} />
       </div>

@@ -44,7 +44,7 @@ export default function ReusableCard({
         <CarouselPrevious className="left-2" />
         <CarouselNext className="right-2" />
       </Carousel>
-      <CardContent className="p-4 rounded-none">
+      <CardContent className=" p-0 pt-4 rounded-none">
         <h3 className="lg:text-3xl text-2xl font-semibold mb-2 flex items-center gap-2">
           {title}{" "}
           <span>
