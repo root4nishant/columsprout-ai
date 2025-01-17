@@ -24,7 +24,7 @@ export default function ReusableCard({
   buttonText,
 }: ProductCardProps) {
   return (
-    <Card className="w-full lg:max-w-lg md:max-w-full overflow-hidden shadow-none border-none ">
+    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none ">
       <Carousel className="w-full">
         <CarouselContent>
           {images.map((image, index) => (

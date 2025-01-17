@@ -1,6 +1,7 @@
 import Tag from "./Tag";
 import ReusableCard from "./reusables/Card";
 import Heading from "./reusables/Heading";
+import Section from "./reusables/Section";
 
 export default function AITeamSection() {
   const productData = {
@@ -11,15 +12,15 @@ export default function AITeamSection() {
     buttonText: "Explore Lomi",
   };
   return (
-    <section className=" px-10">
-      <div className="mx-auto text-center flex gap-10 flex-col">
-        <Tag />
+    <Section className="">
+      <div className="mx-auto text-center flex flex-col">
+        <Tag text="Features" />
         <Heading text="Meet your AI Team" />
       </div>
       <div className="flex lg:flex-row  flex-col justify-center items-center lg:gap-20 gap-10">
         <ReusableCard {...productData} />
         <ReusableCard {...productData} />
       </div>
-    </section>
+    </Section>
   );
 }

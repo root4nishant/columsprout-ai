@@ -1,12 +1,13 @@
 import AITeamSection from "@/components/custom/Ait";
 import Benefits from "@/components/custom/Benefits";
+import Footer from "@/components/custom/Footer";
 import HeroSection from "@/components/custom/Hero";
 import Navbar from "@/components/custom/nav";
 
 export default function Home() {
   return (
     <main className="">
-      <div className=" flex flex-col">
+      <div className="">
         <Navbar />
         <HeroSection />
       </div>
@@ -14,6 +15,7 @@ export default function Home() {
         <AITeamSection />
         <Benefits />
       </div>
+      <Footer />
     </main>
   );
 }

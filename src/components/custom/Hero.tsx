@@ -1,11 +1,12 @@
 import { Button } from "../ui/button";
 import { Sparkles } from "lucide-react";
+import Section from "./reusables/Section";
 
 export default function HeroSection() {
   return (
-    <main className="flex flex-1 flex-col items-center justify-center bg-[url('/hero.png')] bg-no-repeat bg-cover relative">
+    <Section className="flex flex-col items-center justify-center bg-[url('/hero.png')] bg-no-repeat bg-cover relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white z-0"></div>
-      <div className="relative z-10 mx-auto px-4 py-20 md:py-32">
+      <div className="relative z-10 mx-auto px-4 pt-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <div className="space-y-2">
             <p className="text-lg text-primary font-bold">Introducing</p>
@@ -35,6 +36,6 @@ export default function HeroSection() {
             </Button> */}
         </div>
       </div>
-    </main>
+    </Section>
   );
 }
