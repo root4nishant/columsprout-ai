@@ -14,7 +14,14 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-12">
           <Link href="/" className="text-white font-semibold text-xl">
-            <Image src="/logo.png" alt="Logo" width={200} height={200} />
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              className="w-40 lg:w-auto"
+              width={200}
+              height={200}
+              loading="lazy"
+            />
           </Link>
           <Link
             href="#"
@@ -51,7 +58,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed inset-0 bg-[#1a1a1a] border-t border-gray-700 transform transition-transform duration-300 ${
+        className={`md:hidden fixed inset-0 bg-[#1a1a1a] z-20 border-t border-gray-700 transform transition-transform duration-300 ${
           isMobileMenuOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -65,23 +72,30 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="flex flex-col items-center justify-center h-full gap-6">
-          <Image src="/logo.png" alt="Logo" width={200} height={200} />
+          <Image src="/logo.png" alt="Logo" width={300} height={300} />
           <li>
             <Link
               href="#"
-              className="text-gray-300 hover:text-white text-lg font-bold"
+              className="text-gray-300 hover:text-white text-xl font-bold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Products
             </Link>
           </li>
           <li>
-            <Button
-              variant="outline"
-              className="text-lg bg-transparent text-white border-white/20 hover:bg-white/10 font-bold"
-              onClick={() => setMobileMenuOpen(false)}
+            <Link
+              href="#"
+              className="text-gray-300 hover:text-white text-xl font-bold"
             >
-              Sign in & Use
+              Start for free
+            </Link>
+          </li>
+          <li>
+            <Button
+              variant="default"
+              className="text-xl bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-gray-300 "
+            >
+              Contact Us
             </Button>
           </li>
         </ul>

@@ -11,12 +11,12 @@ export default function AITeamSection() {
     buttonText: "Explore Lomi",
   };
   return (
-    <section className="bg-gradient-to-b from-[#C7CFD2] to-white">
+    <section className=" px-10">
       <div className="mx-auto text-center flex gap-10 flex-col">
         <Tag />
         <Heading text="Meet your AI Team" />
       </div>
-      <div className="p-6 flex lg:flex-row flex-col justify-center gap-20">
+      <div className="p-6 flex lg:flex-row  flex-col justify-center items-center lg:gap-20 gap-10">
         <ReusableCard {...productData} />
         <ReusableCard {...productData} />
       </div>

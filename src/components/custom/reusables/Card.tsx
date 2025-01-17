@@ -24,12 +24,12 @@ export default function ReusableCard({
   buttonText,
 }: ProductCardProps) {
   return (
-    <Card className="w-full max-w-lg overflow-hidden shadow-none border-none">
+    <Card className="w-full lg:max-w-lg md:max-w-full overflow-hidden shadow-none border-none ">
       <Carousel className="w-full">
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-[3/1.5] w-full h-auto">
+              <div className="relative aspect-[3/1.5] w-full h-auto z-5">
                 <Image
                   src={image || "/placeholder.svg"}
                   alt={`${title} - View ${index + 1}`}
@@ -45,14 +45,14 @@ export default function ReusableCard({
         <CarouselNext className="right-2" />
       </Carousel>
       <CardContent className="p-4 rounded-none">
-        <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+        <h3 className="lg:text-3xl text-2xl font-semibold mb-2 flex items-center gap-2">
           {title}{" "}
           <span>
             <Sparkles className="w-4 h-4 " />
           </span>{" "}
         </h3>
         <p className="text-muted-foreground mb-4">{description}</p>
-        <Button className="w-auto font-bold text-white text-xl rounded-sm py-6">
+        <Button className="w-auto font-bold text-white lg:text-xl text-lg rounded-sm py-6">
           {buttonText}
         </Button>
       </CardContent>
