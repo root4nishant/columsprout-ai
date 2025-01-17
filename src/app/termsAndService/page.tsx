@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
   return (
     <Section className="bg-gray-100 text-gray-800 min-h-screen py-20 text-justify">
       <div className="lg:p-6 p-0">
-        <Heading text="Terms and Conditions" />
+        <Heading text="Terms and Services" />
         {/* <div className="flex justify-center items-center">
           <p className="text-center text-gray-600 mb-8 border border-blue-100 p-2 rounded-full w-fit font-semibold flex items-center gap-2">
             <RxCounterClockwiseClock />

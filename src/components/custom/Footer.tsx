@@ -22,13 +22,13 @@ const Footer: React.FC = () => {
         <div className="flex justify-end items-center lg:flex-row flex-col gap-2 lg:-gap-4">
           <div className=" space-x-4 mt-4 sm:mt-0">
             <Link
-              href="/privacy-policy"
+              href="/privacyPolicy"
               className="text-md font-semibold text-gray-800 hover:underline"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms-of-service"
+              href="/termsAndService"
               className="text-md font-semibold text-gray-800 hover:underline"
             >
               Terms of Service
