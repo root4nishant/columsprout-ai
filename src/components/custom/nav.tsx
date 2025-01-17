@@ -59,7 +59,7 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <div
         className={`md:hidden fixed inset-0 bg-[#1a1a1a] z-20 border-t border-gray-700 transform transition-transform duration-300 ${
-          isMobileMenuOpen ? "translate-y-0" : "translate-y-full"
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-end p-4">
