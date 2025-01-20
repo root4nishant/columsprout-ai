@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <Section className="flex flex-col items-center justify-center bg-[url('/hero.png')] bg-no-repeat bg-cover relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white z-0"></div>
-      <div className=" z-10 md:py-10 py-20">
+      <div className=" z-10 md:py-10 py-10">
         <div className="lg:max-w-5xl w-full mx-auto text-center space-y-6">
           <div className="space-y-2">
             <Tag text="Introducing" />
