@@ -52,7 +52,7 @@ export default function ReusableCard({
           </span>{" "}
         </h3>
         <p className="text-muted-foreground mb-4">{description}</p>
-        <Button className="w-auto font-bold text-white lg:text-xl text-lg rounded-sm py-6">
+        <Button className="w-auto font-bold text-white lg:text-xl text-lg rounded-sm py-6 hover:bg-black  ">
           {buttonText}
         </Button>
       </CardContent>
