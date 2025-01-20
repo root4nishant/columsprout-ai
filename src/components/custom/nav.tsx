@@ -9,8 +9,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full mx-auto flex justify-center items-center lg:px-24 px-6 md:px-12  mt-2 z-40">
-      <div className="w-full border-b bg-[#1a1a1a] mx-auto  rounded-md shadow-lg py-4 px-5 flex items-center justify-between">
+    <header className="fixed w-full mx-auto flex justify-center items-center lg:px-24 px-6 md:px-12 lg:pt-4 pt-4 z-40">
+      <div className="w-full border-b bg-[#1a1a1a] mx-auto  rounded-md shadow-lg xl:py-4 lg:py-6 lg:px-6 md:px-4 md:py-4 py-2 px-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-12">
           <Link href="/" className="text-white font-semibold text-xl">
@@ -40,7 +40,7 @@ export default function Navbar() {
           </Link>
           <Button
             variant="default"
-            className="text-md bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-gray-300 "
+            className="text-lg bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-gray-300 py-5 px-4"
           >
             Contact Us
           </Button>
