@@ -13,7 +13,7 @@ export default function Home() {
         <AITeamSection />
         <Benefits />
         <Banner
-          message="Try Columsprout AI today & Elevate your Storefront"
+          message="Try Columsprout AI today & "
           buttonText="Try Now"
           buttonLink="/"
         />

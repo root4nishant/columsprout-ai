@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#d6ceb3] border-t border-gray-300  px-6 lg:px-24">
       <div className=" mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
-        <div className="flex items-center space-x-2 lg:flex-row flex-col">
+        <div className="flex items-center space-x-6 lg:flex-row flex-col">
           <Image
             src="/logo2.png"
             alt="Logo"
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             &copy; 2024 Columnsprout AI, Inc.
           </span>
         </div>
-        <div className="flex justify-end items-center lg:flex-row flex-col gap-2 lg:-gap-4">
+        <div className="flex justify-end items-center lg:flex-row flex-col gap-2 lg:gap-8">
           <div className=" space-x-4 mt-4 sm:mt-0">
             <Link
               href="/privacyPolicy"
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
 
           <div className="mt-4 sm:mt-0">
             <Link
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/columsprout-ai/"
               target="_blank"
               rel="noopener noreferrer"
             >

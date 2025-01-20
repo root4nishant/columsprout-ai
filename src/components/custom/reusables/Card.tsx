@@ -24,7 +24,7 @@ export default function ReusableCard({
   buttonText,
 }: ProductCardProps) {
   return (
-    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none ">
+    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none">
       <Carousel className="w-full">
         <CarouselContent>
           {images.map((image, index) => (
@@ -44,8 +44,8 @@ export default function ReusableCard({
         <CarouselPrevious className="left-2" />
         <CarouselNext className="right-2" />
       </Carousel>
-      <CardContent className=" p-0 pt-4 rounded-none">
-        <h3 className="lg:text-3xl text-2xl font-semibold mb-2 flex items-center gap-2">
+      <CardContent className=" p-0 pt-4 rounded-none lg:text-left text-center ">
+        <h3 className="lg:text-3xl text-2xl font-semibold mb-2 flex lg:justify-start justify-center items-center gap-2">
           {title}{" "}
           <span>
             <Sparkles className="w-4 h-4 " />
