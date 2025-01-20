@@ -61,47 +61,50 @@ const Benefits = () => {
         <Heading text="Experience the Era of AI Performance" />
         <div className="flex flex-col gap-3">
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="border rounded-lg overflow-hidden bg-white"
-            >
-              <button
-                onClick={() =>
-                  setSelectedCard(index === selectedCard ? -1 : index)
-                }
-                className={`w-full flex items-center justify-between p-4 text-left
-                  ${
-                    selectedCard === index ? "bg-blue-50" : "hover:bg-gray-50"
-                  }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{stat.icon}</span>
-                  <div>
-                    <h3 className="font-bold text-lg text-gray-900">
-                      {stat.title}
-                    </h3>
-                    <div
-                      className={`lg:text-4xl text-2xl font-bold  ${
-                        selectedCard === index
-                          ? "text-blue-600"
-                          : "text-gray-600"
-                      }`}
-                    >
-                      {stat.percentage}
+            <div key={index} className="">
+              <div className="border rounded-lg overflow-hidden">
+                <button
+                  onClick={() =>
+                    setSelectedCard(index === selectedCard ? -1 : index)
+                  }
+                  className={`w-full flex items-center justify-between p-4 text-left
+                  ${selectedCard === index ? "bg-white" : "hover:bg-gray-50"}`}
+                >
+                  <div className="flex items-center gap-3">
+                    {/* <span className="text-2xl">{stat.icon}</span> */}
+                    <div>
+                      <div
+                        className={`lg:text-4xl text-2xl font-bold  ${
+                          selectedCard === index
+                            ? "text-blue-600 "
+                            : "text-gray-600 hidden"
+                        }`}
+                      >
+                        {stat.percentage}
+                      </div>
+                      <h3 className="font-bold text-lg text-gray-900 ">
+                        {stat.title}
+                      </h3>
+                      <p
+                        className={`text-gray-600 mb-4 ${
+                          selectedCard === index ? " " : "hidden"
+                        }`}
+                      >
+                        {stat.description}
+                      </p>
                     </div>
                   </div>
-                </div>
-                {selectedCard === index ? (
-                  <ChevronUp className="h-5 w-5 text-gray-500" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-gray-500" />
-                )}
-              </button>
+                  {selectedCard === index ? (
+                    <ChevronUp className="h-5 w-5 text-gray-500" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-gray-500" />
+                  )}
+                </button>
+              </div>
 
               {selectedCard === index && (
-                <div className="p-4 pt-0">
-                  <p className="text-gray-600 mb-4">{stat.description}</p>
-                  <div className="rounded-lg overflow-hidden border bg-white">
+                <div className="pt-2 shadow-xl rounded-lg">
+                  <div className=" overflow-hidden bg-gray-50">
                     <Image
                       src={stat.image || "/placeholder.svg"}
                       alt={stat.title}
@@ -128,7 +131,7 @@ const Benefits = () => {
           <div
             key={index}
             onClick={() => setSelectedCard(index)}
-            className={`shadow-sm rounded-lg lg:p-6 p-2 text-center border cursor-pointer transition-all w-full
+            className={`shadow-sm rounded-lg lg:p-5 p-2 text-center border cursor-pointer transition-all w-full
               ${
                 selectedCard === index
                   ? "border-blue-500 shadow-xl bg-white "
@@ -137,7 +140,7 @@ const Benefits = () => {
           >
             <div className="flex justify-items-center text-left justify-start">
               {/* <span className="text-5xl">{stat.icon}</span> */}
-              <div>
+              <div className="flex flex-col gap-4">
                 <div
                   className={`lg:text-4xl text-2xl font-bold  ${
                     selectedCard === index ? "text-blue-600" : "text-gray-600"
@@ -145,12 +148,12 @@ const Benefits = () => {
                 >
                   {stat.percentage}
                 </div>
-                <h3 className="mt-4 text-xl font-semibold text-gray-800">
+                <h3 className=" text-xl font-semibold text-gray-800">
                   {stat.title}
                 </h3>
               </div>
             </div>
-            <p className="mt-2 text-gray-600 text-justify">
+            <p className="mt-4 text-gray-600 lg:text-left text-justify">
               {stat.description}
             </p>
           </div>
