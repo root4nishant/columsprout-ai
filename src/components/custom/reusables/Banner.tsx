@@ -19,7 +19,7 @@ const Banner: React.FC<BannerProps> = ({ message, buttonText, buttonLink }) => {
             <span className="text-indigo-600">Elevate your Storefront</span>
           </h2>
           <Link href={buttonLink} passHref>
-            <Button className="lg:p-6 p-4 bg-indigo-600 text-white rounded-sm lg:text-xl text-xs shadow-md hover:bg-black transition-colors duration-300">
+            <Button className="lg:p-6 p-4 w-[172px] bg-indigo-600 text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-black transition-colors duration-300">
               {buttonText}
             </Button>
           </Link>

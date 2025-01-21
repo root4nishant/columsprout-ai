@@ -35,7 +35,7 @@ const Benefits = () => {
       description:
         "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
       icon: <DollarSign className="w-6 h-6 text-blue-600" />,
-      image: "/benefits.png",
+      image: "/home1.png",
     },
     {
       percentage: "70%",
@@ -43,7 +43,7 @@ const Benefits = () => {
       description:
         "Boost precision with advanced data batching pipelines that outperform traditional LLMs.",
       icon: <Target className="w-6 h-6 text-blue-600" />,
-      image: "/benefits.png",
+      image: "/home2.png",
     },
     {
       percentage: "75%",
@@ -51,123 +51,130 @@ const Benefits = () => {
       description:
         "Simplify tasks, prioritize strategy, and deliver rapid results.",
       icon: <Timer className="w-6 h-6 text-blue-600" />,
-      image: "/benefits.png",
+      image: "/home3.png",
     },
   ];
-  if (isMobile) {
-    return (
-      <Section className="flex flex-col">
-        <Tag text="Benefits" />
-        <Heading text="Experience the Era of AI Performance" />
-        <div className="flex flex-col gap-3">
-          {stats.map((stat, index) => (
-            <div key={index} className="">
-              <div className="border rounded-lg overflow-hidden">
-                <button
-                  onClick={() =>
-                    setSelectedCard(index === selectedCard ? -1 : index)
-                  }
-                  className={`w-full flex items-center justify-between p-4 text-left
-                  ${selectedCard === index ? "bg-white" : "hover:bg-gray-50"}`}
-                >
-                  <div className="flex items-center gap-3">
-                    {/* <span className="text-2xl">{stat.icon}</span> */}
-                    <div>
-                      <div
-                        className={`lg:text-4xl text-2xl font-bold  ${
-                          selectedCard === index
-                            ? "text-blue-600 "
-                            : "text-gray-600 hidden"
-                        }`}
-                      >
-                        {stat.percentage}
-                      </div>
-                      <h3 className="font-bold text-lg text-gray-900 ">
-                        {stat.title}
-                      </h3>
-                      <p
-                        className={`text-gray-600 mb-4 ${
-                          selectedCard === index ? " " : "hidden"
-                        }`}
-                      >
-                        {stat.description}
-                      </p>
-                    </div>
-                  </div>
-                  {selectedCard === index ? (
-                    <ChevronUp className="h-5 w-5 text-gray-500" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-500" />
-                  )}
-                </button>
-              </div>
 
-              {selectedCard === index && (
-                <div className="pt-2 shadow-xl rounded-lg">
-                  <div className=" overflow-hidden bg-gray-50">
-                    <Image
-                      src={stat.image || "/placeholder.svg"}
-                      alt={stat.title}
-                      width={800}
-                      height={600}
-                      className="w-full"
-                    />
+  const renderMobileView = () => (
+    <div className="flex flex-col gap-3">
+      {stats.map((stat, index) => (
+        <div key={index}>
+          <div className="border rounded-lg overflow-hidden">
+            <button
+              onClick={() =>
+                setSelectedCard(index === selectedCard ? -1 : index)
+              }
+              className={`w-full flex items-center justify-between p-4 text-left transition-colors
+              ${selectedCard === index ? "bg-white" : "hover:bg-gray-50"}`}
+            >
+              <div className="flex items-center gap-3">
+                <div>
+                  <div
+                    className={`lg:text-4xl text-2xl font-bold transition-colors duration-300
+                    ${
+                      selectedCard === index
+                        ? "text-blue-600"
+                        : "text-gray-600 hidden"
+                    }`}
+                  >
+                    {stat.percentage}
                   </div>
+                  <h3 className="font-bold text-lg text-gray-900">
+                    {stat.title}
+                  </h3>
                 </div>
+              </div>
+              {selectedCard === index ? (
+                <ChevronUp className="h-5 w-5 text-gray-500" />
+              ) : (
+                <ChevronDown className="h-5 w-5 text-gray-500" />
               )}
+            </button>
+          </div>
+
+          {selectedCard === index && (
+            <div className="pt-2">
+              <div className="bg-gray-50 rounded-lg overflow-hidden">
+                <div className=" flex justify-center items-center">
+                  <Image
+                    src={stat.image}
+                    alt={stat.title}
+                    width={800}
+                    height={600}
+                    className=" w-auto rounded-md"
+                  />
+                </div>
+              </div>
             </div>
-          ))}
+          )}
         </div>
-      </Section>
-    );
-  }
+      ))}
+    </div>
+  );
+
+  const renderDesktopView = () => (
+    <div className="flex flex-col lg:flex-row justify-between gap-6">
+      {stats.map((stat, index) => (
+        <div
+          key={index}
+          onClick={() => setSelectedCard(index)}
+          className={`shadow-sm rounded-lg lg:p-5 p-2 text-center border cursor-pointer transition-all duration-300 w-full
+            ${
+              selectedCard === index
+                ? "shadow-xl bg-white"
+                : "border-gray-200 hover:shadow-xl bg-gray-50"
+            }`}
+        >
+          <div className="flex flex-col gap-4">
+            <div
+              className={`lg:text-4xl text-2xl font-bold transition-colors duration-300
+              ${selectedCard === index ? "text-blue-600" : "text-gray-600"}`}
+            >
+              {stat.percentage}
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800">
+              {stat.title}
+            </h3>
+            <p className="mt-4 text-gray-600 text-justify">
+              {stat.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderImageOverlay = () => (
+    <div className="relative flex justify-center items-center py-20">
+      {stats.map((stat, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-all duration-500 ease-in-out  ${
+            selectedCard === index
+              ? "opacity-100 z-30 transform scale-100"
+              : "opacity-0 z-10 transform scale-95"
+          }`}
+        >
+          <div className=" flex justify-center items-center py-16">
+            <Image
+              src={stat.image}
+              alt={stat.title}
+              className="h-full w-auto object-cover rounded-md shadow-md border"
+              width={800}
+              height={600}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <Section className="flex flex-col">
       <Tag text="Benefits" />
       <Heading text="Experience the Era of AI Performance" />
-      <div className="flex flex-col lg:flex-row justify-between gap-6">
-        {stats.map((stat, index) => (
-          <div
-            key={index}
-            onClick={() => setSelectedCard(index)}
-            className={`shadow-sm rounded-lg lg:p-5 p-2 text-center border cursor-pointer transition-all w-full
-              ${
-                selectedCard === index
-                  ? "border-blue-500 shadow-xl bg-white "
-                  : "border-gray-200 hover:shadow-xl bg-white/10"
-              }`}
-          >
-            <div className="flex justify-items-center text-left justify-start">
-              {/* <span className="text-5xl">{stat.icon}</span> */}
-              <div className="flex flex-col gap-4">
-                <div
-                  className={`lg:text-4xl text-2xl font-bold  ${
-                    selectedCard === index ? "text-blue-600" : "text-gray-600"
-                  }`}
-                >
-                  {stat.percentage}
-                </div>
-                <h3 className=" text-xl font-semibold text-gray-800">
-                  {stat.title}
-                </h3>
-              </div>
-            </div>
-            <p className="mt-4 text-gray-600 lg:text-left text-justify">
-              {stat.description}
-            </p>
-          </div>
-        ))}
-      </div>
-      <div className="mt-8 border shadow-lg rounded-md lg:py-10 py-5 flex justify-center items-center">
-        <Image
-          src={stats[selectedCard]?.image || "/placeholder.svg"}
-          alt={stats[selectedCard]?.title}
-          width={500}
-          height={200}
-          className="transition-opacity duration-300"
-        />
-      </div>
+      {isMobile ? renderMobileView() : renderDesktopView()}
+      {!isMobile && renderImageOverlay()}
     </Section>
   );
 };

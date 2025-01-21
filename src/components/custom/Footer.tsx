@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
             width={200}
             height={50}
           />
-          <span className="text-md font-semibold text-gray-800">
+          <span className="text-md text-gray-800">
             &copy; 2024 Columnsprout AI, Inc.
           </span>
         </div>
@@ -23,13 +23,13 @@ const Footer: React.FC = () => {
           <div className=" space-x-4 mt-4 sm:mt-0">
             <Link
               href="/privacyPolicy"
-              className="text-md font-semibold text-gray-800 hover:underline"
+              className="text-md text-gray-800"
             >
               Privacy Policy
             </Link>
             <Link
               href="/termsAndService"
-              className="text-md font-semibold text-gray-800 hover:underline"
+              className="text-md  text-gray-800"
             >
               Terms of Service
             </Link>
