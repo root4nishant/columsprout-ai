@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Section from "./reusables/Section";
 import Tag from "./Tag";
 import Heading from "./reusables/Heading";
@@ -15,18 +15,18 @@ import {
 
 const Benefits = () => {
   const [selectedCard, setSelectedCard] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1000);
-    };
+  // useEffect(() => {
+  //   const checkMobile = () => {
+  //     setIsMobile(window.innerWidth < 1000);
+  //   };
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
+  //   checkMobile();
+  //   window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  //   return () => window.removeEventListener("resize", checkMobile);
+  // }, []);
 
   const stats = [
     {
@@ -56,7 +56,7 @@ const Benefits = () => {
   ];
 
   const renderMobileView = () => (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-2">
       {stats.map((stat, index) => (
         <div key={index}>
           <div className="border rounded-lg overflow-hidden">
@@ -64,17 +64,17 @@ const Benefits = () => {
               onClick={() =>
                 setSelectedCard(index === selectedCard ? -1 : index)
               }
-              className={`w-full flex items-center justify-between p-4 text-left transition-colors
+              className={`w-full flex  items-center justify-between lg:p-4 p-2 text-left transition-colors
               ${selectedCard === index ? "bg-white" : "hover:bg-gray-50"}`}
             >
               <div className="flex items-center gap-3">
                 <div>
                   <div
-                    className={`lg:text-4xl text-2xl font-bold transition-colors duration-300
+                    className={`lg:text-2xl text-xl font-bold transition-colors duration-300
                     ${
                       selectedCard === index
                         ? "text-blue-600"
-                        : "text-gray-600 hidden"
+                        : "text-gray-600 "
                     }`}
                   >
                     {stat.percentage}
@@ -93,15 +93,20 @@ const Benefits = () => {
           </div>
 
           {selectedCard === index && (
-            <div className="pt-2">
-              <div className="bg-gray-50 rounded-lg overflow-hidden">
-                <div className=" flex justify-center items-center">
+            <div className="pt-2 border rounded-md">
+              <p className="lg:px-4 lg:py-2 py-1 px-2 text-gray-600 text-justify">
+                {stat.description}
+              </p>
+              <div className="rounded-lg overflow-hidden">
+                <div className="w-full">
+                  {" "}
+                  {/* Set height as needed */}
                   <Image
                     src={stat.image}
                     alt={stat.title}
-                    width={800}
+                    width={1000}
                     height={600}
-                    className=" w-auto rounded-md"
+                    className="w-full h-full object-cover "
                   />
                 </div>
               </div>
@@ -112,69 +117,70 @@ const Benefits = () => {
     </div>
   );
 
-  const renderDesktopView = () => (
-    <div className="flex flex-col lg:flex-row justify-between gap-6">
-      {stats.map((stat, index) => (
-        <div
-          key={index}
-          onClick={() => setSelectedCard(index)}
-          className={`shadow-sm rounded-lg lg:p-5 p-2 text-center border cursor-pointer transition-all duration-300 w-full
-            ${
-              selectedCard === index
-                ? "shadow-xl bg-white"
-                : "border-gray-200 hover:shadow-xl bg-gray-50"
-            }`}
-        >
-          <div className="flex flex-col gap-4">
-            <div
-              className={`lg:text-4xl text-2xl font-bold transition-colors duration-300
-              ${selectedCard === index ? "text-blue-600" : "text-gray-600"}`}
-            >
-              {stat.percentage}
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800">
-              {stat.title}
-            </h3>
-            <p className="mt-4 text-gray-600 text-justify">
-              {stat.description}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  // const renderDesktopView = () => (
+  //   <div className="flex flex-col lg:flex-row justify-between gap-6">
+  //     {stats.map((stat, index) => (
+  //       <div
+  //         key={index}
+  //         onClick={() => setSelectedCard(index)}
+  //         className={`shadow-sm rounded-lg lg:p-5 p-2 text-center border cursor-pointer transition-all duration-300 w-full
+  //           ${
+  //             selectedCard === index
+  //               ? "shadow-xl bg-white"
+  //               : "border-gray-200 hover:shadow-xl bg-gray-50"
+  //           }`}
+  //       >
+  //         <div className="flex flex-col gap-4">
+  //           <div
+  //             className={`lg:text-4xl text-2xl font-bold transition-colors duration-300
+  //             ${selectedCard === index ? "text-blue-600" : "text-gray-600"}`}
+  //           >
+  //             {stat.percentage}
+  //           </div>
+  //           <h3 className="text-xl font-semibold text-gray-800">
+  //             {stat.title}
+  //           </h3>
+  //           <p className="mt-4 text-gray-600 text-justify">
+  //             {stat.description}
+  //           </p>
+  //         </div>
+  //       </div>
+  //     ))}
+  //   </div>
+  // );
 
-  const renderImageOverlay = () => (
-    <div className="relative flex justify-center items-center py-20">
-      {stats.map((stat, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-all duration-500 ease-in-out  ${
-            selectedCard === index
-              ? "opacity-100 z-30 transform scale-100"
-              : "opacity-0 z-10 transform scale-95"
-          }`}
-        >
-          <div className=" flex justify-center items-center py-16">
-            <Image
-              src={stat.image}
-              alt={stat.title}
-              className="h-full w-auto object-cover rounded-md shadow-md border"
-              width={800}
-              height={600}
-            />
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  // const renderImageOverlay = () => (
+  //   <div className="relative flex justify-center items-center py-20">
+  //     {stats.map((stat, index) => (
+  //       <div
+  //         key={index}
+  //         className={`absolute inset-0 transition-all duration-500 ease-in-out  ${
+  //           selectedCard === index
+  //             ? "opacity-100 z-30 transform scale-100"
+  //             : "opacity-0 z-10 transform scale-95"
+  //         }`}
+  //       >
+  //         <div className=" flex justify-center items-center py-16">
+  //           <Image
+  //             src={stat.image}
+  //             alt={stat.title}
+  //             className="h-full w-auto object-cover rounded-md shadow-md border"
+  //             width={800}
+  //             height={600}
+  //           />
+  //         </div>
+  //       </div>
+  //     ))}
+  //   </div>
+  // );
 
   return (
     <Section className="flex flex-col">
       <Tag text="Benefits" />
       <Heading text="Experience the Era of AI Performance" />
-      {isMobile ? renderMobileView() : renderDesktopView()}
-      {!isMobile && renderImageOverlay()}
+      {/* {isMobile ? renderMobileView() : renderDesktopView()} */}
+      {renderMobileView()}
+      {/* {!isMobile && renderImageOverlay()} */}
     </Section>
   );
 };
