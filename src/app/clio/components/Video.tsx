@@ -27,40 +27,41 @@ const VideoWithMessages = () => {
 
   return (
     <Section>
-      <div>
-      <video
-        className="w-auto object-cover  rounded-md"
-        src="/clio.mp4"
-        autoPlay
-        loop
-        muted
-        width={400}
-        height={400}
-      />
+      <div className="relative lg:h-screen h-auto items-start justify-start overflow-hidden rounded-md">
+        <video
+          className="w-auto object-cover"
+          src="/clio.mp4"
+          autoPlay
+          loop
+          muted
+          width={400}
+          height={400}
+        />
 
-      <div className="relative rounded-md ">
-        {messages.map(
-          (message, index) =>
-            currentMessage === index && (
-              <div
-                key={message.id}
-                className={`absolute md:w-[300px] w-[170px] shadow-lg lg:shadow-gray-500 shadow-gray-500 z-[30] ${
-                  message.position === "left"
-                    ? "lg:left-10 left-2"
-                    : "lg:right-10 right-2"
-                } lg:bottom-20 bottom-12 bg-white/90 text-[0.5rem] lg:text-[0.8rem] text-black lg:p-4 p-2 rounded-md transition-transform ease-in-out  duration-100`}
-              >
-                <p className="font-bold text-[#423EC7]">
-                  {message.text.split(":")[0]}
-                </p>
-                <p>{message.text.split(":")[1]}</p>
-              </div>
-            )
-        )}
-        <div className="absolute bottom-0 rounded-md lg:h-60 h-20 w-full bg-gradient-to-t from-black to-transparent text-white flex justify-between">
-          <div className="absolute bottom-0 flex justify-between w-full  lg:p-4 p-2 lg:text-[0.9rem] text-[0.7rem]">
-            <span>Brandon&apos;s Customer Success Manager</span>
-            <span>Steffanie&apos;s Shopping Assistant</span>
+        <div className=" rounded-md ">
+          {messages.map(
+            (message, index) =>
+              currentMessage === index && (
+                <div
+                  key={message.id}
+                  className={`absolute md:w-[300px] w-[170px] shadow-lg lg:shadow-gray-500 shadow-gray-500 z-[30] ${
+                    message.position === "left"
+                      ? "lg:left-10 left-2"
+                      : "lg:right-10 right-2"
+                  } lg:bottom-20 bottom-12 bg-white/90 text-[0.5rem] lg:text-[0.8rem] text-black lg:p-4 p-2 rounded-md transition-transform ease-in-out  duration-100`}
+                >
+                  <p className="font-bold text-[#423EC7]">
+                    {message.text.split(":")[0]}
+                  </p>
+                  <p>{message.text.split(":")[1]}</p>
+                </div>
+              )
+          )}
+          <div className="absolute bottom-0 rounded-md lg:h-60 h-20 w-full bg-gradient-to-t from-black to-transparent text-white flex justify-between">
+            <div className="absolute  bottom-0 flex justify-between w-full  lg:p-4 p-2 lg:text-[0.9rem] text-[0.7rem]">
+              <span>Brandon&apos;s Customer Success Manager</span>
+              <span>Steffanie&apos;s Shopping Assistant</span>
+            </div>
           </div>
         </div>
       </div>
