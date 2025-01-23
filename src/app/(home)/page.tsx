@@ -16,6 +16,7 @@ export default function Home() {
           message="Try Columsprout AI today & "
           buttonText="Try Now"
           buttonLink="/"
+          message2="Elevate your Storefront"
         />
       </div>
     </main>
