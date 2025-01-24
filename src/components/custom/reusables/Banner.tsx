@@ -18,8 +18,8 @@ const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <Section>
-      <div className="bg-[#423EC7] bg-no-repeat bg-cover lg:py-10 py-4 rounded-md w-full">
-        <div className="container mx-auto px-4 flex flex-col items-center text-center">
+      <div className="bg-[#423EC7] bg-no-repeat bg-cover flex flex-col items-center justify-center lg:py-10 py-4 rounded-md w-full lg:h-[238px] md:-[164px] h-[120px]">
+        <div className="container mx-auto px-4  text-center ">
           <h2 className="text-sm md:text-3xl font-bold text-white mb-4">
             {message}
             <span className="text-[#D6CFB6]">{message2}</span>

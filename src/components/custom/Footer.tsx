@@ -5,8 +5,8 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#d6ceb3] border-t border-gray-300  px-6 lg:px-24">
-      <div className=" mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
+    <footer className="bg-[#d6ceb3] border-t border-gray-300  mx-auto">
+      <div className=" mx-auto flex flex-col lg:max-w-[1400px] md:max-w-[900px] w-full px-6 lg:px-20 sm:flex-row items-center justify-between py-4">
         <div className="flex items-center space-x-6 lg:flex-row flex-col">
           <Image
             src="/logo.svg"
