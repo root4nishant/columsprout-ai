@@ -10,16 +10,16 @@ export default function AITeamSection() {
       title: "Clio AI",
       description:
         "Seamlessly transform meaningful customer interactions into sales with your store's AI concierge",
-      buttonText: "Explore Lomi",
-      link: "/tabi",
+      buttonText: "Explore Clio",
+      link: "/clio",
     },
     {
       images: ["/meetai.png", "/meetai.png", "/meetai.png"],
       title: "Tabi AI",
       description:
         "Seamlessly transform meaningful customer interactions into sales with your store's AI concierge",
-      buttonText: "Explore Lomi",
-      link: "/clio",
+      buttonText: "Explore Tabi",
+      link: "/tabi",
     },
   ];
   return (

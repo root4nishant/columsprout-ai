@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ["var(--font-primary)", "sans-serif"],
+        secondary: ["var(--font-secondary)", "sans-serif"],
+      },
       backgroundImage: {
         hero: "url('hero.png')",
         "footer-texture": "url('/img/footer-texture.png')",

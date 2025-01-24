@@ -6,14 +6,14 @@ import Tag from "./Tag";
 export default function HeroSection() {
   return (
     <div>
-    <div className="absolute inset-0 z-[-10] bg-[url('/hero.png')] bg-no-repeat bg-cover"></div>
+    <div className="font-primary absolute inset-0 z-[-10] bg-[url('/hero.png')] bg-no-repeat bg-cover"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/10  via-transparent to-white z-[-10] w-full mx-auto"></div>
       <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative">
         <div className=" z-10 py-20 ">
           <div className="lg:max-w-5xl w-full mx-auto text-center gap-8 flex flex-col">
             <div className="flex flex-col gap-1">
               <Tag text="Introducing" />
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wide text-gray-900 font-montserrat">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wide text-gray-900 font-primary leading-loose">
                 Your Stores
               </h1>
               <div className="flex gap-2 items-center text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight justify-center">

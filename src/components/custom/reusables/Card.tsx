@@ -48,13 +48,13 @@ export default function ReusableCard({ data }: ProductCardProps) {
         <CarouselNext className="right-2" />
       </Carousel>
       <CardContent className=" p-0 pt-4 rounded-none lg:text-left text-center ">
-        <h3 className="lg:text-3xl text-2xl font-semibold mb-2 flex lg:justify-start justify-center items-center gap-2">
+        <h3 className="lg:text-3xl text-2xl  mb-2 flex lg:justify-start justify-center items-center gap-2 font-primary font-semibold">
           {data.title}{" "}
           <span>
             <Sparkles className="w-4 h-4 " />
           </span>{" "}
         </h3>
-        <p className="text-muted-foreground mb-4">{data.description}</p>
+        <p className="font-secondary text-muted-foreground mb-4">{data.description}</p>
         <Link href={data.link} passHref>
           <Button className="w-auto font-bold text-white  text-lg rounded-sm py-6 hover:bg-black  ">
             {data.buttonText}
