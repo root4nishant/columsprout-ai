@@ -8,9 +8,9 @@ import VideoWithMessages from "./components/Video";
 
 function page() {
   return (
-    <div>
+    <div className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-secondary">
       <HeroSection />
-      <VideoWithMessages/>
+      <VideoWithMessages />
       <FeatureComponent />
 
       <Benefits />

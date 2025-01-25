@@ -1,6 +1,7 @@
 "use client";
 
 import Heading from "@/components/custom/reusables/Heading";
+import Section from "@/components/custom/reusables/Section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -8,19 +9,19 @@ import { Check } from "lucide-react";
 
 export default function PricingTabs() {
   return (
-    <div className="container mx-auto px-4 lg:py-32 py-20">
+    <Section className=" mx-auto lg:py-20 md:py-0 py-24 lg:pt-32 ">
       <Heading text="Hire your Storefront Managers" />
-      <Tabs defaultValue="tabi" className="w-full max-w-4xl mx-auto">
-        <TabsList className="grid w-full max-w-[400px] grid-cols-2 mx-auto mb-8">
+      <Tabs defaultValue="tabi" className="w-full mx-auto">
+        <TabsList className="grid w-full max-w-[400px] grid-cols-2 mx-auto mb-8 ">
           <TabsTrigger
             value="tabi"
-            className="data-[state=active]:bg-[#9747FF] data-[state=active]:text-white"
+            className="data-[state=active]:bg-primary-dark data-[state=active]:text-white font-semibold"
           >
             Tabi AI
           </TabsTrigger>
           <TabsTrigger
             value="clio"
-            className="data-[state=active]:bg-[#E5DED3] data-[state=active]:text-black"
+            className="data-[state=active]:bg-[#E5DED3] data-[state=active]:text-black font-semibold"
           >
             Clio AI
           </TabsTrigger>
@@ -35,11 +36,19 @@ export default function PricingTabs() {
                   Transform your data effortlessly with high-quality tools for
                   seamless uploads, experiments, and exports.
                 </p>
-                <Button className="w-full bg-[#9747FF] hover:bg-[#8033FF]">
+                <div className="flex flex-col text-sm text-muted-foreground">
+                  <span className="text-primary-dark">
+                    Process upto 200 rows of data with 100 Free Sprout Tokens
+                  </span>
+                  <span className="text-xs">
+                    *Sprout Tokens consumed based on data size and prompts used
+                  </span>
+                </div>
+                <Button className="w-full bg-primary-dark font-semibold text-white hover:bg-[#8033FF]">
                   Try for Free →
                 </Button>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4 ">
                 <h3 className="text-lg font-semibold">What&apos;s Included</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-sm">
@@ -160,6 +169,6 @@ export default function PricingTabs() {
           </div>
         </TabsContent>
       </Tabs>
-    </div>
+    </Section>
   );
 }
