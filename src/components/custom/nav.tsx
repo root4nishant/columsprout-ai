@@ -4,14 +4,29 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { ProductsDropdown } from "./DropDown";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isProductsOpen, setProductsOpen] = useState(false);
+  // const [isDown, setDown] = useState(false);
+
+  const toggleProducts = () => {
+    setProductsOpen(!isProductsOpen);
+  };
+
+  // const handleProductsMouseEnter = () => {
+  //   setProductsOpen(true);
+  // };
+
+  const handleProductsMouseLeave = () => {
+    setProductsOpen(false);
+  };
 
   return (
     <div className="max-w-[1400px] mx-auto">
       <header className="fixed top-0 left-0 w-full z-40 mt-4 lg:px-20 px-4">
-        <div className=" bg-[#1a1a1a] rounded-md shadow-lg shadow-[#707070] py-4 px-6 flex items-center justify-between">
+        <div className="bg-[#1a1a1a] w-full rounded-md shadow-lg shadow-[#707070] py-4 px-6 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <Link href="/" className="text-white font-semibold text-xl">
               <Image
@@ -23,12 +38,23 @@ export default function Navbar() {
                 loading="lazy"
               />
             </Link>
-            <Link
-              href="#"
-              className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
+            <div
+              className=""
+              // onMouseEnter={handleProductsMouseEnter}
+              // onMouseLeave={handleProductsMouseLeave}
             >
-              Products
-            </Link>
+              <Link
+                href="#"
+                className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleProducts();
+                }}
+              >
+                Products
+              </Link>
+              <ProductsDropdown isOpen={isProductsOpen} />
+            </div>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link
@@ -76,7 +102,11 @@ export default function Navbar() {
               <Link
                 href="#"
                 className="text-gray-300 hover:text-white text-xl font-bold"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleProducts();
+                  setMobileMenuOpen(false);
+                }}
               >
                 Products
               </Link>
@@ -98,6 +128,11 @@ export default function Navbar() {
               </Button>
             </li>
           </ul>
+        </div>
+
+        {/* Products Dropdown for Mobile */}
+        <div className="lg:hidden" onMouseLeave={handleProductsMouseLeave}>
+          <ProductsDropdown isOpen={isProductsOpen} />
         </div>
       </header>
     </div>

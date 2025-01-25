@@ -10,7 +10,7 @@ export const metadata = {
 
 const primaryFont = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400","500", "700"],
   variable: "--font-primary",
 });
 
