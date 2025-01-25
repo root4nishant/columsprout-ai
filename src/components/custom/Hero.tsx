@@ -44,7 +44,7 @@ const HeroSection: FC<HeroSectionProps> = ({
         } z-[-10] w-full mx-auto`}
       ></div>
       <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative">
-        <div className="z-10 py-20 md:py-0 md:pt-28 lg:pt-20 pt-20">
+        <div className="z-10 py-20 md:py-0 md:pt-28 lg:pt-24 pt-20">
           <div className="lg:max-w-5xl w-full mx-auto text-center lg:gap-8 gap-3 flex flex-col">
             <div className="flex flex-col gap-1">
               {tagText && <Tag text={tagText} />}
@@ -67,7 +67,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 {description}
               </p>
               <a href={buttonLink || "#"}>
-                <Button className=" bg-indigo-600 hover:bg-indigo-700 text-white text-md font-semibold py-6 rounded-md">
+                <Button className=" bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-6 rounded-md">
                   {buttonText}
                 </Button>
               </a>

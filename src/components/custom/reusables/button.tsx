@@ -46,7 +46,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          "lg:w-[172px] lg:h-[60px] w-[120px] h-[30px] md:w-[120px] md:h-[44px]",
+          "lg:w-[172px] lg:h-[60px] w-[120px] h-[30px] md:w-[120px] md:h-[44px] font-primary lg:text-lg text-sm",
           buttonVariants({ variant, size, className })
         )}
         ref={ref}

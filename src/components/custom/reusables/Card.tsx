@@ -27,17 +27,17 @@ interface ProductCardProps extends CardProps {
 
 export default function ReusableCard({ data }: ProductCardProps) {
   return (
-    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none bg-transparent">
+    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none bg-gradient-to-b from-[#e0e0f1] via-white to-transparent p-2 flex flex-col gap-3">
       <Carousel className="w-full">
         <CarouselContent>
           {data?.images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-[3/1.5] w-full h-auto z-5">
+              <div className="relative aspect-[2/1] w-full h-auto z-5 ">
                 <Image
                   src={image || "/placeholder.svg"}
                   alt={`${data?.title} - View ${index + 1}`}
                   fill
-                  className="object-cover rounded-t-lg"
+                  className="object-cover rounded-lg"
                   priority={index === 0}
                 />
               </div>
@@ -47,16 +47,18 @@ export default function ReusableCard({ data }: ProductCardProps) {
         <CarouselPrevious className="left-2" />
         <CarouselNext className="right-2" />
       </Carousel>
-      <CardContent className=" p-0 pt-4 rounded-none lg:text-left text-center ">
-        <h3 className="lg:text-3xl text-2xl  mb-2 flex lg:justify-start justify-center items-center gap-2 font-primary font-semibold">
+      <CardContent className=" p-0 pt-4 rounded-none lg:text-left text-center flex lg:gap-5 gap-3 flex-col">
+        <h3 className="lg:text-[36px] md:text-[36px] text-2xl flex lg:justify-start justify-center items-center gap-2 font-primary font-semibold">
           {data.title}{" "}
           <span>
             <Sparkles className="w-4 h-4 " />
           </span>{" "}
         </h3>
-        <p className="font-secondary text-muted-foreground mb-4">{data.description}</p>
+        <p className="font-secondary lg:text-[18px] text-sm text-muted-foreground">
+          {data.description}
+        </p>
         <Link href={data.link} passHref>
-          <Button className=" font-bold text-white  text-lg rounded-sm py-6 hover:bg-black  ">
+          <Button className=" font-bold text-white  text-sm rounded-sm py-6 hover:bg-black  ">
             {data.buttonText}
           </Button>
         </Link>
