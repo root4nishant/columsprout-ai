@@ -1,6 +1,7 @@
 // import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface ProductsDropdownProps {
   isOpen: boolean;
@@ -35,9 +36,11 @@ export function ProductsDropdown({ isOpen }: ProductsDropdownProps) {
                   Effortlessly use Gen AI for tabular data with speed &
                   accuracy. Guess what, anyone can use it
                 </p>
-                <Button className="bg-gray-300 hover:bg-white text-black font-medium rounded px-6">
-                  Explore Tabi
-                </Button>
+                <Link href="/tabi">
+                  <Button className="bg-gray-300 hover:bg-white text-black font-medium rounded px-6">
+                    Explore Tabi
+                  </Button>
+                </Link>
               </div>
 
               {/* Clio Product */}
@@ -56,9 +59,11 @@ export function ProductsDropdown({ isOpen }: ProductsDropdownProps) {
                   Deliver seamless customer experiences and gain actionable
                   insights with intelligent AI agents
                 </p>
-                <Button className="bg-gray-300 hover:bg-white text-black font-medium rounded px-6">
-                  Explore Clio
-                </Button>
+                <Link href="/clio">
+                  <Button className="bg-gray-300 hover:bg-white text-black font-medium rounded px-6">
+                    Explore Clio
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
