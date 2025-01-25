@@ -56,7 +56,7 @@ export default function ReusableCard({ data }: ProductCardProps) {
         </h3>
         <p className="font-secondary text-muted-foreground mb-4">{data.description}</p>
         <Link href={data.link} passHref>
-          <Button className="w-auto font-bold text-white  text-lg rounded-sm py-6 hover:bg-black  ">
+          <Button className=" font-bold text-white  text-lg rounded-sm py-6 hover:bg-black  ">
             {data.buttonText}
           </Button>
         </Link>
