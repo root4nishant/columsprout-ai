@@ -28,7 +28,7 @@ export default {
         primary: {
           DEFAULT: "#4f46e5",
           light: "#6366f1",
-          dark: "#4338ca",
+          dark: "#423EC7",
         },
         secondary: {
           DEFAULT: "#f59e0b",

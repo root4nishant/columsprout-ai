@@ -35,7 +35,7 @@ const Benefits = () => {
       description:
         "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
       icon: <DollarSign className="w-6 h-6 text-blue-600" />,
-      image: "/home1.png",
+      image: "/image.png",
     },
     {
       percentage: "70%",
@@ -43,7 +43,7 @@ const Benefits = () => {
       description:
         "Boost precision with advanced data batching pipelines that outperform traditional LLMs.",
       icon: <Target className="w-6 h-6 text-blue-600" />,
-      image: "/home2.png",
+      image: "/image.png",
     },
     {
       percentage: "75%",
@@ -51,14 +51,14 @@ const Benefits = () => {
       description:
         "Simplify tasks, prioritize strategy, and deliver rapid results.",
       icon: <Timer className="w-6 h-6 text-blue-600" />,
-      image: "/home3.png",
+      image: "/image.png",
     },
   ];
 
   const renderMobileView = () => (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-4">
       {stats.map((stat, index) => (
-        <div key={index}>
+        <div key={index} className="flex flex-col gap-2">
           <div className="border rounded-lg overflow-hidden">
             <button
               onClick={() =>
@@ -68,20 +68,23 @@ const Benefits = () => {
               ${selectedCard === index ? "bg-white" : "hover:bg-gray-50"}`}
             >
               <div className="flex items-center gap-3">
-                <div>
+                <div className="flex flex-col lg:gap-4 gap-2">
                   <div
-                    className={`lg:text-2xl text-xl font-bold transition-colors duration-300
+                    className={`text-[36px] leading-tight font-bold transition-colors duration-300
                     ${
                       selectedCard === index
-                        ? "text-blue-600"
+                        ? "text-primary-dark"
                         : "text-gray-600 "
                     }`}
                   >
                     {stat.percentage}
                   </div>
-                  <h3 className="font-bold text-lg text-gray-900">
+                  <h3 className="font-bold lg:text-xl  text-[14px] text-gray-900">
                     {stat.title}
                   </h3>
+                  <p className=" text-gray-600  lg:text-xl  text-[14px] text-justify">
+                    {stat.description}
+                  </p>
                 </div>
               </div>
               {selectedCard === index ? (
@@ -93,11 +96,8 @@ const Benefits = () => {
           </div>
 
           {selectedCard === index && (
-            <div className="pt-2 border rounded-md">
-              <p className="lg:px-4 lg:py-2 py-1 px-2 text-gray-600 text-justify">
-                {stat.description}
-              </p>
-              <div className="rounded-lg overflow-hidden">
+            <div className="lg:pt-2 pt-1 border rounded-lg lg:h-[300px] h-[120px] bg-gradient-to-b from-gray-300 from-10% to-transparent shadow-md lg:pr-2 pr-1 pb-[-2px] ">
+              <div className="rounded-lg overflow-hidden bg-[#EDEDFF] h-auto">
                 <div className="w-full">
                   {" "}
                   {/* Set height as needed */}
@@ -105,8 +105,8 @@ const Benefits = () => {
                     src={stat.image}
                     alt={stat.title}
                     width={1000}
-                    height={600}
-                    className="w-full h-full object-cover "
+                    height={800}
+                    className="w-full lg:h-[300px] h-[120px] object-fit-cover "
                   />
                 </div>
               </div>
