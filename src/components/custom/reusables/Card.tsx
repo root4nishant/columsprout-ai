@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/custom/reusables/button";
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ interface ProductCardProps extends CardProps {
 
 export default function ReusableCard({ data }: ProductCardProps) {
   return (
-    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none">
+    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none bg-transparent">
       <Carousel className="w-full">
         <CarouselContent>
           {data?.images.map((image, index) => (
