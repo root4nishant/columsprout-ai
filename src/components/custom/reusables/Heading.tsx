@@ -11,7 +11,7 @@ const Heading: React.FC<HeadingProps> = ({ text, className }) => {
     <div>
       <h1
         className={clsx(
-          "lg:text-4xl text-3xl font-bold text-gray-800 text-center pb-10",
+          "font-primary lg:text-[56px] md:text-[36px] text-[28px] font-bold text-gray-800 text-center pb-10",
           className
         )}
       >
