@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Columnspro AI Inc.
           </span>
         </div>
-        <div className="flex justify-end items-center lg:flex-row flex-col gap-2 lg:gap-8">
-          <div className=" space-x-4 lg:mt-4 mt-0">
+        <div className="flex justify-center items-center lg:flex-row flex-col gap-2 lg:gap-8">
+          <div className=" space-x-4">
             <Link href="/privacyPolicy" className="text-md text-gray-800">
               Privacy Policy
             </Link>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
-          <div className="lg:mt-4 mt-0">
+          <div className="">
             <Link
               href="https://www.linkedin.com/company/columsprout-ai/"
               target="_blank"
