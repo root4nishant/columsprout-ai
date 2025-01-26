@@ -7,19 +7,19 @@ import Image from "next/image";
 import { ProductsDropdown } from "./DropDown";
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isProductsOpen, setProductsOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleProducts = () => {
-    setProductsOpen(!isProductsOpen);
+  const handleMouseEnter = () => {
+    setProductsOpen(true);
   };
 
-  const handleProductsMouseLeave = () => {
-    setProductsOpen(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setProductsOpen(false);
+  // };
 
   return (
-    <div className="w-full fixed top-0 z-40 bg-transparent">
+    <div className="w-full fixed top-0 z-20 bg-transparent">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-20 mt-4">
         <header className="bg-[#1a1a1a] w-full rounded-md shadow-lg shadow-[#707070] py-4 px-6 flex items-center justify-between">
           <div className="flex items-center gap-12">
@@ -33,18 +33,24 @@ export default function Navbar() {
                 loading="lazy"
               />
             </Link>
-            <div>
+            <div
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+
+              // onMouseLeave={handleMouseLeave}
+            >
               <Link
+                onClick={handleMouseEnter}
                 href="#"
                 className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleProducts();
-                }}
+                // onClick={(e) => e.preventDefault()}
               >
                 Products
               </Link>
-              <ProductsDropdown isOpen={isProductsOpen} />
+              <ProductsDropdown
+                isOpen={isProductsOpen}
+                closeDrawer={() => setProductsOpen(false)}
+              />
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6">
@@ -71,7 +77,6 @@ export default function Navbar() {
           </button>
         </header>
       </div>
-
       {/* Mobile Navigation */}
       <div
         className={`md:hidden fixed inset-0 bg-[#1a1a1a] z-20 border-t border-gray-700 transform transition-transform duration-300 ${
@@ -95,7 +100,7 @@ export default function Navbar() {
               className="text-gray-300 hover:text-white text-xl font-bold"
               onClick={(e) => {
                 e.preventDefault();
-                toggleProducts();
+                // toggleProducts();
                 setMobileMenuOpen(false);
               }}
             >
@@ -119,11 +124,6 @@ export default function Navbar() {
             </Button>
           </li>
         </ul>
-      </div>
-
-      {/* Products Dropdown for Mobile */}
-      <div className="lg:hidden" onMouseLeave={handleProductsMouseLeave}>
-        <ProductsDropdown isOpen={isProductsOpen} />
       </div>
     </div>
   );
