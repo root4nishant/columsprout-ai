@@ -27,21 +27,23 @@ const Benefits = () => {
   ];
 
   const renderStats = () => (
-    <div className="flex flex-col md:flex-row justify-between md:gap-6 gap-2">
+    <div className="flex flex-col md:flex-row justify-between md:gap-6 gap-2 w-full">
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="rounded-lg lg:p-5 p-2 border cursor-pointer transition-all duration-300 w-full
+          className="rounded-lg lg:p-5 p-3 border cursor-pointer transition-all duration-300 w-full
           shadow-xl bg-white hover:shadow-2xl hover:shadow-gray-300 texl-left"
         >
           <div className="flex flex-col lg:gap-4 gap-2">
-            <div className="lg:text-3xl text-2xl font-bold transition-colors duration-300 text-primary-dark">
+            <div className="lg:text-5xl md:text-3xl text-2xl font-semibold transition-colors duration-300 text-primary-dark">
               {stat.percentage}
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-gray-800">
               {stat.title}
             </h3>
-            <p className="text-gray-600 ">{stat.description}</p>
+            <p className="text-sm md:text-lg lg:text-xl text-gray-600 font-secondary">
+              {stat.description}
+            </p>
           </div>
         </div>
       ))}
@@ -61,10 +63,10 @@ const Benefits = () => {
       ></div> */}
 
       {/* Section content */}
-      <Section className=" flex flex-col items-center justify-between py-20">
-        <div className="z-10 mx-auto">
+      <Section className=" flex flex-col items-center justify-between py-20 w-full">
+        <div className="z-10 mx-auto w-full">
           <Tag text="Benefits" />
-          <Heading text="Unlock Transformative Benefits" />
+          <Heading text="Unlock Transformative Benefits" className="pb-0" />
           <div className="mt-8">{renderStats()}</div>
         </div>
       </Section>

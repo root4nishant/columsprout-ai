@@ -9,7 +9,7 @@ export default function FeatureComponent() {
       <Tag text="Features" />
       <Heading text="AI That Delivers on Every Front" />
       <div className="flex flex-col md:flex-row justify-between items-start lg:gap-28 gap-16 ">
-        <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-10 gap-5">
+        <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">
           <Image
             src="/meetai.png"
             alt="Storefront AI Concierge"
