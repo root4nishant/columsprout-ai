@@ -22,7 +22,7 @@ export default function FeatureComponent() {
               Customer Facing
             </h3>
             <h2 className="text-2xl font-semibold">Storefront AI Concierge</h2>
-            <p className=" text-gray-600 text-lg">
+            <p className=" text-gray-600 text-lg font-secondary">
               Seamlessly automate customer conversations across channels, while
               maintaining your brand&apos;s voice.
             </p>
@@ -41,7 +41,7 @@ export default function FeatureComponent() {
               Back Office
             </h3>
             <h2 className="text-2xl font-semibold">Unified Support Desk</h2>
-            <p className=" text-gray-600 text-lg">
+            <p className=" text-gray-600 text-lg font-secondary">
               Enhance customer experience while solving 30% more tickets every
               day.
             </p>
