@@ -62,7 +62,7 @@ export default function Navbar() {
             </Link>
             <Button
               variant="default"
-              className="text-lg bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-gray-300 py-5 px-4"
+              className="text-lg bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-secondary py-5 px-4"
             >
               Contact Us
             </Button>

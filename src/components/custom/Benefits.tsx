@@ -145,7 +145,7 @@ const Benefits = () => {
   );
 
   const renderImageOverlay = () => (
-    <div className="relative flex justify-center items-center lg:py-20">
+    <div className="relative flex justify-center items-center lg:py-20 z-10">
       {stats.map((stat, index) => (
         <div
           key={index}
