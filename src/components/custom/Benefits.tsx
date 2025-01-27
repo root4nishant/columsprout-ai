@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Section from "./reusables/Section";
-import Tag from "./Tag";
+// import Tag from "./Tag";
 import Heading from "./reusables/Heading";
 import Image from "next/image";
 import {
@@ -126,13 +126,13 @@ const Benefits = () => {
         >
           <div className="flex flex-col gap-4">
             <div
-              className={`text-2xl lg:text-[42px] font-bold transition-colors duration-300 leading-tight ${
-                selectedCard === index ? "text-blue-600" : "text-gray-600"
+              className={`text-2xl lg:text-[42px] font-bold transition-colors duration-300 leading-tight font-primary ${
+                selectedCard === index ? "text-primary-dark" : "text-gray-600"
               }`}
             >
               {stat.percentage}
             </div>
-            <h3 className="text-[18px] font-semibold text-gray-800">
+            <h3 className="text-[18px] font-semibold text-gray-800 font-primary">
               {stat.title}
             </h3>
             <p className="text-[18px] font-secondary text-gray-600 text-justify">
@@ -145,7 +145,7 @@ const Benefits = () => {
   );
 
   const renderImageOverlay = () => (
-    <div className="relative flex justify-center items-center lg:py-20 z-10">
+    <div className="relative flex justify-center items-center lg:py-80 py-10 z-10">
       {stats.map((stat, index) => (
         <div
           key={index}
@@ -170,11 +170,13 @@ const Benefits = () => {
   );
 
   return (
-    <Section className="flex flex-col lg:max-h-[560px] relative lg:mb-80 mb-0">
-      <Tag text="Benefits" />
-      <Heading text="Experience the Era of AI Performance" />
-      {isMobile ? renderMobileView() : renderDesktopView()}
-      {!isMobile && renderImageOverlay()}
+    <Section className="flex flex-col lg:max-h-[560px]  w-full lg:mb-80 mb-0 ">
+      <div className="lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 mx-auto">
+        {/* <Tag text="Benefits" /> */}
+        <Heading text="Experience the Era of AI Performance" />
+        {isMobile ? renderMobileView() : renderDesktopView()}
+        {!isMobile && renderImageOverlay()}
+      </div>
     </Section>
   );
 };

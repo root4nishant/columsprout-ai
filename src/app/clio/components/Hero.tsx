@@ -35,12 +35,12 @@ const HeroSection: FC<HeroSectionProps> = ({
   return (
     <div>
       <div
-        className={` font-primary absolute inset-0 z-[-10] bg-[url("/hero.png")] bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
+        className={` font-primary absolute inset-0 z-[-10] bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
       ></div>
       <div
         className={`absolute inset-0 ${
           gradientOverlay ||
-          "bg-gradient-to-b from-gray-900/50 via-transparent to-white"
+          "bg-gradient-to-b from-gray-900/50 via-gray-900 to-black h-full"
         } z-[-10] w-full mx-auto`}
       ></div>
       <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative py-0 pt-10">
@@ -53,7 +53,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                   {title}
                 </h1>
                 <div className="flex gap-2 items-center text-[32px]  md:text-5xl lg:text-5xl font-bold tracking-[0.4px] justify-center">
-                  <span className="text-indigo-600 leading-tight">
+                  <span className="text-primary-dark leading-tight">
                     {highlightText}
                   </span>
                   {highlightIcon && (
@@ -69,7 +69,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 {description}
               </p>
               <a href={buttonLink || "#"}>
-                <Button className=" bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-6 rounded-md">
+                <Button className=" bg-primary-dark hover:bg-black text-white font-semibold py-6 rounded-md">
                   {buttonText}
                 </Button>
               </a>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Section from "@/components/custom/reusables/Section";
-import Tag from "@/components/custom/Tag";
+// import Tag from "@/components/custom/Tag";
 import Heading from "@/components/custom/reusables/Heading";
 import { Button } from "@/components/custom/reusables/button";
 
@@ -41,7 +41,7 @@ const cardData = [
 export default function TabiInAction() {
   return (
     <Section>
-      <Tag text="Features" />
+      {/* <Tag text="Features" /> */}
       <Heading text="Tabi in Action" />
       <div className="mx-auto lg:py-12 py-0 lg:space-y-12 space-y-4 flex flex-col items-center">
         {cardData.map((card) => (
@@ -78,7 +78,7 @@ export default function TabiInAction() {
           </Card>
         ))}
         <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
-          Start for free
+          Try Now
         </Button>
       </div>
     </Section>

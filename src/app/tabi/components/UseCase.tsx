@@ -1,5 +1,5 @@
 import Heading from "@/components/custom/reusables/Heading";
-import Tag from "@/components/custom/Tag";
+// import Tag from "@/components/custom/Tag";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Pencil } from "lucide-react";
 
@@ -33,7 +33,7 @@ const useCases = [
 export default function UseCase() {
   return (
     <div className="w-full mx-auto py-12">
-      <Tag text="Use Cases" />
+      {/* <Tag text="Use Cases" /> */}
       <Heading text="Choose from a Use Case suite" />
 
       <div className="lg:grid md:grid flex flex-col md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">

@@ -35,7 +35,7 @@ const HeroSection: FC<HeroSectionProps> = ({
   return (
     <div>
       <div
-        className={` font-primary absolute inset-0 z-[-10] bg-[url("/hero.png")] bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
+        className={` font-primary absolute inset-0 z-[-10]  bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
       ></div>
       <div
         className={`absolute inset-0 ${

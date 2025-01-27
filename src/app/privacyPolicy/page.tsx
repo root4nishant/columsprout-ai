@@ -1,11 +1,12 @@
 import Heading from "@/components/custom/reusables/Heading";
-import Section from "@/components/custom/reusables/Section";
+// import Section from "@/components/custom/reusables/Section";
 import { RxCounterClockwiseClock } from "react-icons/rx";
+import Banner from "../(home)/components/Banner";
 
 const PrivacyPolicy = () => {
   return (
-    <Section className="bg-gray-100 text-gray-800 min-h-screen py-20 text-justify">
-      <div className="lg:p-6 p-0">
+    <div className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-primary">
+      <div className="lg:px-6 px-2 pt-28">
         <Heading text="Our Privacy Policy" />
         <div className="flex justify-center items-center">
           <p className="text-center text-gray-600 mb-8 border border-blue-100 p-2 rounded-full w-fit font-semibold flex items-center gap-2">
@@ -107,7 +108,13 @@ const PrivacyPolicy = () => {
           </p>
         </div>
       </div>
-    </Section>
+      <Banner
+        message="Try Columsprout AI today & "
+        buttonText="Try Now"
+        buttonLink="/"
+        message2="Elevate your Storefront"
+      />
+    </div>
   );
 };
 

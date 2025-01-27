@@ -12,12 +12,12 @@ function page() {
     <div className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-primary">
       <HeroSection
         gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
-        tagText="Introduction"
+        tagText="Introducing"
         title="Clio AI"
         highlightText="Your store's Customer Success AI"
         highlightIcon={<Sparkles />}
         description="Use Cleo AI to create world-class Customer Experiences and provide Outstanding Support"
-        buttonText="Book Demo"
+        buttonText="Try Now"
         buttonLink="/get-started"
         // additionalButton={{
         //   text: "Learn More",
