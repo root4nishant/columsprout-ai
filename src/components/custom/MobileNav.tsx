@@ -48,10 +48,10 @@ export default function MobileNavigation({
           </button>
           {isMobileProductOpen && (
             <div className="mt-4 space-y-4 text-bold">
-              <Link href="#" className="block" onClick={onClose}>
+              <Link href="/tabi" className="block" onClick={onClose}>
                 Tabi AI
               </Link>
-              <Link href="#" className="block" onClick={onClose}>
+              <Link href="/clio" className="block" onClick={onClose}>
                 Clio AI
               </Link>
               <hr className=" bg-black" />
