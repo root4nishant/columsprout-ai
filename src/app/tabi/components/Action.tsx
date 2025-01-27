@@ -11,7 +11,7 @@ const cardData = [
     description:
       "Streamline your process with our innovative tools. Built for modern teams, our platform helps you achieve more in less time.",
     buttonText: "Learn More",
-    imageSrc: "/hero.png",
+    imageSrc: "/tabi1.svg",
     imageAlt: "Feature illustration",
     imageLeftOnLg: true,
   },
@@ -21,7 +21,7 @@ const cardData = [
     description:
       "Gain deep insights into your data with advanced analytics. Make informed decisions backed by real-time metrics and comprehensive reports.",
     buttonText: "Explore Analytics",
-    imageSrc: "/hero.png",
+    imageSrc: "/tabi2.svg",
     imageAlt: "Analytics illustration",
     imageLeftOnLg: false,
   },
@@ -31,7 +31,7 @@ const cardData = [
     description:
       "Work together effortlessly with your team. Our collaborative features ensure everyone stays in sync and projects move forward smoothly.",
     buttonText: "Start Collaborating",
-    imageSrc: "/hero.png",
+    imageSrc: "/tabi3.svg",
     imageAlt: "Collaboration illustration",
     imageLeftOnLg: true,
   },
@@ -58,11 +58,11 @@ export default function TabiInAction() {
                   src={card.imageSrc}
                   alt={card.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-fit"
                 />
               </div>
               <div
-                className={`p-6 flex flex-col justify-center lg:space-y-4 space-y-2 items-center text-center ${
+                className={`p-6 flex flex-col justify-center lg:space-y-4 space-y-2 lg:items-start items-center lg:text-left text-center ${
                   card.imageLeftOnLg ? "order-2" : "lg:order-1"
                 }`}
               >
