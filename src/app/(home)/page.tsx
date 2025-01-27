@@ -16,23 +16,21 @@ export default function Home() {
         description="Unleash the power of AI to automate repetitive tasks, enhance your storefront experience, personalize customer interactions, and drive higher sales conversions effortlessly"
         buttonText="Book Demo"
         buttonLink="/get-started"
-        // additionalButton={{
-        //   text: "Learn More",
-        //   size: "lg",
-        //   variant: "outline",
-        //   className:
-        //     "border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white",
-        //   onClick: () => console.log("Learn More clicked"),
-        // }}
       />
       <AITeamSection />
-      <Benefits />
-      <Banner
-        message="Try Columsprout AI today & "
-        buttonText="Try Now"
-        buttonLink="/"
-        message2="Elevate your Storefront"
-      />
+
+      {/* Benefits Section with Full-Width Background */}
+      <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] bg-gradient-to-b from-primary-dark/10 to-white ">
+        <Benefits />
+      </div>
+      <div className="">
+        <Banner
+          message="Try Columsprout AI today & "
+          buttonText="Try Now"
+          buttonLink="/"
+          message2="Elevate your Storefront"
+        />
+      </div>
     </main>
   );
 }

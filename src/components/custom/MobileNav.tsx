@@ -69,6 +69,15 @@ export default function MobileNavigation({
         </li>
         <li className="w-full px-6">
           <Link
+            href="/pricing"
+            className="text-black text-xl font-bold"
+            onClick={onClose}
+          >
+            Pricing
+          </Link>
+        </li>
+        <li className="w-full px-6">
+          <Link
             href="#"
             className="text-black text-xl font-bold"
             onClick={onClose}

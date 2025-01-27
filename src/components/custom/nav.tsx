@@ -24,7 +24,7 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Logo"
-                className="w-40 lg:w-auto"
+                className="md:w-60 w-40 lg:w-auto"
                 width={200}
                 height={200}
                 loading="lazy"
@@ -50,7 +50,7 @@ export default function Navbar() {
               Pricing
             </Link>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             <Link
               href="#"
               className="text-gray-300 hover:text-white text-md font-bold"
@@ -67,7 +67,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
-            className="md:hidden text-gray-300 hover:text-white text-lg focus:outline-none"
+            className="lg:hidden text-gray-300 hover:text-white md:text-2xl text-lg focus:outline-none"
           >
             ☰
           </button>

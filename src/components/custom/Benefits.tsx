@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Section from "./reusables/Section";
-import Tag from "./Tag";
+// import Tag from "./Tag";
 import Heading from "./reusables/Heading";
 import Image from "next/image";
 import {
@@ -145,7 +145,7 @@ const Benefits = () => {
   );
 
   const renderImageOverlay = () => (
-    <div className="relative flex justify-center items-center lg:py-20 z-10">
+    <div className="relative flex justify-center items-center lg:py-80 py-10 z-10">
       {stats.map((stat, index) => (
         <div
           key={index}
@@ -170,11 +170,13 @@ const Benefits = () => {
   );
 
   return (
-    <Section className="flex flex-col lg:max-h-[560px] relative lg:mb-80 mb-0">
-      <Tag text="Benefits" />
-      <Heading text="Experience the Era of AI Performance" />
-      {isMobile ? renderMobileView() : renderDesktopView()}
-      {!isMobile && renderImageOverlay()}
+    <Section className="flex flex-col lg:max-h-[560px]  w-full lg:mb-80 mb-0 ">
+      <div className="lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 mx-auto">
+        {/* <Tag text="Benefits" /> */}
+        <Heading text="Experience the Era of AI Performance" />
+        {isMobile ? renderMobileView() : renderDesktopView()}
+        {!isMobile && renderImageOverlay()}
+      </div>
     </Section>
   );
 };

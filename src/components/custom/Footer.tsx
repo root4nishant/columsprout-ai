@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#d6ceb3] border-t border-gray-300  mx-auto">
       <div className=" mx-auto flex flex-col lg:max-w-[1400px] md:max-w-[900px] w-full px-6 lg:px-20 sm:flex-row items-center justify-between py-4">
-        <div className="flex items-center space-x-6 lg:flex-row flex-col">
+        <div className="flex items-center lg:space-x-6 space-x-2 flex-row">
           <Image
             src="/logo.svg"
             alt="Logo"
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Columspro AI Inc.
           </span>
         </div>
-        <div className="flex justify-center items-center lg:flex-row flex-col gap-2 lg:gap-8">
+        <div className="flex justify-center items-center gap-2 lg:gap-8">
           <div className=" space-x-4">
             <Link href="/privacyPolicy" className="text-md text-gray-800">
               Privacy Policy
