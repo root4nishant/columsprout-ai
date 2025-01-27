@@ -42,11 +42,11 @@ export default function TabiInAction() {
     <Section>
       <Tag text="Features" />
       <Heading text="Tabi in Action" />
-      <div className="mx-auto py-12 space-y-12">
+      <div className="mx-auto lg:py-12 py-0 space-y-12">
         {cardData.map((card) => (
           <Card
             key={card.id}
-            className="overflow-hidden border-none shadow-none"
+            className="overflow-hidden border-none shadow-none bg-transparent"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 md:gap-4 gap-2">
               <div
@@ -63,7 +63,7 @@ export default function TabiInAction() {
               </div>
               <div
                 className={`p-6 flex flex-col justify-center lg:space-y-4 space-y-2 lg:items-start items-center lg:text-left text-center ${
-                  card.imageLeftOnLg ? "order-2" : "lg:order-1"
+                  card.imageLeftOnLg ? "order-2" : "lg:order-1" 
                 }`}
               >
                 <h2 className="lg:text-2xl text-md md:text-xl font-bold tracking-tight">
