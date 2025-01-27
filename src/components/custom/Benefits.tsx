@@ -70,7 +70,7 @@ const Benefits = () => {
               <div className="flex items-center gap-3">
                 <div className="flex flex-col gap-2 lg:gap-4">
                   <div
-                    className={`text-[32px] font-bold leading-tight transition-colors duration-300 ${
+                    className={`text-[28px] font-bold leading-tight transition-colors duration-300 ${
                       selectedCard === index
                         ? "text-primary-dark"
                         : "text-gray-600"

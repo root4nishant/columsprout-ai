@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import Section from "@/components/custom/reusables/Section";
 import Tag from "@/components/custom/Tag";
 import Heading from "@/components/custom/reusables/Heading";
+import { Button } from "@/components/custom/reusables/button";
 
 const cardData = [
   {
@@ -42,7 +43,7 @@ export default function TabiInAction() {
     <Section>
       <Tag text="Features" />
       <Heading text="Tabi in Action" />
-      <div className="mx-auto lg:py-12 py-0 space-y-12">
+      <div className="mx-auto lg:py-12 py-0 lg:space-y-12 space-y-4 flex flex-col items-center">
         {cardData.map((card) => (
           <Card
             key={card.id}
@@ -63,7 +64,7 @@ export default function TabiInAction() {
               </div>
               <div
                 className={`p-6 flex flex-col justify-center lg:space-y-4 space-y-2 lg:items-start items-center lg:text-left text-center ${
-                  card.imageLeftOnLg ? "order-2" : "lg:order-1" 
+                  card.imageLeftOnLg ? "order-2" : "lg:order-1"
                 }`}
               >
                 <h2 className="lg:text-2xl text-md md:text-xl font-bold tracking-tight">
@@ -72,14 +73,13 @@ export default function TabiInAction() {
                 <p className="text-muted-foreground lg:text-lg text-sm md:text-lg font-secondary">
                   {card.description}
                 </p>
-                {/* <Button className="w-fit">
-                  {card.buttonText}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button> */}
               </div>
             </div>
           </Card>
         ))}
+        <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
+          Start for free
+        </Button>
       </div>
     </Section>
   );
