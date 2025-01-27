@@ -126,13 +126,13 @@ const Benefits = () => {
         >
           <div className="flex flex-col gap-4">
             <div
-              className={`text-2xl lg:text-[42px] font-bold transition-colors duration-300 leading-tight ${
+              className={`text-2xl lg:text-[42px] font-bold transition-colors duration-300 leading-tight font-primary ${
                 selectedCard === index ? "text-blue-600" : "text-gray-600"
               }`}
             >
               {stat.percentage}
             </div>
-            <h3 className="text-[18px] font-semibold text-gray-800">
+            <h3 className="text-[18px] font-semibold text-gray-800 font-primary">
               {stat.title}
             </h3>
             <p className="text-[18px] font-secondary text-gray-600 text-justify">
