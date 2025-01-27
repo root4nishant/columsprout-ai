@@ -17,7 +17,7 @@ function page() {
         highlightText="Your store's Customer Success AI"
         highlightIcon={<Sparkles />}
         description="Use Cleo AI to create world-class Customer Experiences and provide Outstanding Support"
-        buttonText="Book Demo"
+        buttonText="Try Now"
         buttonLink="/get-started"
         // additionalButton={{
         //   text: "Learn More",

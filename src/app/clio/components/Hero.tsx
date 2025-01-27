@@ -35,12 +35,12 @@ const HeroSection: FC<HeroSectionProps> = ({
   return (
     <div>
       <div
-        className={` font-primary absolute inset-0 z-[-10] bg-[url("/hero.png")] bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
+        className={` font-primary absolute inset-0 z-[-10] bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
       ></div>
       <div
         className={`absolute inset-0 ${
           gradientOverlay ||
-          "bg-gradient-to-b from-gray-900/50 via-transparent to-white"
+          "bg-gradient-to-b from-gray-900/50 via-gray-900 to-black h-full"
         } z-[-10] w-full mx-auto`}
       ></div>
       <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative py-0 pt-10">

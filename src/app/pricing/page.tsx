@@ -1,6 +1,6 @@
 import React from "react";
 import PricingTabs from "./components/Tabs";
-import Banner from "@/components/custom/reusables/Banner";
+import Banner from "../(home)/components/Banner";
 
 function PricingPage() {
   return (

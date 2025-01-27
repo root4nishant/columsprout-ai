@@ -78,7 +78,7 @@ export default function TabiInAction() {
           </Card>
         ))}
         <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
-          Start for free
+          Try Now
         </Button>
       </div>
     </Section>

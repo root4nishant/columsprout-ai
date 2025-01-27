@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             height={10}
           />
           <span className="text-md text-gray-800">
-            &copy; {new Date().getFullYear()} Columnspro AI Inc.
+            &copy; {new Date().getFullYear()} Columspro AI Inc.
           </span>
         </div>
         <div className="flex justify-center items-center lg:flex-row flex-col gap-2 lg:gap-8">

@@ -127,7 +127,7 @@ const Benefits = () => {
           <div className="flex flex-col gap-4">
             <div
               className={`text-2xl lg:text-[42px] font-bold transition-colors duration-300 leading-tight font-primary ${
-                selectedCard === index ? "text-blue-600" : "text-gray-600"
+                selectedCard === index ? "text-primary-dark" : "text-gray-600"
               }`}
             >
               {stat.percentage}

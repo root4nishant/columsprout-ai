@@ -17,7 +17,7 @@ function TabiPage() {
         highlightText="Transform Data at Speed"
         highlightIcon={<Sparkles />}
         description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
-        buttonText="Book Demo"
+        buttonText="Try Now"
         buttonLink="/get-started"
         // additionalButton={{
         //   text: "Learn More",
