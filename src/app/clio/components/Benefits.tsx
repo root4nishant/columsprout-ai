@@ -1,7 +1,7 @@
 "use client";
 
 import Section from "@/components/custom/reusables/Section";
-import Tag from "@/components/custom/Tag";
+// import Tag from "@/components/custom/Tag";
 import Heading from "@/components/custom/reusables/Heading";
 
 const Benefits = () => {
@@ -65,7 +65,7 @@ const Benefits = () => {
       {/* Section content */}
       <Section className=" flex flex-col items-center justify-between py-20 w-full">
         <div className="z-10 mx-auto w-full">
-          <Tag text="Benefits" />
+          {/* <Tag text="Benefits" /> */}
           <Heading text="Unlock Transformative Benefits" className="pb-0" />
           <div className="mt-8">{renderStats()}</div>
         </div>

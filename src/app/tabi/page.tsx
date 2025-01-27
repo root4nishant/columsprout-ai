@@ -12,7 +12,7 @@ function TabiPage() {
     <div className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-primary">
       <HeroSection
         gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
-        tagText="Introduction"
+        tagText="Introducing"
         title="Tabi AI"
         highlightText="Transform Data at Speed"
         highlightIcon={<Sparkles />}

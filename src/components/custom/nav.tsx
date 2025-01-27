@@ -43,6 +43,12 @@ export default function Navbar() {
                 closeDrawer={() => setProductsOpen(false)}
               />
             </div>
+            <Link
+              href="/pricing"
+              className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
+            >
+              Pricing
+            </Link>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link

@@ -1,12 +1,12 @@
 import Heading from "@/components/custom/reusables/Heading";
 import Section from "@/components/custom/reusables/Section";
-import Tag from "@/components/custom/Tag";
+// import Tag from "@/components/custom/Tag";
 import Image from "next/image";
 
 export default function FeatureComponent() {
   return (
     <Section>
-      <Tag text="Features" />
+      {/* <Tag text="Features" /> */}
       <Heading text="AI That Delivers on Every Front" />
       <div className="flex flex-col md:flex-row justify-between items-start lg:gap-28 gap-16 ">
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">

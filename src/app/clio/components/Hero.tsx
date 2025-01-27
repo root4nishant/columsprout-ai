@@ -53,7 +53,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                   {title}
                 </h1>
                 <div className="flex gap-2 items-center text-[32px]  md:text-5xl lg:text-5xl font-bold tracking-[0.4px] justify-center">
-                  <span className="text-indigo-600 leading-tight">
+                  <span className="text-primary-dark leading-tight">
                     {highlightText}
                   </span>
                   {highlightIcon && (
@@ -69,7 +69,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 {description}
               </p>
               <a href={buttonLink || "#"}>
-                <Button className=" bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-6 rounded-md">
+                <Button className=" bg-primary-dark hover:bg-black text-white font-semibold py-6 rounded-md">
                   {buttonText}
                 </Button>
               </a>

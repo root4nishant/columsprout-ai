@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Section from "./Section";
 import { Button } from "@/components/ui/button";
+import Section from "@/components/custom/reusables/Section";
 
 interface BannerProps {
   message: string;
@@ -28,6 +28,11 @@ const Banner: React.FC<BannerProps> = ({
             <Link href={buttonLink} passHref>
               <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-[#D6CFB6] text-[#423EC7] rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
                 {buttonText}
+              </Button>
+            </Link>
+            <Link href={buttonLink} passHref>
+              <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-white text-[#423EC7] rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
+                Book Demo
               </Button>
             </Link>
           </div>
