@@ -5,39 +5,33 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#d6ceb3] border-t border-gray-300  px-6 lg:px-24">
-      <div className=" mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
-        <div className="flex items-center space-x-2 lg:flex-row flex-col">
+    <footer className="bg-[#d6ceb3] border-t border-gray-300  mx-auto">
+      <div className=" mx-auto flex flex-col lg:max-w-[1400px] md:max-w-[900px] w-full px-6 lg:px-20 sm:flex-row items-center justify-between py-4">
+        <div className="flex items-center space-x-6 lg:flex-row flex-col">
           <Image
-            src="/logo2.png"
+            src="/logo.svg"
             alt="Logo"
-            className="w-72 "
-            width={200}
-            height={50}
+            className="w-10 "
+            width={20}
+            height={10}
           />
-          <span className="text-md font-semibold text-gray-800">
-            &copy; 2024 Columnsprout AI, Inc.
+          <span className="text-md text-gray-800">
+            &copy; {new Date().getFullYear()} Columnspro AI Inc.
           </span>
         </div>
-        <div className="flex justify-end items-center lg:flex-row flex-col gap-2 lg:-gap-4">
-          <div className=" space-x-4 mt-4 sm:mt-0">
-            <Link
-              href="/privacyPolicy"
-              className="text-md font-semibold text-gray-800 hover:underline"
-            >
+        <div className="flex justify-center items-center lg:flex-row flex-col gap-2 lg:gap-8">
+          <div className=" space-x-4">
+            <Link href="/privacyPolicy" className="text-md text-gray-800">
               Privacy Policy
             </Link>
-            <Link
-              href="/termsAndService"
-              className="text-md font-semibold text-gray-800 hover:underline"
-            >
+            <Link href="/termsAndService" className="text-md  text-gray-800">
               Terms of Service
             </Link>
           </div>
 
-          <div className="mt-4 sm:mt-0">
+          <div className="">
             <Link
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/columsprout-ai/"
               target="_blank"
               rel="noopener noreferrer"
             >

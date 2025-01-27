@@ -4,10 +4,7 @@ import React from "react";
 
 const Section: React.FC<SectionProps> = ({ children, className, style }) => {
   return (
-    <section
-      style={style}
-      className={cn("py-8 lg:py-24 px-6 lg:px-24 md:px-12 mx-auto", className)}
-    >
+    <section style={style} className={cn("py-8 lg:py-12 mx-auto", className)}>
       {children}
     </section>
   );

@@ -1,19 +1,22 @@
-import AITeamSection from "@/components/custom/Ait";
-import Benefits from "@/components/custom/Benefits";
-import HeroSection from "@/components/custom/Hero";
 import Banner from "@/components/custom/reusables/Banner";
+import React from "react";
+import FeatureComponent from "./components/Features";
+import Benefits from "./components/Benefits";
+import Integration from "./components/Integration";
+import VideoWithMessages from "./components/Video";
 import { Sparkles } from "lucide-react";
+import HeroSection from "./components/Hero";
 
-export default function Home() {
+function page() {
   return (
-    <main className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-secondary">
+    <div className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-primary">
       <HeroSection
         gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
         tagText="Introduction"
-        title="Your Store's"
-        highlightText="AI Concierge"
+        title="Clio AI"
+        highlightText="Your store's Customer Success AI"
         highlightIcon={<Sparkles />}
-        description="Unleash the power of AI to automate repetitive tasks, enhance your storefront experience, personalize customer interactions, and drive higher sales conversions effortlessly"
+        description="Use Cleo AI to create world-class Customer Experiences and provide Outstanding Support"
         buttonText="Book Demo"
         buttonLink="/get-started"
         // additionalButton={{
@@ -25,14 +28,19 @@ export default function Home() {
         //   onClick: () => console.log("Learn More clicked"),
         // }}
       />
-      <AITeamSection />
+      <VideoWithMessages />
+      <FeatureComponent />
+
       <Benefits />
+      <Integration />
       <Banner
-        message="Try Columsprout AI today & "
+        message="Join the waitlist "
         buttonText="Try Now"
         buttonLink="/"
-        message2="Elevate your Storefront"
+        message2="for the Cleo AI"
       />
-    </main>
+    </div>
   );
 }
+
+export default page;

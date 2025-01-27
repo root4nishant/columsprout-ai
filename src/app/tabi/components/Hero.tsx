@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import { Button } from "@/components/custom/reusables/button";
-import Section from "./reusables/Section";
-import Tag from "./Tag";
+import Section from "@/components/custom/reusables/Section";
+import Tag from "@/components/custom/Tag";
 
 interface HeroSectionProps {
   gradientOverlay?: string;
@@ -43,19 +43,21 @@ const HeroSection: FC<HeroSectionProps> = ({
           "bg-gradient-to-b from-gray-900/50 via-transparent to-white"
         } z-[-10] w-full mx-auto`}
       ></div>
-      <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative">
+      <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative py-0 pt-10">
         <div className="z-10 py-20 md:py-0 md:pt-28 lg:pt-24 pt-20">
           <div className="lg:max-w-5xl w-full mx-auto text-center lg:gap-8 gap-3 flex flex-col">
             <div className="flex flex-col gap-1">
               {tagText && <Tag text={tagText} />}
-              <div className="flex flex-col gap-2">
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-[0.4px] text-gray-900 font-primary">
+              <div className="flex flex-col lg:gap-2 gap-0">
+                <h1 className="text-[32px] md:text-5xl lg:text-5xl font-bold tracking-[0.4px] text-gray-900 font-primary">
                   {title}
                 </h1>
-                <div className="flex gap-2 items-center text-4xl md:text-5xl lg:text-7xl font-bold tracking-[0.4px] justify-center">
-                  <span className="text-indigo-600">{highlightText}</span>
+                <div className="flex gap-2 items-center text-[32px]  md:text-5xl lg:text-5xl font-bold tracking-[0.4px] justify-center">
+                  <span className="text-indigo-600 leading-tight">
+                    {highlightText}
+                  </span>
                   {highlightIcon && (
-                    <span className="text-primary-dark flex items-center  ">
+                    <span className="text-primary-dark items-center lg:block hidden ">
                       {highlightIcon}
                     </span>
                   )}
@@ -63,7 +65,7 @@ const HeroSection: FC<HeroSectionProps> = ({
               </div>
             </div>
             <div className="flex flex-col  lg:gap-16 gap-8 justify-center items-center">
-              <p className="text-sm md:text-xl max-w-5xl mx-auto text-center">
+              <p className="text-sm md:text-lg lg:text-lg max-w-5xl mx-auto text-center font-secondary">
                 {description}
               </p>
               <a href={buttonLink || "#"}>
