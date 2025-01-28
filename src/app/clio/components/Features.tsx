@@ -11,6 +11,7 @@ export default function FeatureComponent() {
       <div className="flex flex-col md:flex-row justify-between items-start lg:gap-28 gap-16 ">
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">
           <Image
+            loading="lazy"
             src="/meetai.png"
             alt="Storefront AI Concierge"
             width={600}
@@ -32,6 +33,7 @@ export default function FeatureComponent() {
         </div>
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-10 gap-5">
           <Image
+            loading="lazy"
             src="/meetai.png"
             alt="Unified Support Desk"
             width={600}

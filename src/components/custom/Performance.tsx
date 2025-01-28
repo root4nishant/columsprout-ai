@@ -24,6 +24,7 @@ export default function PerformanceSection() {
           ))}
         </div>
         <Image
+          loading="lazy"
           src="/performance-mockup.jpg"
           alt="Performance Mockup"
           className="mt-10 mx-auto rounded-md shadow-lg"

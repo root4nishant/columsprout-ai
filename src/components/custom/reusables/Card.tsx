@@ -34,6 +34,7 @@ export default function ReusableCard({ data }: ProductCardProps) {
             <CarouselItem key={index}>
               <div className="relative aspect-[2/1] w-full h-auto z-5 ">
                 <Image
+                  // loading="lazy"
                   src={image || "/placeholder.svg"}
                   alt={`${data?.title} - View ${index + 1}`}
                   fill

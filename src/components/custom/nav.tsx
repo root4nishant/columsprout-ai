@@ -22,12 +22,12 @@ export default function Navbar() {
           <div className="flex items-center gap-12">
             <Link href="/" className="text-white font-semibold text-xl">
               <Image
+                loading="lazy"
                 src="/logo.png"
                 alt="Logo"
                 className="md:w-60 w-40 lg:w-auto"
                 width={200}
                 height={200}
-                loading="lazy"
               />
             </Link>
             <div className="relative" onMouseEnter={handleMouseEnter}>

@@ -1,45 +1,57 @@
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Sparkles } from "lucide-react";
-import React from "react";
-import HeroSection from "./components/Hero";
-import VideoWithMessages from "../clio/components/Video";
-import TabiInAction from "./components/Action";
-import FAQ from "./components/FAQs";
-import Banner from "@/components/custom/reusables/Banner";
-import UseCase from "./components/UseCase";
+
+// Dynamically import components
+const HeroSection = dynamic(() => import("./components/Hero"));
+const VideoWithMessages = dynamic(() => import("../clio/components/Video"));
+const TabiInAction = dynamic(() => import("./components/Action"));
+const FAQ = dynamic(() => import("./components/FAQs"));
+const UseCase = dynamic(() => import("./components/UseCase"));
+const Banner = dynamic(() => import("@/components/custom/reusables/Banner"));
 
 function TabiPage() {
   return (
     <div className="w-full mx-auto lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 font-primary">
-      <HeroSection
-        gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
-        tagText="Introducing"
-        title="Tabi AI"
-        highlightText="Transform Data at Speed"
-        highlightIcon={<Sparkles />}
-        description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
-        buttonText="Try Now"
-        buttonLink="/try"
-        // additionalButton={{
-        //   text: "Learn More",
-        //   size: "lg",
-        //   variant: "outline",
-        //   className:
-        //     "border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white",
-        //   onClick: () => console.log("Learn More clicked"),
-        // }}
-      />
-      <VideoWithMessages />
-      <TabiInAction />
-      <div className="relative w-[100vw] left-1/2 right-1/2 -mx-[50vw] bg-gradient-to-b from-primary-dark/10 to-white ">
-        <UseCase />
-        <FAQ />
+      <Suspense fallback={<div>Loading Hero Section...</div>}>
+        <HeroSection
+          gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
+          tagText="Introducing"
+          title="Tabi AI"
+          highlightText="Transform Data at Speed"
+          highlightIcon={<Sparkles />}
+          description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
+          buttonText="Try Now"
+          buttonLink="/try"
+        />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading Video Section...</div>}>
+        <VideoWithMessages />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading Tabi in Action Section...</div>}>
+        <TabiInAction />
+      </Suspense>
+
+      <div className="relative w-[100vw] left-1/2 right-1/2 -mx-[50vw] bg-gradient-to-b from-primary-dark/10 to-white">
+        <Suspense fallback={<div>Loading Use Cases...</div>}>
+          <UseCase />
+        </Suspense>
+
+        <Suspense fallback={<div>Loading FAQ...</div>}>
+          <FAQ />
+        </Suspense>
       </div>
-      <Banner
-        message="Empower your data and marketing teams "
-        buttonText="Try Now"
-        buttonLink="/try"
-        message2="with Lomi — get started today!"
-      />
+
+      <Suspense fallback={<div>Loading Banner...</div>}>
+        <Banner
+          message="Empower your data and marketing teams "
+          buttonText="Try Now"
+          buttonLink="/try"
+          message2="with Lomi — get started today!"
+        />
+      </Suspense>
     </div>
   );
 }

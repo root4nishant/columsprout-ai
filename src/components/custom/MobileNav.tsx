@@ -31,6 +31,7 @@ export default function MobileNavigation({
       <ul className="flex flex-col items-start justify-start h-full gap-6">
         <div className="flex gap-2 bg-[#1a1a1a] w-full py-8 px-5 items-center">
           <Image
+            loading="lazy"
             src="/logo.svg"
             alt="Logo"
             className="invert"

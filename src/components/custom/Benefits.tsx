@@ -98,6 +98,7 @@ const Benefits = () => {
             <div className="border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent lg:h-[300px] h-[120px] lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1">
               <div className="rounded-lg overflow-hidden bg-[#EDEDFF] h-auto">
                 <Image
+                  loading="lazy"
                   src={stat.image}
                   alt={stat.title}
                   width={1000}
@@ -157,6 +158,7 @@ const Benefits = () => {
         >
           <div className="py-2 flex justify-center items-center">
             <Image
+              loading="lazy"
               src={stat.image}
               alt={stat.title}
               width={800}

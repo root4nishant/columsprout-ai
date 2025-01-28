@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
       <div className=" mx-auto flex lg:max-w-[1400px] md:max-w-[900px] w-full px-6 lg:px-20 flex-row items-center justify-between py-4">
         <div className="flex items-center lg:space-x-6 space-x-2 md:flex-row flex-col">
           <Image
+            loading="lazy"
             src="/logo.svg"
             alt="Logo"
             className="w-10 "

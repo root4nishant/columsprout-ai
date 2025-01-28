@@ -57,6 +57,7 @@ export default function TabiInAction() {
                 }`}
               >
                 <Image
+                  loading="lazy"
                   src={card.imageSrc}
                   alt={card.imageAlt}
                   fill
