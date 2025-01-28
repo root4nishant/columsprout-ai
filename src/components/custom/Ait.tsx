@@ -6,7 +6,10 @@ import Section from "./reusables/Section";
 export default function AITeamSection() {
   const productData = [
     {
-      images: ["/hero.png", "/hero.png", "/hero.png"],
+      images: [
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-clio-1-tp.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-clio-2-tp.webp",
+      ],
       title: "Clio AI",
       description:
         "Seamlessly transform meaningful customer interactions into sales with your store's AI concierge",
@@ -14,7 +17,11 @@ export default function AITeamSection() {
       link: "/clio",
     },
     {
-      images: ["/hero.png", "/hero.png", "/hero.png"],
+      images: [
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-1-tp.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-2-tp.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-3-tp.webp",
+      ],
       title: "Tabi AI",
       description:
         "Seamlessly transform meaningful customer interactions into sales with your store's AI concierge",

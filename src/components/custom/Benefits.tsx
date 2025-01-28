@@ -35,7 +35,8 @@ const Benefits = () => {
       description:
         "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
       icon: <DollarSign className="w-6 h-6 text-primary-dark" />,
-      image: "/image.png",
+      image:
+        "https://storage.googleapis.com/cs-website-assets/homepage/benefits-1-dd.webp",
     },
     {
       percentage: "70%",
@@ -43,7 +44,8 @@ const Benefits = () => {
       description:
         "Boost precision with advanced data batching pipelines that outperform traditional LLMs.",
       icon: <Target className="w-6 h-6 text-primary-dark" />,
-      image: "/image.png",
+      image:
+        "https://storage.googleapis.com/cs-website-assets/homepage/benefits-2-dd.webp",
     },
     {
       percentage: "75%",
@@ -51,7 +53,8 @@ const Benefits = () => {
       description:
         "Simplify tasks, prioritize strategy, and deliver rapid results.",
       icon: <Timer className="w-6 h-6 text-primary-dark" />,
-      image: "/image.png",
+      image:
+        "https://storage.googleapis.com/cs-website-assets/homepage/benefits-3-dd.webp",
     },
   ];
 
@@ -103,7 +106,7 @@ const Benefits = () => {
                   alt={stat.title}
                   width={1000}
                   height={800}
-                  className="w-full object-cover lg:h-[300px] h-[120px]"
+                  className="w-full lg:h-[300px] h-[120px]"
                 />
               </div>
             </div>

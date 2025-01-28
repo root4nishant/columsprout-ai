@@ -33,16 +33,30 @@ const HeroSection: FC<HeroSectionProps> = ({
   // additionalButton,
 }) => {
   return (
-    <div>
-      <div
-        className={` font-primary absolute inset-0 z-[-10] bg-[url("/hero.png")] bg-no-repeat lg:bg-fit bg-cover w-full mx-auto`}
-      ></div>
+    <div className=" w-full mx-auto">
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 z-[-10] w-full h-full object-cover"
+      >
+        <source
+          src="https://storage.googleapis.com/cs-website-assets/homepage/homepage-hero.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Gradient Overlay */}
       <div
         className={`absolute inset-0 ${
           gradientOverlay ||
           "bg-gradient-to-b from-gray-900/50 via-transparent to-white"
-        } z-[-10] w-full mx-auto`}
+        } z-[-10]`}
       ></div>
+
       <Section className="flex flex-col items-center justify-center bg-no-repeat bg-cover relative">
         <div className="z-10 py-20 md:py-0 md:pt-28 lg:pt-24 pt-20">
           <div className="lg:max-w-5xl w-full mx-auto text-center lg:gap-8 gap-3 flex flex-col">
@@ -53,7 +67,9 @@ const HeroSection: FC<HeroSectionProps> = ({
                   {title}
                 </h1>
                 <div className="flex gap-2 items-center text-4xl md:text-5xl lg:text-7xl font-bold tracking-[0.4px] justify-center">
-                  <span className="text-indigo-600 font-primary">{highlightText}</span>
+                  <span className="text-indigo-600 font-primary">
+                    {highlightText}
+                  </span>
                   {highlightIcon && (
                     <span className="text-primary-dark flex items-center  ">
                       {highlightIcon}
