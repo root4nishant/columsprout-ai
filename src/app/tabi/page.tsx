@@ -4,7 +4,7 @@ import { Sparkles } from "lucide-react";
 
 // Dynamically import components
 const HeroSection = dynamic(() => import("./components/Hero"));
-const VideoWithMessages = dynamic(() => import("../clio/components/Video"));
+const VideoWithMessages = dynamic(() => import("./components/Video"));
 const TabiInAction = dynamic(() => import("./components/Action"));
 const FAQ = dynamic(() => import("./components/FAQs"));
 const UseCase = dynamic(() => import("./components/UseCase"));

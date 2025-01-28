@@ -13,7 +13,8 @@ const cardData = [
     description:
       "Streamline your process with our innovative tools. Built for modern teams, our platform helps you achieve more in less time.",
     buttonText: "Learn More",
-    imageSrc: "/tabi1.svg",
+    imageSrc:
+      "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-1-dd.webp",
     imageAlt: "Feature illustration",
     imageLeftOnLg: true,
   },
@@ -23,7 +24,8 @@ const cardData = [
     description:
       "Gain deep insights into your data with advanced analytics. Make informed decisions backed by real-time metrics and comprehensive reports.",
     buttonText: "Explore Analytics",
-    imageSrc: "/tabi2.svg",
+    imageSrc:
+      "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-2-dd.webp",
     imageAlt: "Analytics illustration",
     imageLeftOnLg: false,
   },
@@ -33,7 +35,8 @@ const cardData = [
     description:
       "Work together effortlessly with your team. Our collaborative features ensure everyone stays in sync and projects move forward smoothly.",
     buttonText: "Start Collaborating",
-    imageSrc: "/tabi3.svg",
+    imageSrc:
+      "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-3-dd.webp",
     imageAlt: "Collaboration illustration",
     imageLeftOnLg: true,
   },
@@ -44,11 +47,11 @@ export default function TabiInAction() {
     <Section>
       {/* <Tag text="Features" /> */}
       <Heading text="Tabi in Action" />
-      <div className="mx-auto lg:py-12 py-0 max-w-[1000px] border lg:space-y-12 space-y-4 flex flex-col items-center">
+      <div className="mx-auto lg:py-12 py-0 max-w-[1000px] border-none lg:space-y-12 space-y-4 flex flex-col items-center">
         {cardData.map((card) => (
           <Card
             key={card.id}
-            className="overflow-hidden border shadow-none bg-transparent"
+            className="overflow-hidden border-none shadow-none bg-transparent"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-between lg:gap-6 md:gap-4 gap-2">
               <div
