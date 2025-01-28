@@ -27,7 +27,8 @@ export function ProductsDropdown({
               <div>
                 <div className="mb-6">
                   <Image
-                    src="/hero.png"
+                    loading="lazy"
+                    src="https://storage.googleapis.com/cs-website-assets/dropdown/clio-ai.webp"
                     alt="Tabi AI"
                     width={400}
                     height={200}
@@ -53,7 +54,8 @@ export function ProductsDropdown({
               <div>
                 <div className="mb-6">
                   <Image
-                    src="/hero.png"
+                    loading="lazy"
+                    src="https://storage.googleapis.com/cs-website-assets/dropdown/tabi-ai.webp"
                     alt="Clio AI"
                     width={400}
                     height={200}
