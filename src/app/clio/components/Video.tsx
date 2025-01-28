@@ -57,7 +57,11 @@ const VideoWithMessages = () => {
         <video
           ref={videoRef}
           className="w-auto object-cover"
-          src={isInView ? "/clio.mp4" : undefined}
+          src={
+            isInView
+              ? "https://storage.googleapis.com/cs-website-assets/clio/clio-hero-dd.webm"
+              : undefined
+          }
           autoPlay={isInView}
           loop
           muted

@@ -18,7 +18,7 @@ function Integration() {
         </h1>
         <Image
           loading="lazy"
-          src="/clioInt.png"
+          src="https://storage.googleapis.com/cs-website-assets/clio/clio-integrations-dd.webp"
           alt="Integration"
           width={1000}
           height={400}
