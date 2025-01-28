@@ -34,24 +34,27 @@ const Benefits = () => {
       title: "Lower Operational Costs",
       description:
         "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
-      icon: <DollarSign className="w-6 h-6 text-blue-600" />,
-      image: "/image.png",
+      icon: <DollarSign className="w-6 h-6 text-primary-dark" />,
+      image:
+        "https://storage.googleapis.com/cs-website-assets/homepage/benefits-1-dd.webp",
     },
     {
       percentage: "70%",
       title: "Increase in Accuracy",
       description:
         "Boost precision with advanced data batching pipelines that outperform traditional LLMs.",
-      icon: <Target className="w-6 h-6 text-blue-600" />,
-      image: "/image.png",
+      icon: <Target className="w-6 h-6 text-primary-dark" />,
+      image:
+        "https://storage.googleapis.com/cs-website-assets/homepage/benefits-2-dd.webp",
     },
     {
       percentage: "75%",
       title: "Faster Results",
       description:
         "Simplify tasks, prioritize strategy, and deliver rapid results.",
-      icon: <Timer className="w-6 h-6 text-blue-600" />,
-      image: "/image.png",
+      icon: <Timer className="w-6 h-6 text-primary-dark" />,
+      image:
+        "https://storage.googleapis.com/cs-website-assets/homepage/benefits-3-dd.webp",
     },
   ];
 
@@ -98,11 +101,12 @@ const Benefits = () => {
             <div className="border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent lg:h-[300px] h-[120px] lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1">
               <div className="rounded-lg overflow-hidden bg-[#EDEDFF] h-auto">
                 <Image
+                  loading="lazy"
                   src={stat.image}
                   alt={stat.title}
                   width={1000}
                   height={800}
-                  className="w-full object-cover lg:h-[300px] h-[120px]"
+                  className="w-full lg:h-[300px] h-[120px]"
                 />
               </div>
             </div>
@@ -135,7 +139,7 @@ const Benefits = () => {
             <h3 className="text-[18px] font-semibold text-gray-800 font-primary">
               {stat.title}
             </h3>
-            <p className="text-[18px] font-secondary text-gray-600 text-justify">
+            <p className="text-[18px] font-secondary text-gray-600 text-left">
               {stat.description}
             </p>
           </div>
@@ -157,6 +161,7 @@ const Benefits = () => {
         >
           <div className="py-2 flex justify-center items-center">
             <Image
+              loading="lazy"
               src={stat.image}
               alt={stat.title}
               width={800}

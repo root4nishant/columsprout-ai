@@ -11,18 +11,21 @@ export default function FeatureComponent() {
       <div className="flex flex-col md:flex-row justify-between items-start lg:gap-28 gap-16 ">
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">
           <Image
-            src="/meetai.png"
+            loading="lazy"
+            src="https://storage.googleapis.com/cs-website-assets/clio/clio-chat-tp.webp"
             alt="Storefront AI Concierge"
             width={600}
-            height={400}
-            className="rounded-lg shadow-md w-full lg:h-80 h-auto "
+            height={300}
+            className="rounded-lg shadow-md w-full aspect-[2/1] "
           />
           <div className="flex flex-col lg:gap-4 gap-2">
-            <h3 className="text-lg font-bold text-[#423EC7] uppercase">
+            <h3 className="lg:text-lg md:text-md text-sm font-bold text-primary-dark uppercase font-secondary">
               Customer Facing
             </h3>
-            <h2 className="text-2xl font-semibold">Storefront AI Concierge</h2>
-            <p className=" text-gray-600 text-lg font-secondary">
+            <h2 className="lg:text-2xl md:text-xl text-lg font-semibold font-primary">
+              Storefront AI Concierge
+            </h2>
+            <p className=" text-gray-600 lg:text-lg md:text-md text-sm font-secondary">
               Seamlessly automate customer conversations across channels, while
               maintaining your brand&apos;s voice.
             </p>
@@ -30,18 +33,21 @@ export default function FeatureComponent() {
         </div>
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-10 gap-5">
           <Image
-            src="/meetai.png"
+            loading="lazy"
+            src="https://storage.googleapis.com/cs-website-assets/clio/clio-bo-tp.webp"
             alt="Unified Support Desk"
             width={600}
             height={400}
-            className="rounded-lg shadow-md w-full lg:h-80 h-auto  "
+            className="rounded-lg shadow-md w-full aspect-[2/1]  "
           />
           <div className="flex flex-col lg:gap-4 gap-2">
-            <h3 className="text-lg font-bold text-[#423EC7]  uppercase">
+            <h3 className="lg:text-lg md:text-md text-sm font-bold text-primary-dark font-secondary uppercase">
               Back Office
             </h3>
-            <h2 className="text-2xl font-semibold">Unified Support Desk</h2>
-            <p className=" text-gray-600 text-lg font-secondary">
+            <h2 className="lg:text-2xl md:text-xl text-lg font-primary font-semibold">
+              Unified Support Desk
+            </h2>
+            <p className=" text-gray-600 lg:text-lg md:text-md text-sm font-secondary">
               Enhance customer experience while solving 30% more tickets every
               day.
             </p>

@@ -26,7 +26,7 @@ const Banner: React.FC<BannerProps> = ({
           </h2>
           <div className="flex justify-center gap-6">
             <Link href={buttonLink} passHref>
-              <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-[#D6CFB6] text-[#423EC7] rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
+              <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-[#D6CFB6] text-primary-dark rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-black hover:text-white transition-colors duration-300">
                 {buttonText}
               </Button>
             </Link>

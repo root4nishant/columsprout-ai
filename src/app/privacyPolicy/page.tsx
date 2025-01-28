@@ -87,7 +87,7 @@ const PrivacyPolicy = () => {
             in the application. You can email us at{" "}
             <a
               href="mailto:connect@columsprout.ai"
-              className="text-blue-600 hover:underline"
+              className="text-primary-dark hover:underline"
             >
               connect@columsprout.ai
             </a>{" "}
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
             your data, please contact us at{" "}
             <a
               href="mailto:connect@columsprout.ai"
-              className="text-blue-600 hover:underline"
+              className="text-primary-dark hover:underline"
             >
               connect@columsprout.ai
             </a>
@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
       <Banner
         message="Try Columsprout AI today & "
         buttonText="Try Now"
-        buttonLink="/"
+        buttonLink="/try"
         message2="Elevate your Storefront"
       />
     </div>

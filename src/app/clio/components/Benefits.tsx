@@ -35,7 +35,7 @@ const Benefits = () => {
           shadow-xl bg-white hover:shadow-2xl hover:shadow-gray-300 texl-left"
         >
           <div className="flex flex-col lg:gap-4 gap-2">
-            <div className="lg:text-5xl md:text-3xl text-2xl font-semibold transition-colors duration-300 text-primary-dark">
+            <div className="lg:text-[42px] md:text-3xl text-2xl font-semibold transition-colors duration-300 text-primary-dark">
               {stat.percentage}
             </div>
             <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-gray-800">
@@ -63,7 +63,7 @@ const Benefits = () => {
       ></div> */}
 
       {/* Section content */}
-      <Section className=" flex flex-col items-center justify-between py-20 w-full">
+      <Section className=" flex flex-col items-center justify-between lg:py-20 w-full">
         <div className="z-10 mx-auto w-full">
           {/* <Tag text="Benefits" /> */}
           <Heading text="Unlock Transformative Benefits" className="pb-0" />

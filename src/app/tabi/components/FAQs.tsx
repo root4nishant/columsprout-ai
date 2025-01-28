@@ -42,7 +42,7 @@ const faqData = [
 
 export default function FAQ() {
   return (
-    <div className="w-full mx-auto py-12 px-4">
+    <div className="w-full mx-auto py-12 px-4 lg:max-w-[1400px] md:max-w-[900px] lg:px-20">
       <Heading text="Frequently Asked Questions" />
 
       <Accordion
@@ -51,7 +51,7 @@ export default function FAQ() {
         className="w-full border p-5 rounded-sm"
       >
         {faqData.map((faq) => (
-          <AccordionItem key={faq.id} value={faq.id}>
+          <AccordionItem key={faq.id} value={faq.id} className="border-0">
             <AccordionTrigger className="font-primary text-left lg:text-lg text-sm hover:no-underline">
               {faq.question}
             </AccordionTrigger>

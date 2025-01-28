@@ -4,6 +4,7 @@ import Section from "@/components/custom/reusables/Section";
 // import Tag from "@/components/custom/Tag";
 import Heading from "@/components/custom/reusables/Heading";
 import { Button } from "@/components/custom/reusables/button";
+import Link from "next/link";
 
 const cardData = [
   {
@@ -12,7 +13,8 @@ const cardData = [
     description:
       "Streamline your process with our innovative tools. Built for modern teams, our platform helps you achieve more in less time.",
     buttonText: "Learn More",
-    imageSrc: "/tabi1.svg",
+    imageSrc:
+      "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-1-dd.webp",
     imageAlt: "Feature illustration",
     imageLeftOnLg: true,
   },
@@ -22,7 +24,8 @@ const cardData = [
     description:
       "Gain deep insights into your data with advanced analytics. Make informed decisions backed by real-time metrics and comprehensive reports.",
     buttonText: "Explore Analytics",
-    imageSrc: "/tabi2.svg",
+    imageSrc:
+      "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-2-dd.webp",
     imageAlt: "Analytics illustration",
     imageLeftOnLg: false,
   },
@@ -32,7 +35,8 @@ const cardData = [
     description:
       "Work together effortlessly with your team. Our collaborative features ensure everyone stays in sync and projects move forward smoothly.",
     buttonText: "Start Collaborating",
-    imageSrc: "/tabi3.svg",
+    imageSrc:
+      "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-3-dd.webp",
     imageAlt: "Collaboration illustration",
     imageLeftOnLg: true,
   },
@@ -43,19 +47,20 @@ export default function TabiInAction() {
     <Section>
       {/* <Tag text="Features" /> */}
       <Heading text="Tabi in Action" />
-      <div className="mx-auto lg:py-12 py-0 lg:space-y-12 space-y-4 flex flex-col items-center">
+      <div className="mx-auto lg:py-12 py-0 max-w-[1000px] border-none lg:space-y-12 space-y-4 flex flex-col items-center">
         {cardData.map((card) => (
           <Card
             key={card.id}
             className="overflow-hidden border-none shadow-none bg-transparent"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 md:gap-4 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 justify-between lg:gap-6 md:gap-4 gap-2">
               <div
                 className={`relative h-[300px] lg:h-full min-h-[300px] ${
                   card.imageLeftOnLg ? "order-1" : "lg:order-2"
                 }`}
               >
                 <Image
+                  loading="lazy"
                   src={card.imageSrc}
                   alt={card.imageAlt}
                   fill
@@ -77,9 +82,11 @@ export default function TabiInAction() {
             </div>
           </Card>
         ))}
-        <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
-          Try Now
-        </Button>
+        <Link href="/try">
+          <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
+            Try Now
+          </Button>
+        </Link>
       </div>
     </Section>
   );

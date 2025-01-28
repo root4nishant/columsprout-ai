@@ -59,7 +59,7 @@ const VideoWithMessages = () => {
           className="w-auto object-cover"
           src={
             isInView
-              ? "https://storage.googleapis.com/cs-website-assets/clio/clio-hero-dd.webm"
+              ? "https://storage.googleapis.com/cs-website-assets/tabi/tabi-hero-dd.webm"
               : undefined
           }
           autoPlay={isInView}

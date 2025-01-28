@@ -16,12 +16,15 @@ export default function PerformanceSection() {
         <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-3">
           {performanceStats.map((stat, index) => (
             <div key={index} className="p-6 bg-white rounded-lg shadow">
-              <h3 className="text-4xl font-bold text-blue-600">{stat.value}</h3>
+              <h3 className="text-4xl font-bold text-primary-dark">
+                {stat.value}
+              </h3>
               <p className="mt-2 text-gray-600">{stat.title}</p>
             </div>
           ))}
         </div>
         <Image
+          loading="lazy"
           src="/performance-mockup.jpg"
           alt="Performance Mockup"
           className="mt-10 mx-auto rounded-md shadow-lg"
