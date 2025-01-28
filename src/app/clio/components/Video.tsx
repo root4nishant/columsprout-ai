@@ -1,6 +1,6 @@
 "use client";
 import Section from "@/components/custom/reusables/Section";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const VideoWithMessages = () => {
   const [currentMessage, setCurrentMessage] = useState(0);
@@ -25,13 +25,40 @@ const VideoWithMessages = () => {
     return () => clearInterval(interval);
   }, [messages.length]);
 
+  const videoRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const currentVideoRef = videoRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentVideoRef) {
+      observer.observe(currentVideoRef);
+    }
+
+    return () => {
+      if (currentVideoRef) {
+        observer.unobserve(currentVideoRef);
+      }
+    };
+  }, []);
+
   return (
     <Section>
-      <div className="relative h-auto items-start justify-start overflow-hidden rounded-md">
+      <div className="relative lg:h-[90vh] items-start justify-start overflow-hidden rounded-md">
         <video
+          ref={videoRef}
           className="w-auto object-cover"
-          src="/clio.mp4"
-          autoPlay
+          src={isInView ? "/clio.mp4" : undefined}
+          autoPlay={isInView}
           loop
           muted
           width={400}

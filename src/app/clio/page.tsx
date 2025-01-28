@@ -18,7 +18,7 @@ function page() {
         highlightIcon={<Sparkles />}
         description="Use Cleo AI to create world-class Customer Experiences and provide Outstanding Support"
         buttonText="Try Now"
-        buttonLink="/get-started"
+        buttonLink="/try"
         // additionalButton={{
         //   text: "Learn More",
         //   size: "lg",
@@ -36,7 +36,7 @@ function page() {
       <Banner
         message="Join the waitlist "
         buttonText="Try Now"
-        buttonLink="/"
+        buttonLink="/try"
         message2="for the Cleo AI"
       />
     </div>

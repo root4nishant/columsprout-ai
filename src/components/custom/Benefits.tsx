@@ -34,7 +34,7 @@ const Benefits = () => {
       title: "Lower Operational Costs",
       description:
         "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
-      icon: <DollarSign className="w-6 h-6 text-blue-600" />,
+      icon: <DollarSign className="w-6 h-6 text-primary-dark" />,
       image: "/image.png",
     },
     {
@@ -42,7 +42,7 @@ const Benefits = () => {
       title: "Increase in Accuracy",
       description:
         "Boost precision with advanced data batching pipelines that outperform traditional LLMs.",
-      icon: <Target className="w-6 h-6 text-blue-600" />,
+      icon: <Target className="w-6 h-6 text-primary-dark" />,
       image: "/image.png",
     },
     {
@@ -50,7 +50,7 @@ const Benefits = () => {
       title: "Faster Results",
       description:
         "Simplify tasks, prioritize strategy, and deliver rapid results.",
-      icon: <Timer className="w-6 h-6 text-blue-600" />,
+      icon: <Timer className="w-6 h-6 text-primary-dark" />,
       image: "/image.png",
     },
   ];
@@ -135,7 +135,7 @@ const Benefits = () => {
             <h3 className="text-[18px] font-semibold text-gray-800 font-primary">
               {stat.title}
             </h3>
-            <p className="text-[18px] font-secondary text-gray-600 text-justify">
+            <p className="text-[18px] font-secondary text-gray-600 text-left">
               {stat.description}
             </p>
           </div>

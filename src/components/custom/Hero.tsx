@@ -67,7 +67,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 {description}
               </p>
               <a href={buttonLink || "#"}>
-                <Button className=" bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-6 rounded-md">
+                <Button className=" bg-primary-dark hover:bg-white text-white hover:text-black font-semibold py-6 rounded-md">
                   {buttonText}
                 </Button>
               </a>

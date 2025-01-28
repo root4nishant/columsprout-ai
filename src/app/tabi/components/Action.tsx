@@ -4,6 +4,7 @@ import Section from "@/components/custom/reusables/Section";
 // import Tag from "@/components/custom/Tag";
 import Heading from "@/components/custom/reusables/Heading";
 import { Button } from "@/components/custom/reusables/button";
+import Link from "next/link";
 
 const cardData = [
   {
@@ -43,13 +44,13 @@ export default function TabiInAction() {
     <Section>
       {/* <Tag text="Features" /> */}
       <Heading text="Tabi in Action" />
-      <div className="mx-auto lg:py-12 py-0 lg:space-y-12 space-y-4 flex flex-col items-center">
+      <div className="mx-auto lg:py-12 py-0 max-w-[1000px] border lg:space-y-12 space-y-4 flex flex-col items-center">
         {cardData.map((card) => (
           <Card
             key={card.id}
-            className="overflow-hidden border-none shadow-none bg-transparent"
+            className="overflow-hidden border shadow-none bg-transparent"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 md:gap-4 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 justify-between lg:gap-6 md:gap-4 gap-2">
               <div
                 className={`relative h-[300px] lg:h-full min-h-[300px] ${
                   card.imageLeftOnLg ? "order-1" : "lg:order-2"
@@ -77,9 +78,11 @@ export default function TabiInAction() {
             </div>
           </Card>
         ))}
-        <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
-          Try Now
-        </Button>
+        <Link href="/try">
+          <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-primary-dark text-white rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-white hover:text-black transition-colors duration-300">
+            Try Now
+          </Button>
+        </Link>
       </div>
     </Section>
   );

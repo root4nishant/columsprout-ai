@@ -15,7 +15,7 @@ export default function Home() {
         highlightIcon={<Sparkles />}
         description="Unleash the power of AI to automate repetitive tasks, enhance your storefront experience, personalize customer interactions, and drive higher sales conversions effortlessly"
         buttonText="Book Demo"
-        buttonLink="/get-started"
+        buttonLink="https://calendly.com/meghav-columsprout"
       />
       <AITeamSection />
 
@@ -27,7 +27,7 @@ export default function Home() {
         <Banner
           message="Try Columsprout AI today & "
           buttonText="Try Now"
-          buttonLink="/"
+          buttonLink="/try"
           message2="Elevate your Storefront"
         />
       </div>

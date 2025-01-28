@@ -9,7 +9,7 @@ function PricingPage() {
       <Banner
         message="Try Columsprout AI today & "
         buttonText="Try Now"
-        buttonLink="/"
+        buttonLink="/try"
         message2="Elevate your Storefront"
       />
     </div>

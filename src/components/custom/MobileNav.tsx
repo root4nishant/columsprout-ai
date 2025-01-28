@@ -60,7 +60,7 @@ export default function MobileNavigation({
         </li>
         <li className="w-full px-6">
           <Link
-            href="#"
+            href="/try"
             className="text-black text-xl font-bold"
             onClick={onClose}
           >

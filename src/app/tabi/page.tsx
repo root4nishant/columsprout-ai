@@ -18,7 +18,7 @@ function TabiPage() {
         highlightIcon={<Sparkles />}
         description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
         buttonText="Try Now"
-        buttonLink="/get-started"
+        buttonLink="/try"
         // additionalButton={{
         //   text: "Learn More",
         //   size: "lg",
@@ -30,12 +30,14 @@ function TabiPage() {
       />
       <VideoWithMessages />
       <TabiInAction />
-      <UseCase />
-      <FAQ />
+      <div className="relative w-[100vw] left-1/2 right-1/2 -mx-[50vw] bg-gradient-to-b from-primary-dark/10 to-white ">
+        <UseCase />
+        <FAQ />
+      </div>
       <Banner
         message="Empower your data and marketing teams "
         buttonText="Try Now"
-        buttonLink="/"
+        buttonLink="/try"
         message2="with Lomi — get started today!"
       />
     </div>

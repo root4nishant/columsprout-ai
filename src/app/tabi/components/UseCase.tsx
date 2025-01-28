@@ -32,24 +32,24 @@ const useCases = [
 
 export default function UseCase() {
   return (
-    <div className="w-full mx-auto py-12">
+    <div className="w-full mx-auto py-12 lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4">
       {/* <Tag text="Use Cases" /> */}
       <Heading text="Choose from a Use Case suite" />
 
-      <div className="lg:grid md:grid flex flex-col md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
+      <div className="lg:grid md:grid flex flex-col md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center border">
         {useCases.map((useCase, index) => (
           <Card
             key={index}
-            className=" hover:bg-gray-100 transition-colors cursor-pointer rounded-sm lg:h-[192px]  justify-center items-center flex lg:w-full md:w-full w-[200px] "
+            className=" hover:bg-gray-100 transition-colors cursor-pointer rounded-sm lg:h-[192px]  justify-center items-center flex lg:w-full md:w-full w-[300px] "
           >
-            <div className="lg:p-4 p-2  gap-5 flex flex-col">
+            <div className="lg:p-4 p-2  lg:gap-5 gap-3 flex flex-col">
               <CardHeader className="p-0">
-                <CardTitle className="lg:text-2xl text-md font-semibold">
+                <CardTitle className="lg:text-2xl text-lg font-semibold">
                   {useCase.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <p className="text-sm lg:text-md text-muted-foreground font-secondary">
+                <p className="text-sm lg:text-lg text-muted-foreground font-secondary">
                   {useCase.description}
                 </p>
               </CardContent>
@@ -58,9 +58,9 @@ export default function UseCase() {
         ))}
 
         {/* Build Your Own Card */}
-        <Card className=" hover:bg-gray-100 transition-colors cursor-pointer border-primary-dark rounded-sm lg:justify-center items-center justify-start flex lg:h-[192px] lg:w-full md:w-full md:h-full w-[200px]">
+        <Card className=" hover:bg-gray-100 transition-colors cursor-pointer border-primary-dark rounded-sm lg:justify-center items-center justify-start flex lg:h-[192px] lg:w-full md:w-full md:h-full w-[300px]">
           <CardHeader>
-            <CardTitle className="lg:text-2xl text-md font-semibold flex  gap-2">
+            <CardTitle className="lg:text-2xl text-md font-semibold flex justify-center items-center  gap-2">
               <Pencil className="w-4 h-4" />
               Or Build your Own!
             </CardTitle>
