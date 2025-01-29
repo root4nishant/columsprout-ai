@@ -27,7 +27,7 @@ export default function Navbar() {
                 alt="Logo"
                 className="md:w-60 w-40 lg:w-auto"
                 width={200}
-                height={200}
+                height={40}
               />
             </Link>
             <div className="relative" onMouseEnter={handleMouseEnter}>

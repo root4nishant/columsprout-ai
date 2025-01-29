@@ -98,15 +98,15 @@ const Benefits = () => {
           </div>
 
           {selectedCard === index && (
-            <div className="border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent lg:h-[300px] h-[120px] lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1">
+            <div className="border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent  lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1">
               <div className="rounded-lg overflow-hidden bg-[#EDEDFF] h-auto">
                 <Image
                   loading="lazy"
                   src={stat.image}
                   alt={stat.title}
                   width={1000}
-                  height={800}
-                  className="w-full lg:h-[300px] h-[120px]"
+                  height={150}
+                  className="w-full "
                 />
               </div>
             </div>
@@ -159,13 +159,13 @@ const Benefits = () => {
               : "opacity-0 z-10 transform scale-95"
           }`}
         >
-          <div className="py-2 flex justify-center items-center">
+          <div className="py-2 flex justify-center border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent  lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1 items-center">
             <Image
               loading="lazy"
               src={stat.image}
               alt={stat.title}
-              width={800}
-              height={600}
+              width={1000}
+              height={150}
               className="h-full w-full object-cover rounded-md shadow-md border"
             />
           </div>
@@ -175,7 +175,7 @@ const Benefits = () => {
   );
 
   return (
-    <Section className="flex flex-col lg:max-h-[560px]  w-full lg:mb-80 mb-0 ">
+    <Section className="flex flex-col lg:max-h-[560px]  w-full lg:mb-20 mb-0 ">
       <div className="lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 mx-auto">
         {/* <Tag text="Benefits" /> */}
         <Heading text="Experience the Era of AI Performance" />

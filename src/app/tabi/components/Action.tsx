@@ -64,7 +64,7 @@ export default function TabiInAction() {
                   src={card.imageSrc}
                   alt={card.imageAlt}
                   fill
-                  className="object-fit"
+                  className=" object-contain"
                 />
               </div>
               <div
