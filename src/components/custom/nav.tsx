@@ -59,7 +59,7 @@ export default function Navbar() {
           </div>
           <nav className="hidden lg:flex items-center gap-6">
             <Link
-              href="#"
+              href="/try"
               className="text-gray-300 hover:text-white text-md font-bold"
             >
              Try Tabi
