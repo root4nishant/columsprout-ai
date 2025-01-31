@@ -62,7 +62,7 @@ export default function Navbar() {
               href="#"
               className="text-gray-300 hover:text-white text-md font-bold"
             >
-              Start for free
+             Try Tabi
             </Link>
             <Button
               variant="default"

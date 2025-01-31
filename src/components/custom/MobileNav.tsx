@@ -65,7 +65,7 @@ export default function MobileNavigation({
             className="text-black text-xl font-bold"
             onClick={onClose}
           >
-            Start for free
+            Try Tabi
           </Link>
         </li>
         <li className="w-full px-6">
