@@ -36,7 +36,7 @@ export default function UseCase() {
       {/* <Tag text="Use Cases" /> */}
       <Heading text="Choose from a Use Case suite" />
 
-      <div className="lg:grid md:grid flex flex-col md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center border">
+      <div className="lg:grid md:grid flex flex-col md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center ">
         {useCases.map((useCase, index) => (
           <Card
             key={index}
