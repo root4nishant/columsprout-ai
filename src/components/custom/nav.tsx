@@ -64,12 +64,14 @@ export default function Navbar() {
             >
              Try Tabi
             </Link>
+            <Link href="https://calendly.com/meghav-columsprout">
             <Button
               variant="default"
               className="text-lg bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-secondary py-5 px-4"
             >
               Contact Us
             </Button>
+              </Link>
           </nav>
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
