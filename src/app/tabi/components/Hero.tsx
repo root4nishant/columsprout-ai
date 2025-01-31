@@ -50,18 +50,20 @@ const HeroSection: FC<HeroSectionProps> = ({
             <div className="flex flex-col gap-1">
               {tagText && <Tag text={tagText} />}
               <div className="flex flex-col lg:gap-2 gap-0">
-                <h1 className="text-[32px] md:text-5xl lg:text-5xl font-bold tracking-[0.4px] text-gray-900 font-primary">
-                  {title}
-                </h1>
+                <div className="flex justify-center items-center">
+                  <h1 className="text-[32px] md:text-5xl lg:text-5xl font-bold tracking-[0.4px] text-gray-900 font-primary">
+                    {title}
+                  </h1>
+                  {highlightIcon && (
+                    <span className="text-black items-center lg:block hidden ">
+                      {highlightIcon}
+                    </span>
+                  )}
+                </div>
                 <div className="flex gap-2 items-center text-[32px]  md:text-5xl lg:text-5xl font-bold tracking-[0.4px] justify-center">
                   <span className="text-indigo-600 leading-tight">
                     {highlightText}
                   </span>
-                  {highlightIcon && (
-                    <span className="text-primary-dark items-center lg:block hidden ">
-                      {highlightIcon}
-                    </span>
-                  )}
                 </div>
               </div>
             </div>
@@ -70,7 +72,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                 {description}
               </p>
               <Link href={buttonLink || "#"}>
-                <Button className=" bg-primary-dark hover:bg-white text-white hover:text-black font-semibold py-6 rounded-md">
+                <Button className=" bg-primary-dark hover:bg-black text-white hover:text-white font-semibold py-6 rounded-md">
                   {buttonText}
                 </Button>
               </Link>

@@ -84,7 +84,7 @@ const Benefits = () => {
                   <h3 className="text-[14px] lg:text-xl font-bold text-gray-900">
                     {stat.title}
                   </h3>
-                  <p className="text-[14px] lg:text-xl text-gray-600 text-justify">
+                  <p className="text-[14px] lg:text-xl text-gray-600 text-left">
                     {stat.description}
                   </p>
                 </div>

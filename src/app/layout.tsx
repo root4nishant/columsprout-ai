@@ -10,7 +10,7 @@ export const metadata = {
 
 const primaryFont = Montserrat({
   subsets: ["latin"],
-  weight: ["400","500", "700"],
+  weight: ["400", "500", "700"],
   variable: "--font-primary",
 });
 
@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${primaryFont.variable} ${secondaryFont.variable} antialiased`}
+        className={`${primaryFont.variable} ${secondaryFont.variable} antialiased min-h-screen flex flex-col`}
       >
         <Navbar />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
