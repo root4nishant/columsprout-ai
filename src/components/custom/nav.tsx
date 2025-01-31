@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { ProductsDropdown } from "./DropDown";
 import MobileNavigation from "./MobileNav";
+import { Button } from "../ui/button";
 
 export default function Navbar() {
   const [isProductsOpen, setProductsOpen] = useState(false);
@@ -13,6 +13,10 @@ export default function Navbar() {
 
   const handleMouseEnter = () => {
     setProductsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setProductsOpen(false);
   };
 
   return (
@@ -25,32 +29,35 @@ export default function Navbar() {
                 loading="lazy"
                 src="/logo.png"
                 alt="Logo"
-                className="md:w-60 w-40 lg:w-auto"
+                className="md:w-80 w-40 lg:w-auto"
                 width={200}
                 height={40}
               />
             </Link>
-            <div className="relative" onMouseEnter={handleMouseEnter}>
+            <div
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <Link
-                onClick={handleMouseEnter}
                 href="#"
-                className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
+                className="text-gray-300 hover:text-white text-md font-bold hidden lg:block transition-colors duration-300"
               >
                 Products
               </Link>
               <ProductsDropdown
                 isOpen={isProductsOpen}
-                closeDrawer={() => setProductsOpen(false)}
+                closeDrawer={handleMouseLeave}
               />
             </div>
             <Link
               href="/pricing"
-              className="text-gray-300 hover:text-white text-md font-bold hidden lg:block"
+              className="text-gray-300 hover:text-white text-md font-bold hidden lg:block transition-colors duration-300"
             >
               Pricing
             </Link>
           </div>
-          <nav className="hidden lg:flex items-center gap-6">
+           <nav className="hidden lg:flex items-center gap-6">
             <Link
               href="#"
               className="text-gray-300 hover:text-white text-md font-bold"

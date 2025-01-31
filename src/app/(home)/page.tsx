@@ -36,10 +36,10 @@ export default function Home() {
       </Suspense>
 
       <Suspense fallback={<div>Loading Banner...</div>}>
-        <div>
+        <div className="z-40 relative">
           <Banner
             message="Try Columsprout AI today & "
-            buttonText="Try Now"
+            buttonText="Try Tabi"
             buttonLink="/try"
             message2="Elevate your Storefront"
           />

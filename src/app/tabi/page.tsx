@@ -21,7 +21,7 @@ function TabiPage() {
           highlightText="Transform Data at Speed"
           highlightIcon={<Sparkles />}
           description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
-          buttonText="Try Now"
+          buttonText="Try Tabi"
           buttonLink="/try"
         />
       </Suspense>
@@ -47,7 +47,7 @@ function TabiPage() {
       <Suspense fallback={<div>Loading Banner...</div>}>
         <Banner
           message="Empower your data and marketing teams "
-          buttonText="Try Now"
+          buttonText="Try Tabi"
           buttonLink="/try"
           message2="with Lomi — get started today!"
         />

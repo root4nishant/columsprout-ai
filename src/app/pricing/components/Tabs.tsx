@@ -6,10 +6,11 @@ import { Button } from "@/components/custom/reusables/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export default function PricingTabs() {
   return (
-    <Section className=" mx-auto lg:py-20 md:py-0 py-24 lg:pt-32 font-secondary">
+    <Section className=" mx-auto lg:py-20 md:py-5 py-5 md:pt-24 pt-24 lg:pt-32 font-secondary">
       <Heading text="Hire your Storefront Managers" />
       <Tabs defaultValue="tabi" className="w-full mx-auto  ">
         <TabsList className="grid w-full max-w-[400px] grid-cols-2 mx-auto mb-8 h-full font-primary">
@@ -46,9 +47,14 @@ export default function PricingTabs() {
                     *Sprout Tokens consumed based on data size and prompts used
                   </span>
                 </div>
-                <Button className="h-[38px] text-[18px] w-full bg-primary-dark font-semibold text-white hover:bg-black">
-                  Try for Free
-                </Button>
+                <Link
+                  href="https://calendly.com/meghav-columsprout"
+                  target="_blank"
+                >
+                  <Button className="h-[38px] text-[18px] w-full bg-primary-dark font-semibold text-white hover:bg-black">
+                    Try for Free
+                  </Button>
+                </Link>
               </div>
               <div className="space-y-4 bg-[#423EC7]/10 mt-4 lg:p-6 p-4">
                 <h3 className="text-lg font-semibold">What&apos;s Included</h3>

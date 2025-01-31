@@ -27,7 +27,7 @@ interface ProductCardProps extends CardProps {
 
 export default function ReusableCard({ data }: ProductCardProps) {
   return (
-    <Card className="w-full lg:max-w-2xl md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none bg-gradient-to-b from-[#e0e0f1] via-white to-transparent p-2 flex flex-col gap-3">
+    <Card className="w-full xl:max-w-2xl lg:max-w-full md:max-w-full overflow-hidden shadow-none border-none rounded-md rounded-b-none bg-gradient-to-b from-[#e0e0f1] via-white to-transparent p-2 flex flex-col gap-3">
       <Carousel className="w-full">
         <CarouselContent>
           {data?.images.map((image, index) => (
@@ -48,8 +48,8 @@ export default function ReusableCard({ data }: ProductCardProps) {
         <CarouselPrevious className="left-2" />
         <CarouselNext className="right-2" />
       </Carousel>
-      <CardContent className=" p-0 pt-4 rounded-none lg:text-left text-center flex lg:gap-5 gap-3 flex-col">
-        <h3 className="lg:text-[36px] md:text-[36px] text-2xl flex lg:justify-start justify-center items-center gap-2 font-primary font-semibold">
+      <CardContent className=" p-0 pt-4 rounded-none lg:text-center xl:text-left text-center flex lg:gap-5 gap-3 flex-col">
+        <h3 className="lg:text-[36px] md:text-[36px] text-2xl flex xl:justify-start lg:justify-center justify-center items-center gap-2 font-primary font-semibold">
           {data.title}{" "}
           <span>
             <Sparkles className="w-4 h-4 " />
