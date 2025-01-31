@@ -79,7 +79,7 @@ export default function MobileNavigation({
         </li>
         <li className="w-full px-6">
           <Link
-            href="#"
+            href="https://calendly.com/meghav-columsprout"
             className="text-black text-xl font-bold"
             onClick={onClose}
           >
