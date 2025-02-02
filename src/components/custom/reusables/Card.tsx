@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/custom/reusables/button";
-import { Sparkles } from "lucide-react";
+import { Sparkle } from "lucide-react";
 import Link from "next/link";
 
 interface ProductCardProps extends CardProps {
@@ -52,7 +52,7 @@ export default function ReusableCard({ data }: ProductCardProps) {
         <h3 className="lg:text-[36px] md:text-[36px] text-2xl flex xl:justify-start lg:justify-center justify-center items-center gap-2 font-primary font-semibold">
           {data.title}{" "}
           <span>
-            <Sparkles className="w-4 h-4 " />
+            <Sparkle className="w-4 h-4 " />
           </span>{" "}
         </h3>
         <p className="font-secondary lg:text-[18px] text-sm text-muted-foreground">

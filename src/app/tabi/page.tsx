@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Sparkles } from "lucide-react";
+import { Sparkle } from "lucide-react";
 
 // Dynamically import components
 const HeroSection = dynamic(() => import("./components/Hero"));
@@ -19,7 +19,7 @@ function TabiPage() {
           tagText="Introducing"
           title="Tabi AI"
           highlightText="Transform Data at Speed"
-          highlightIcon={<Sparkles />}
+          highlightIcon={<Sparkle />}
           description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
           buttonText="Try Tabi"
           buttonLink="/try"

@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Sparkles } from "lucide-react";
+import { Sparkle } from "lucide-react";
 
 // Dynamically import components
 const HeroSection = dynamic(() => import("./components/Hero"));
@@ -19,7 +19,7 @@ function Page() {
           tagText="Introducing"
           title="Clio AI"
           highlightText="Your store's Customer Success AI"
-          highlightIcon={<Sparkles />}
+          highlightIcon={<Sparkle />}
           description="Use Cleo AI to create world-class Customer Experiences and provide Outstanding Support"
           buttonText="Try Now"
           buttonLink="/try"

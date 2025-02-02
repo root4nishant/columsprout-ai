@@ -61,7 +61,7 @@ const HeroSection: FC<HeroSectionProps> = ({
                   )}
                 </div>
                 <div className="flex gap-2 items-center text-[32px]  md:text-5xl lg:text-5xl font-bold tracking-[0.4px] justify-center">
-                  <span className="text-indigo-600 leading-tight">
+                  <span className="text-primary-dark leading-tight">
                     {highlightText}
                   </span>
                 </div>

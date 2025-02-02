@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Sparkles } from "lucide-react";
+import { Sparkle } from "lucide-react";
 
 // Dynamically import components
 const HeroSection = dynamic(() => import("@/components/custom/Hero"));
@@ -17,7 +17,7 @@ export default function Home() {
           tagText="Introducing"
           title="Your Store's"
           highlightText="AI Concierge"
-          highlightIcon={<Sparkles />}
+          highlightIcon={<Sparkle />}
           description="Unleash the power of AI to automate repetitive tasks, enhance your storefront experience, personalize customer interactions, and drive higher sales conversions effortlessly"
           buttonText="Book Demo"
           buttonLink="https://calendly.com/meghav-columsprout"
@@ -41,7 +41,7 @@ export default function Home() {
             message="Try Columsprout AI today & "
             buttonText="Try Tabi"
             buttonLink="/try"
-            message2="Elevate your Storefront"
+            message2="elevate your storefront today"
           />
         </div>
       </Suspense>

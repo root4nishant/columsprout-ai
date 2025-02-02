@@ -60,15 +60,15 @@ export function ProductsDropdown({
                   />
                 </div>
                 <p className="text-gray-700 mb-6 font-secondary">
-                  Effortlessly use Gen AI for tabular data with speed &
-                  accuracy. Guess what, anyone can use it.
+                  Deliver seamless customer experiences and gain actionable
+                  insights with intelligent AI agents.
                 </p>
-                <Link href="/tabi">
+                <Link href="/clio">
                   <Button
                     className="bg-primary-dark hover:bg-black text-white font-medium rounded px-6 transition-all duration-300 ease-in-out transform hover:scale-105"
                     onClick={closeDrawer}
                   >
-                    Explore Tabi
+                    Explore Clio
                   </Button>
                 </Link>
               </div>
@@ -92,15 +92,15 @@ export function ProductsDropdown({
                   />
                 </div>
                 <p className="text-gray-700 mb-6 font-secondary">
-                  Deliver seamless customer experiences and gain actionable
-                  insights with intelligent AI agents.
+                  Effortlessly use Gen AI for tabular data with speed &
+                  accuracy. Guess what, anyone can use it.
                 </p>
-                <Link href="/clio">
+                <Link href="/tabi">
                   <Button
                     className="bg-primary-dark hover:bg-black text-white font-medium rounded px-6 transition-all duration-300 ease-in-out transform hover:scale-105"
                     onClick={closeDrawer}
                   >
-                    Explore Clio
+                    Explore Tabi
                   </Button>
                 </Link>
               </div>

@@ -19,7 +19,7 @@ const Benefits = () => {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1000);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     checkMobile();
@@ -31,27 +31,27 @@ const Benefits = () => {
   const stats = [
     {
       percentage: "60%",
-      title: "Lower Operational Costs",
+      title: "Lower operational costs",
       description:
-        "Automate workflows, reduce inefficiencies, and minimize staffing needs.",
+        "Automate workflows, reduce inefficiencies, and minimize staffing needs",
       icon: <DollarSign className="w-6 h-6 text-primary-dark" />,
       image:
         "https://storage.googleapis.com/cs-website-assets/homepage/benefits-1-dd.webp",
     },
     {
       percentage: "70%",
-      title: "Increase in Accuracy",
+      title: "Increase in accuracy",
       description:
-        "Boost precision with advanced data batching pipelines that outperform traditional LLMs.",
+        "Boost precision with advanced data batching pipelines that outperform traditional LLMs",
       icon: <Target className="w-6 h-6 text-primary-dark" />,
       image:
         "https://storage.googleapis.com/cs-website-assets/homepage/benefits-2-dd.webp",
     },
     {
       percentage: "75%",
-      title: "Faster Results",
+      title: "Faster results",
       description:
-        "Simplify tasks, prioritize strategy, and deliver rapid results.",
+        "Simplify tasks, prioritize strategy, and deliver rapid results",
       icon: <Timer className="w-6 h-6 text-primary-dark" />,
       image:
         "https://storage.googleapis.com/cs-website-assets/homepage/benefits-3-dd.webp",
@@ -62,6 +62,7 @@ const Benefits = () => {
     <div className="flex flex-col gap-4">
       {stats.map((stat, index) => (
         <div key={index} className="flex flex-col gap-2">
+          {/* Accordion Header */}
           <div className="border rounded-lg overflow-hidden">
             <button
               onClick={() =>
@@ -96,18 +97,32 @@ const Benefits = () => {
               )}
             </button>
           </div>
-
+  
+          {/* Accordion Content */}
           {selectedCard === index && (
-            <div className="border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent  lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1">
-              <div className="rounded-lg overflow-hidden bg-[#EDEDFF] h-auto">
-                <Image
-                  loading="lazy"
-                  src={stat.image}
-                  alt={stat.title}
-                  width={1000}
-                  height={150}
-                  className="w-full "
-                />
+            <div className="border rounded-lg shadow-md overflow-hidden relative bg-gradient-to-b from-gray-300 to-transparent">
+              {/* Video Background */}
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                src="https://storage.googleapis.com/cs-website-assets/homepage/homepage-benefits.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              ></video>
+  
+              {/* Content Overlay */}
+              <div className="relative z-10 p-4">
+                <div className="rounded-lg overflow-hidden bg-[#EDEDFF] h-auto">
+                  <Image
+                    loading="lazy"
+                    src={stat.image}
+                    alt={stat.title}
+                    width={1000}
+                    height={150}
+                    className="w-full rounded-lg"
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -115,9 +130,9 @@ const Benefits = () => {
       ))}
     </div>
   );
-
+  
   const renderDesktopView = () => (
-    <div className="flex flex-col lg:flex-row gap-4 justify-between lg:max-h-[500px]">
+    <div className="flex flex-col lg:flex-row gap-4 justify-between lg:max-h-[500px] mb-4">
       {stats.map((stat, index) => (
         <div
           key={index}
@@ -149,36 +164,45 @@ const Benefits = () => {
   );
 
   const renderImageOverlay = () => (
-    <div className="relative flex justify-center items-center lg:py-80 py-10 z-10">
-      {stats.map((stat, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-            selectedCard === index
-              ? "opacity-100 z-30 transform scale-100"
-              : "opacity-0 z-10 transform scale-95"
-          }`}
+    <div className="relative flex justify-center items-center aspect-[413/100] w-full z-10 overflow-hidden rounded-lg">
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="https://storage.googleapis.com/cs-website-assets/homepage/homepage-benefits.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+  ></video>
+  {stats.map((stat, index) => (
+    <div
+      key={index}
+      className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+        selectedCard === index
+          ? "opacity-100 z-30 transform scale-100"
+          : "opacity-0 z-10 transform scale-95"
+      }`}
         >
-          <div className="py-2 flex justify-center border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent  lg:pr-2 pr-1 pb-[-2px] lg:pt-2 pt-1 items-center">
+          <div className="flex justify-center items-center border rounded-lg shadow-md bg-gradient-to-b from-gray-300 to-transparent h-full">
             <Image
               loading="lazy"
               src={stat.image}
               alt={stat.title}
-              width={1000}
-              height={150}
-              className="h-full w-full object-cover rounded-md shadow-md border"
+              width={1000} // Fixed width
+              height={150} // Fixed height
+              className="rounded-md shadow-md"
             />
           </div>
         </div>
       ))}
     </div>
   );
+  
 
   return (
-    <Section className="flex flex-col lg:max-h-[560px]  w-full lg:mb-20 mb-0 ">
+    <Section className="flex flex-col lg:max-h-[600px]  w-full lg:mb-20 mb-0 ">
       <div className="lg:max-w-[1400px] md:max-w-[900px] lg:px-20 px-4 mx-auto">
         {/* <Tag text="Benefits" /> */}
-        <Heading text="Experience the Era of AI Performance" />
+        <Heading text="Experience the era of AI Performance" />
         {isMobile ? renderMobileView() : renderDesktopView()}
         {!isMobile && renderImageOverlay()}
       </div>

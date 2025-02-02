@@ -7,8 +7,8 @@ export default function AITeamSection() {
   const productData = [
     {
       images: [
-        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-clio-1-tp.webp",
-        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-clio-2-tp.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-clio-1-dd.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-clio-2-dd.webp",
       ],
       title: "Clio AI",
       description:
@@ -18,13 +18,13 @@ export default function AITeamSection() {
     },
     {
       images: [
-        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-1-tp.webp",
-        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-2-tp.webp",
-        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-3-tp.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-1-dd.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-2-dd.webp",
+        "https://storage.googleapis.com/cs-website-assets/homepage/homepage-carousel-tabi-3-dd.webp",
       ],
       title: "Tabi AI",
       description:
-        "Seamlessly transform meaningful customer interactions into sales with your store's AI concierge",
+        "Effortlessly leverage Gen AI to optimize your store data with unparalleled speed & accuracy",
       buttonText: "Explore Tabi",
       link: "/tabi",
     },
