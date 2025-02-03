@@ -20,7 +20,7 @@ function TabiPage() {
           title="Tabi AI"
           highlightText="Transform Data at Speed"
           highlightIcon={<Sparkle />}
-          description="Use Lomi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
+          description="Use Tabi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
           buttonText="Try Tabi"
           buttonLink="/try"
         />

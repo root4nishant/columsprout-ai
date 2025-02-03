@@ -12,7 +12,7 @@ export default function FeatureComponent() {
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">
           <Image
             loading="lazy"
-            src="https://storage.googleapis.com/cs-website-assets/clio/clio-chat-tp.webp"
+            src="https://storage.googleapis.com/cs-website-assets/clio/clio-chat-dd.webp"
             alt="Storefront AI Concierge"
             width={600}
             height={300}
@@ -34,7 +34,7 @@ export default function FeatureComponent() {
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-10 gap-5">
           <Image
             loading="lazy"
-            src="https://storage.googleapis.com/cs-website-assets/clio/clio-bo-tp.webp"
+            src="https://storage.googleapis.com/cs-website-assets/clio/clio-bo-dd.webp"
             alt="Unified Support Desk"
             width={600}
             height={400}
