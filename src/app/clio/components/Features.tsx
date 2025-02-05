@@ -7,7 +7,7 @@ export default function FeatureComponent() {
   return (
     <Section>
       {/* <Tag text="Features" /> */}
-      <Heading text="AI That Delivers on Every Front" />
+      <Heading text="AI That delivers on every front" />
       <div className="flex flex-col md:flex-row justify-between items-start lg:gap-28 gap-16 ">
         <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">
           <Image
@@ -20,18 +20,18 @@ export default function FeatureComponent() {
           />
           <div className="flex flex-col lg:gap-4 gap-2">
             <h3 className="lg:text-lg md:text-md text-sm font-bold text-primary-dark uppercase font-secondary">
-              Customer Facing
+              Customer facing
             </h3>
             <h2 className="lg:text-2xl md:text-xl text-lg font-semibold font-primary">
               Storefront AI Concierge
             </h2>
             <p className=" text-gray-600 lg:text-lg md:text-md text-sm font-secondary">
               Seamlessly automate customer conversations across channels, while
-              maintaining your brand&apos;s voice.
+              maintaining your brand&apos;s voice
             </p>
           </div>
         </div>
-        <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-10 gap-5">
+        <div className="text-center md:text-left w-full h-full flex flex-col lg:gap-8 gap-5">
           <Image
             loading="lazy"
             src="https://storage.googleapis.com/cs-website-assets/clio/clio-bo-dd.webp"
@@ -42,13 +42,13 @@ export default function FeatureComponent() {
           />
           <div className="flex flex-col lg:gap-4 gap-2">
             <h3 className="lg:text-lg md:text-md text-sm font-bold text-primary-dark font-secondary uppercase">
-              Back Office
+              Back office
             </h3>
             <h2 className="lg:text-2xl md:text-xl text-lg font-primary font-semibold">
               Unified Support Desk
             </h2>
             <p className=" text-gray-600 lg:text-lg md:text-md text-sm font-secondary">
-              Enhance customer experience while solving 30% more tickets every
+              Enhance customer experience while solving 50% more tickets every
               day.
             </p>
           </div>

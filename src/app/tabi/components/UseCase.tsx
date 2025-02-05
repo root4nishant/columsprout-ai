@@ -5,28 +5,28 @@ import { Pencil } from "lucide-react";
 
 const useCases = [
   {
-    title: "Standardize data format",
+    title: "Standardize format",
     description:
-      "Make columns consistent, like fixing dates, phone numbers, or currency formats.",
+      "Make columns consistent, like fixing currency formats, dates, or case formatting.",
   },
   {
-    title: "Optimize column data",
+    title: "Optimize data",
     description:
       "Clean up columns by removing duplicates, fixing errors, or resizing content.",
   },
   {
-    title: "Derive new details",
-    description:
-      "Use data to calculate or figure out new fields (e.g., age from birthdate)",
-  },
-  {
     title: "Generate briefs",
-    description: "Summarize detailed data into quick, easy-to-read overviews.",
+    description:
+      "Summarize detailed data into quick, easy-to-read overviews.",
   },
   {
     title: "Extract keywords",
+    description: "Pick out important words or phrases from text for tagging or analysis.",
+  },
+  {
+    title: "Derive new details",
     description:
-      "Pick out important words or phrases from text for tagging or analysis.",
+      "Use data to calculate or figure out new fields (e.g., age from birthdate).",
   },
 ];
 

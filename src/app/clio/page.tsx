@@ -16,13 +16,13 @@ function Page() {
       <Suspense fallback={<div>Loading Hero Section...</div>}>
         <HeroSection
           gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
-          tagText="Introducing"
+          tagText="Introducing Clio"
           title="Clio AI"
           highlightText="Your store's Customer Success AI"
           highlightIcon={<Sparkle />}
-          description="Use Cleo AI to create world-class Customer Experiences and provide Outstanding Support"
-          buttonText="Try Now"
-          buttonLink="/try"
+          description="Use Cleo AI to create world-class customer experiences and provide outstanding support"
+          buttonText="Book Demo"
+          buttonLink="https://calendly.com/meghav-columsprout"
         />
       </Suspense>
 
@@ -45,9 +45,9 @@ function Page() {
       <Suspense fallback={<div>Loading Banner...</div>}>
         <Banner
           message="Join the waitlist "
-          buttonText="Try Now"
-          buttonLink="/try"
-          message2="for the Cleo AI"
+          buttonText="Book Demo"
+          buttonLink="https://calendly.com/meghav-columsprout"
+          message2="for Clio AI"
         />
       </Suspense>
     </div>

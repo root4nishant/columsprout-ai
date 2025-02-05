@@ -9,9 +9,9 @@ import Link from "next/link";
 const cardData = [
   {
     id: 1,
-    title: "Transform Your Workflow",
+    title: "Upload your Data",
     description:
-      "Streamline your process with our innovative tools. Built for modern teams, our platform helps you achieve more in less time.",
+      "Effortlessly upload your file or feed, and Tabi will seamlessly handle your large data, providing maximum ease and efficiency.",
     buttonText: "Learn More",
     imageSrc:
       "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-1-dd.webp",
@@ -20,9 +20,9 @@ const cardData = [
   },
   {
     id: 2,
-    title: "Powerful Analytics",
+    title: "Experiment with Prompts",
     description:
-      "Gain deep insights into your data with advanced analytics. Make informed decisions backed by real-time metrics and comprehensive reports.",
+      "Try various prompts on sample data, test and validate results, then easily scale successful outcomes across your entire dataset.",
     buttonText: "Explore Analytics",
     imageSrc:
       "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-2-dd.webp",
@@ -31,9 +31,9 @@ const cardData = [
   },
   {
     id: 3,
-    title: "Seamless Collaboration",
+    title: "Export your File",
     description:
-      "Work together effortlessly with your team. Our collaborative features ensure everyone stays in sync and projects move forward smoothly.",
+      "Let Tabi transform your data with ease, then export your file or publish updates directly to your feed - all with just one click.",
     buttonText: "Start Collaborating",
     imageSrc:
       "https://storage.googleapis.com/cs-website-assets/tabi/tabi-in-action-3-dd.webp",

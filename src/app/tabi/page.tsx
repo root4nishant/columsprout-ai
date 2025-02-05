@@ -16,7 +16,7 @@ function TabiPage() {
       <Suspense fallback={<div>Loading Hero Section...</div>}>
         <HeroSection
           gradientOverlay="bg-gradient-to-b from-black/30 via-transparent to-white"
-          tagText="Introducing"
+          tagText="Introducing Tabi"
           title="Tabi AI"
           highlightText="Transform Data at Speed"
           highlightIcon={<Sparkle />}
@@ -46,10 +46,10 @@ function TabiPage() {
 
       <Suspense fallback={<div>Loading Banner...</div>}>
         <Banner
-          message="Empower your data and marketing teams "
+          message="Empower your growth teams "
           buttonText="Try Tabi"
           buttonLink="/try"
-          message2="with Lomi — get started today!"
+          message2="Try Tabi today!"
         />
       </Suspense>
     </div>

@@ -14,7 +14,7 @@ function Integration() {
           text="Connect your E-comm tech stack"
         />
         <h1 className="text-primary-dark lg:text-lg text-sm text-center font-secondary">
-          Effortlessly integrate with all your customer channels in a single hub
+          Effortlessly integrate with all your existing customer channels
         </h1>
         <Image
           loading="lazy"
