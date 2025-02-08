@@ -27,7 +27,7 @@ export function ProductsDropdown({
 
   return (
     <div
-      className={`fixed left-0 w-full px-4 lg:px-10 text-black z-60 mt-10 font-primary transition-all duration-300 ease-in-out ${
+      className={`fixed left-0 w-full px-4 lg:px-10 text-black z-[9999] mt-10 font-primary transition-all duration-300 ease-in-out ${
         isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
       }`}
       onMouseEnter={(e) => e.stopPropagation()}
