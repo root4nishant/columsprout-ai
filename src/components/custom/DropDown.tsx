@@ -27,13 +27,13 @@ export function ProductsDropdown({
 
   return (
     <div
-      className={`fixed left-0 w-full px-4 lg:px-10 text-black z-[1000] mt-10 font-primary transition-all duration-300 ease-in-out ${
+      className={`fixed w-auto left-1/2 -translate-x-1/2 justify-center items-center px-4 lg:px-10 text-black z-[1000] mt-10 font-primary transition-all duration-300 ease-in-out ${
         isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
       }`}
       onMouseEnter={(e) => e.stopPropagation()}
       onMouseLeave={closeDrawer}
     >
-      <div className="max-w-[1000px] mx-auto">
+      <div className="xl:w-[1000px] lg:w-[800px] mx-auto">
         <div
           className={`bg-gradient-to-l from-[#c9c8d9] to-white rounded-md shadow-lg transition-all duration-300 ease-in-out ${
             isOpen ? "scale-100" : "scale-95"
