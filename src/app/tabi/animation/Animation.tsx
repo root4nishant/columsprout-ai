@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
@@ -78,47 +79,47 @@ export default function AnimationFlow() {
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([1, 2]);
-      }, 2000)
+      }, 4000)
     );
 
     // 3) At t=3s, add Step 3
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([2]);
-      }, 2500)
+      }, 5000)
     );
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([2, 3]);
-      }, 4000)
+      }, 6000)
     );
 
     // 4) At t=4s, remove Step 1 => left with [2, 3]
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([2, 3]);
-      }, 4000)
+      }, 6000)
     );
 
     // 5) At t=6s, remove Steps 2 & 3 => []
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([]);
-      }, 6000)
+      }, 10000)
     );
 
     // 6) At t=7s, show Step 4 => [4]
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([4]);
-      }, 7000)
+      }, 10000)
     );
 
     // 7) At t=8s, show Step 5 => [4, 5]
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([4, 5]);
-      }, 9000)
+      }, 12000)
     );
 
     // 8) At t=9s, remove Step 4 => left with [5]
@@ -136,7 +137,7 @@ export default function AnimationFlow() {
         setTimeout(() => {
           startCycle(); // re-run the entire sequence
         }, 300);
-      }, 11000)
+      }, 17000)
     );
   };
 
@@ -161,9 +162,9 @@ export default function AnimationFlow() {
             variants={cardVariants}
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
-            <div className="flex items-center lg:gap-3 md:gap-2 gap-1 lg:px-4 px-2 lg:py-3 py-1">
+            <div className="flex items-center lg:gap-3 md:gap-2 gap-1  lg:py-3 py-1">
               <IconUpload />
-              <span className="lg:text-sm md:text-[10px] text-[8px] text-black font-bold">
+              <span className="lg:text-sm md:text-[10px] text-[6px] text-black font-bold">
                 Upload your data
               </span>
             </div>
@@ -196,9 +197,9 @@ export default function AnimationFlow() {
             variants={cardVariants}
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
-            <div className="flex items-center lg:gap-3 md:gap-2 gap-1 lg:px-4 px-2 lg:py-3 py-1">
+            <div className="flex items-center lg:gap-3 md:gap-2 gap-1  lg:py-3 py-1">
               <IconExperiment />
-              <span className="lg:text-sm md:text-[10px] text-[8px] text-black font-bold">
+              <span className="lg:text-sm md:text-[10px] text-[6px] text-black font-bold">
                 Experiment with your prompt
               </span>
             </div>
@@ -233,23 +234,23 @@ export default function AnimationFlow() {
             variants={cardVariants}
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
-            <div className="lg:px-4 px-2 lg:py-3 py-1 lg:text-sm md:text-[10px] text-[8px]  rounded-lg bg-gray-100 bg-opacity-70">
+            <div className="lg:px-4 px-2 lg:py-3 py-1 lg:text-sm md:text-[10px] text-[6px]  rounded-lg bg-gray-100 bg-opacity-70">
               <div className="grid grid-cols-2 gap-2 text-gray-700 font-semibold lg:mb-2 mb-1">
                 <div>Products</div>
                 <div>General Review</div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px] lg:mb-2 mb-1">
+              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Men's Running Shoes"</div>
                 <div className="text-primary-dark">Not Tested Today</div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px] lg:mb-2 mb-1">
+              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Leather Dress Shoes"</div>
                 <div className="text-primary-dark">Step Into Elegance</div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px]">
+              {/* <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px]">
                 <div>"Kids' Sports Shoes"</div>
                 <div className="text-primary-dark">Play in Style</div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         );
@@ -266,9 +267,9 @@ export default function AnimationFlow() {
             variants={cardVariants}
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
-            <div className="flex items-center lg:gap-3 md:gap-2 gap-1 lg:px-4 px-2 lg:py-3 py-1">
+            <div className="flex items-center lg:gap-3 md:gap-2 gap-1  lg:py-3 py-1">
               <IconExperiment />
-              <span className="lg:text-sm md:text-[10px] text-[8px] text-black font-bold">
+              <span className="lg:text-sm md:text-[10px] text-[6px] text-black font-bold">
                 Export instantly
               </span>
             </div>
@@ -301,30 +302,30 @@ export default function AnimationFlow() {
             variants={cardVariants}
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
-            <div className="lg:px-4 md:px-2 px-1 lg:py-3 md:py-2 py-1 lg:text-sm md:text-[10px] text-[8px]  rounded-lg bg-gray-100 bg-opacity-70">
+            <div className="lg:px-4 md:px-2 px-1 lg:py-3 md:py-2 py-1 lg:text-sm md:text-[10px] text-[6px]  rounded-lg bg-gray-100 bg-opacity-70">
               <div className="grid grid-cols-2 gap-2 text-gray-700 font-semibold lg:mb-2 mb-1">
                 <div>Products</div>
                 <div>4-word Review</div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px] lg:mb-2 mb-1">
+              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Men's Running Shoes"</div>
                 <div className="text-primary-dark">Run Faster Today</div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px] lg:mb-2 mb-1">
+              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Leather Dress Shoes"</div>
                 <div className="text-primary-dark">Step into Elegance</div>
               </div>
-              {/* <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px] lg:mb-2 mb-1">
+              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Kids' Sports Shoes"</div>
                 <div className="text-primary-dark">Play in Style</div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[8px] lg:mb-2 mb-1">
+              <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Casual Sneakers"</div>
                 <div className="text-primary-dark">Your Everyday Essential</div>
-              </div> */}
+              </div>
               {/* Pagination row */}
               <div className="flex items-center justify-between mt-3">
-                <nav className="lg:text-sm md:text-[10px] text-[8px] text-gray-600">
+                <nav className="lg:text-sm md:text-[10px] text-[6px] text-gray-600">
                   <span className="mr-2">1</span>
                   <span className="mr-2">2</span>
                   <span className="mr-2">3</span>
@@ -332,7 +333,7 @@ export default function AnimationFlow() {
                   <span>18</span>
                 </nav>
                 <motion.button
-                  className="rounded-lg  bg-gray-100 bg-opacity-70 px-4 py-2 lg:text-sm md:text-[10px] text-[8px] text-black font-bold shadow-sm"
+                  className="rounded-lg  bg-primary-dark bg-opacity-70 px-4 py-2 lg:text-sm md:text-[10px] text-[6px] text-white font-bold shadow-sm"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >

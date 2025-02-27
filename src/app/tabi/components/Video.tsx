@@ -1,7 +1,7 @@
 "use client";
 import Section from "@/components/custom/reusables/Section";
 import React, { useEffect, useRef, useState } from "react";
-import Animation from "./Annimation";
+import Animation from "../animation/Animation";
 import AnimatedText from "./TextAnimation";
 
 const VideoWithMessages = () => {

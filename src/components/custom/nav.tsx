@@ -29,7 +29,7 @@ export default function Navbar() {
                 loading="lazy"
                 src="/logo.png"
                 alt="Logo"
-                className="md:w-80 w-40 lg:w-auto"
+                className="md:w-80 w-40 lg:w-60"
                 width={200}
                 height={40}
               />

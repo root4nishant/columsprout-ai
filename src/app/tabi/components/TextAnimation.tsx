@@ -9,7 +9,7 @@ const AnimatedText = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -25,7 +25,7 @@ const AnimatedText = () => {
       <h1 className="lg:text-xl md:text-md text-xs font-bold text-white">
         TABI: <span>Your data </span>
         {/* Inline block to keep the next word on the same baseline */}
-        <span className="inline-block  font-bold lg:text-xl md:text-md text-xs text-gray-300">
+        <span className="inline-block  font-bold lg:text-xl md:text-md text-xs text-[#D6CFB6]">
           <AnimatePresence mode="wait">
             <motion.span
               key={words[currentWordIndex]}
