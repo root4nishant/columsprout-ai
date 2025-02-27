@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const AnimatedText = () => {
-  const words = ["Enrich", "Transformer", "Cleaner"];
+  const words = ["Enricher", "Transformer", "Cleaner"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AnimatedText = () => {
 
   return (
     <div>
-      <h1 className="lg:text-xl md:text-md text-xs font-bold text-white">
+      <h1 className="lg:text-xl md:text-md text-xs font-bold text-white lg:px-4 md:px-2 px-1">
         TABI: <span>Your data </span>
         {/* Inline block to keep the next word on the same baseline */}
         <span className="inline-block  font-bold lg:text-xl md:text-md text-xs text-[#D6CFB6]">

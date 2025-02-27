@@ -2,6 +2,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
@@ -68,6 +69,16 @@ export default function AnimationSteffanieClio() {
         setVisibleSteps([]);
       }, 6000)
     );
+    timeoutsRef.current.push(
+      window.setTimeout(() => {
+        setVisibleSteps([3]);
+      }, 7000)
+    );
+    timeoutsRef.current.push(
+      window.setTimeout(() => {
+        setVisibleSteps([3, 4]);
+      }, 10000)
+    );
 
     // At t=4s: Remove Clio => empty, then restart
     timeoutsRef.current.push(
@@ -76,7 +87,7 @@ export default function AnimationSteffanieClio() {
         setTimeout(() => {
           startCycle();
         }, 300);
-      }, 8000)
+      }, 14000)
     );
   };
 
@@ -116,7 +127,7 @@ export default function AnimationSteffanieClio() {
               <div className="font-semibold text-indigo-700">Steffanie</div>
             </div>
             <div className="font-bold">
-              Added <span className="text-indigo-600">to Cart</span>
+              Added <span className="text-primary-dark">to Cart</span>
             </div>
           </div>
         </motion.div>
@@ -151,7 +162,7 @@ export default function AnimationSteffanieClio() {
               <div className="font-semibold text-indigo-700">Clio</div>
             </div>
             <div className="mb-2">
-              Get free <span className="text-indigo-600">50 points</span> when
+              Get free <span className="text-primary-dark">50 points</span> when
               you sign up for the{" "}
               <span className="font-semibold">Rewards Program</span>.
             </div>
@@ -165,6 +176,96 @@ export default function AnimationSteffanieClio() {
             >
               Become a Member
             </motion.button>
+          </div>
+        </motion.div>
+      );
+    } else if (step === 3) {
+      return (
+        <motion.div
+          key="user"
+          layout
+          custom={40}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={cardVariants}
+          className="ml-auto bg-white/80 backdrop-blur-md rounded-sm shadow-md lg:max-w-[250px] md:max-w-[200px] max-w-[120px] w-full lg:p-3 md:p-2 p-1 lg:text-sm md:text-[10px] text-[6px] text-gray-800"
+        >
+          <div>
+            <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
+              <Steffanie />
+              <div className="font-semibold text-indigo-700">Steffanie</div>
+            </div>
+            <div className="font-bold">
+              Browsing <span className="text-primary-dark">Puffer Jacket</span>
+            </div>
+            {/* <div className="font-bold">{scenario.userText}</div> */}
+          </div>
+        </motion.div>
+      );
+    } else if (step === 4) {
+      return (
+        <motion.div
+          key="bot"
+          layout
+          custom={80}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={cardVariants}
+          className="mr-auto bg-white/80 backdrop-blur-md rounded-sm shadow-md lg:max-w-[300px] md:max-w-[200px] max-w-[120px] w-auto lg:p-3 md:p-2 p-1 lg:text-sm md:text-[10px] text-[6px] text-gray-800 text-left"
+        >
+          <div>
+            <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
+              <IoChatbubbleEllipsesOutline className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
+              <div className="font-semibold text-indigo-700">Clio</div>
+            </div>
+            <div className="mb-2">
+              FYI, this Puffer Jacket pairs great with{" "}
+              <span className="text-primary-dark">Distressed Jeans</span> and
+              Brushed Scarves <span className="font-semibold">Interested?</span>
+              .
+            </div>
+            <div className="flex justify-between">
+              <Image
+                src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img1.webp"
+                alt=""
+                width={30}
+                height={30}
+                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+              />
+              <Image
+                src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img2.webp"
+                alt=""
+                width={30}
+                height={30}
+                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+              />
+              <Image
+                src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img3.webp"
+                alt=""
+                width={30}
+                height={30}
+                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+              />
+              <Image
+                src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img4.webp"
+                alt=""
+                width={30}
+                height={30}
+                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+              />
+            </div>
+            {/* <motion.button
+              className="
+              bg-primary-dark border text-white 
+              lg:px-2 md:px-1 px-0.5 lg:py-2 md:py-1 py-0.5 rounded-sm 
+              lg:text-sm md:text-[10px] text-[6px] font-semibold
+            "
+            >
+              Become a Member
+            </motion.button> */}
+            {/* <div className="mb-2">{scenario.botText}</div> */}
           </div>
         </motion.div>
       );

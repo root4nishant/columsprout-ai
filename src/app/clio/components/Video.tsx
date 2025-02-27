@@ -53,11 +53,21 @@ const VideoWithMessages = () => {
         />
 
         {/* Overlay your two-step animation on top of the video */}
-        <div className="absolute lg:bottom-10 md:bottom-4 bottom-2 lg:left-5 md:left-3 left-2 z-10">
+        <div className="absolute lg:bottom-12 md:bottom-5 bottom-5 lg:left-5 md:left-3 left-2 z-10">
           <Animation />
         </div>
-        <div className="absolute lg:bottom-10 md:bottom-4 bottom-2 lg:right-5 md:right-3 right-2 z-10">
+        <div className="absolute lg:bottom-12 md:bottom-5 bottom-5 lg:right-5 md:right-3 right-2 z-10">
           <AnimationSteffanieClio />
+        </div>
+        <div className="absolute bottom-0 rounded-md lg:h-60 h-20 w-full bg-gradient-to-t from-black to-transparent text-white flex justify-between">
+          <div className="absolute  bottom-0 flex justify-between w-full  lg:p-4 p-2 lg:text-[14px] text-[8px]">
+            <div className="text-left flex justify-end w-full">
+              <span>Brandon&apos;s Customer Success Manager</span>
+            </div>
+            <div className="text-right flex justify-end w-full">
+              <span>Steffanie&apos;s Shopping Assistant</span>
+            </div>
+          </div>
         </div>
       </div>
     </Section>
