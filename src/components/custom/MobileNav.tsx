@@ -61,7 +61,7 @@ export default function MobileNavigation({
         </li>
         <li className="w-full px-6">
           <Link
-            href="/try"
+            href="https://tabi.columsprout.ai/"
             className="text-black text-xl font-bold"
             onClick={onClose}
           >
@@ -75,6 +75,15 @@ export default function MobileNavigation({
             onClick={onClose}
           >
             Pricing
+          </Link>
+        </li>
+        <li className="w-full px-6">
+          <Link
+            href="/blogs"
+            className="text-black text-xl font-bold"
+            onClick={onClose}
+          >
+            Blogs
           </Link>
         </li>
         <li className="w-full px-6">
