@@ -225,7 +225,7 @@ export default function Animation() {
               I&apos;ll ship the{" "}
               <span className="text-primary-dark">Blue Covers </span>right away.
               You can
-              <span className="text-primary-dark">return </span>the white ones
+              <span className="text-primary-dark"> return </span>the white ones
               for free. Does that work?
             </div>
           </div>

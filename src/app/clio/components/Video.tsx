@@ -60,7 +60,7 @@ const VideoWithMessages = () => {
           <AnimationSteffanieClio />
         </div>
         <div className="absolute bottom-0 rounded-md lg:h-60 h-20 w-full bg-gradient-to-t from-black to-transparent text-white flex justify-between">
-          <div className="absolute  bottom-0 flex justify-between w-full  lg:py-4 py-2 lg:text-[14px] text-[6px]">
+          <div className="absolute  bottom-0 flex justify-between w-full text-[#D6CFB6] lg:py-4 py-2 lg:text-[14px] text-[6px]">
             <div className="text-left flex justify-start w-full lg:ml-8 md:ml-5 ml-3">
               <span>Brandon&apos;s Customer Success Manager</span>
             </div>
