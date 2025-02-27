@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { Sparkle } from "lucide-react";
+// import BlogSection from "@/components/custom/Blog";
 
 // Dynamically import components
 const HeroSection = dynamic(() => import("@/components/custom/Hero"));
@@ -34,6 +35,7 @@ export default function Home() {
           <Benefits />
         </div>
       </Suspense>
+      {/* <BlogSection /> sarthak blog is here*/}
 
       <Suspense fallback={<div>Loading Banner...</div>}>
         <div className="z-10 relative">

@@ -78,11 +78,21 @@ export default function Animation() {
       }, 4000)
     );
 
-    // At t=3s: Remove Brandon => only Clio remains
+    // At t=3s: Remove Steffanie => only Clio remains
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([]);
       }, 6000)
+    );
+    timeoutsRef.current.push(
+      window.setTimeout(() => {
+        setVisibleSteps([3]);
+      }, 7000)
+    );
+    timeoutsRef.current.push(
+      window.setTimeout(() => {
+        setVisibleSteps([3, 4]);
+      }, 10000)
     );
 
     // At t=4s: Remove Clio => empty, then restart
@@ -92,7 +102,7 @@ export default function Animation() {
         setTimeout(() => {
           startCycle();
         }, 300);
-      }, 8000)
+      }, 14000)
     );
   };
 
@@ -121,7 +131,7 @@ export default function Animation() {
               <div className="font-semibold text-indigo-700">Brandon</div>
             </div>
             <div className="font-bold">
-              Cancel <span className="text-indigo-600">My Order</span>
+              Cancel <span className="text-primary-dark">My Order</span>
             </div>
             <div>I don't need the Tapestry anymore</div>
           </div>
@@ -154,9 +164,69 @@ export default function Animation() {
             </div>
             <div>
               I understand. Your order has{" "}
-              <span className="text-indigo-600">shipped</span>. You can{" "}
-              <span className="text-indigo-600">refuse delivery</span>, and
+              <span className="text-primary-dark">shipped</span>. You can{" "}
+              <span className="text-primary-dark">refuse delivery</span>, and
               we'll get it back.
+            </div>
+          </div>
+        </motion.div>
+      );
+    }
+    if (step === 3) {
+      return (
+        <motion.div
+          key="brandon"
+          layout
+          custom={40}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={cardVariants}
+          className="  ml-auto   bg-white/80 backdrop-blur-md rounded-sm shadow-md lg:max-w-[300px] md:max-w-[200px] max-w-[120px] w-auto lg:p-3 md:p-2 p-1 lg:text-sm md:text-[10px] text-[6px] text-gray-800"
+        >
+          <div>
+            <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
+              <Brandon />
+              <div className="font-semibold text-indigo-700">Brandon</div>
+            </div>
+            <div className="font-bold">
+              Exchange <span className="text-primary-dark">Order Items</span>
+            </div>
+            <div>Received white covers instead of Blue</div>
+          </div>
+        </motion.div>
+      );
+    } else if (step === 4) {
+      return (
+        <motion.div
+          key="clio"
+          layout
+          custom={80}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={cardVariants}
+          className="
+             mr-auto
+            bg-white/80 backdrop-blur-md
+            rounded-sm shadow-md
+            lg:max-w-[300px] md:max-w-[200px] max-w-[120px]  w-auto
+            lg:p-3 md:p-2 p-1
+            lg:text-sm md:text-[10px] text-[6px] text-gray-800
+            text-left
+          "
+        >
+          <div>
+            <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start ">
+              <IoChatbubbleEllipsesOutline className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
+              <div className="font-semibold text-indigo-700">Clio</div>
+            </div>
+            <div>
+              I&apos;ll ship the{" "}
+              <span className="text-primary-dark">Blue Covers </span>right away.
+              You can
+              <span className="text-primary-dark">return </span>the white ones
+              for free. Does that work?
             </div>
           </div>
         </motion.div>
