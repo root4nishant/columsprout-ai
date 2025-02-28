@@ -82,7 +82,7 @@ export default function TabiInAction() {
             </div>
           </Card>
         ))}
-        <Link href="/try">
+        <Link href="https://tabi.columsprout.ai/">
           <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px]  rounded-sm lg:text-lg font-bold text-xs shadow-md bg-primary-dark hover:bg-black text-white hover:text-white transition-colors duration-300">
             Try Tabi
           </Button>

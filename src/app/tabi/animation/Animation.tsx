@@ -329,6 +329,8 @@ export default function AnimationFlow() {
                   <span className="mr-2">1</span>
                   <span className="mr-2">2</span>
                   <span className="mr-2">3</span>
+                  <span className="mr-2">4</span>
+                  <span className="mr-2">5</span>
                   <span className="mr-2">...</span>
                   <span>18</span>
                 </nav>

@@ -22,7 +22,7 @@ function TabiPage() {
           highlightIcon={<Sparkle />}
           description="Use Tabi AI to clean, enrich, and transform your store's data with unmatched speed and accuracy"
           buttonText="Try Tabi"
-          buttonLink="/try"
+          buttonLink="https://tabi.columsprout.ai/"
         />
       </Suspense>
 
@@ -48,7 +48,7 @@ function TabiPage() {
         <Banner
           message="Empower your growth teams "
           buttonText="Try Tabi"
-          buttonLink="/try"
+          buttonLink="https://tabi.columsprout.ai/"
           message2="Try Tabi today!"
         />
       </Suspense>

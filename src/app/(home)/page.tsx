@@ -42,7 +42,7 @@ export default function Home() {
           <Banner
             message="Try Columsprout AI today & "
             buttonText="Try Tabi"
-            buttonLink="/try"
+            buttonLink="https://tabi.columsprout.ai/"
             message2="elevate your storefront today"
           />
         </div>

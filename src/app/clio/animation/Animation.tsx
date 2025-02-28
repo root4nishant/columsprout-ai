@@ -128,7 +128,7 @@ export default function Animation() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
               <Brandon />
-              <div className="font-semibold text-indigo-700">Brandon</div>
+              <div className="font-semibold text-primary-dark">Brandon</div>
             </div>
             <div className="font-bold">
               Cancel <span className="text-primary-dark">My Order</span>
@@ -160,7 +160,7 @@ export default function Animation() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start ">
               <IoChatbubbleEllipsesOutline className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
-              <div className="font-semibold text-indigo-700">Clio</div>
+              <div className="font-semibold text-primary-dark">Clio</div>
             </div>
             <div>
               I understand. Your order has{" "}
@@ -187,7 +187,7 @@ export default function Animation() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
               <Brandon />
-              <div className="font-semibold text-indigo-700">Brandon</div>
+              <div className="font-semibold text-primary-dark">Brandon</div>
             </div>
             <div className="font-bold">
               Exchange <span className="text-primary-dark">Order Items</span>
@@ -219,13 +219,13 @@ export default function Animation() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start ">
               <IoChatbubbleEllipsesOutline className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
-              <div className="font-semibold text-indigo-700">Clio</div>
+              <div className="font-semibold text-primary-dark">Clio</div>
             </div>
             <div>
               I&apos;ll ship the{" "}
               <span className="text-primary-dark">Blue Covers </span>right away.
               You can
-              <span className="text-primary-dark">return </span>the white ones
+              <span className="text-primary-dark"> return </span>the white ones
               for free. Does that work?
             </div>
           </div>

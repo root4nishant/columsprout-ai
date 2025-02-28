@@ -124,7 +124,7 @@ export default function AnimationSteffanieClio() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
               <Steffanie />
-              <div className="font-semibold text-indigo-700">Steffanie</div>
+              <div className="font-semibold text-primary-dark">Steffanie</div>
             </div>
             <div className="font-bold">
               Added <span className="text-primary-dark">to Cart</span>
@@ -159,7 +159,7 @@ export default function AnimationSteffanieClio() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
               <IoChatbubbleEllipsesOutline className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
-              <div className="font-semibold text-indigo-700">Clio</div>
+              <div className="font-semibold text-primary-dark">Clio</div>
             </div>
             <div className="mb-2">
               Get free <span className="text-primary-dark">50 points</span> when
@@ -194,7 +194,7 @@ export default function AnimationSteffanieClio() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
               <Steffanie />
-              <div className="font-semibold text-indigo-700">Steffanie</div>
+              <div className="font-semibold text-primary-dark">Steffanie</div>
             </div>
             <div className="font-bold">
               Browsing <span className="text-primary-dark">Puffer Jacket</span>
@@ -218,7 +218,7 @@ export default function AnimationSteffanieClio() {
           <div>
             <div className="flex lg:gap-2 md:gap-1 gap-0.5 items-start justify-start">
               <IoChatbubbleEllipsesOutline className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
-              <div className="font-semibold text-indigo-700">Clio</div>
+              <div className="font-semibold text-primary-dark">Clio</div>
             </div>
             <div className="mb-2">
               FYI, this Puffer Jacket pairs great with{" "}
@@ -232,28 +232,28 @@ export default function AnimationSteffanieClio() {
                 alt=""
                 width={30}
                 height={30}
-                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+                className="lg:w-16 md:w-10 w-6 lg:h-16 md:h-10 h-6 rounded-sm"
               />
               <Image
                 src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img2.webp"
                 alt=""
                 width={30}
                 height={30}
-                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+                className="lg:w-16 md:w-10 w-6 lg:h-16 md:h-10 h-6 rounded-sm"
               />
               <Image
                 src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img3.webp"
                 alt=""
                 width={30}
                 height={30}
-                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+                className="lg:w-16 md:w-10 w-6 lg:h-16 md:h-10 h-6 rounded-sm"
               />
               <Image
                 src="https://storage.googleapis.com/cs-website-assets/clio/clio-video-img4.webp"
                 alt=""
                 width={30}
                 height={30}
-                className="lg:w-16 w-10 lg:h-16 h-10 rounded-sm"
+                className="lg:w-16 md:w-10 w-6 lg:h-16 md:h-10 h-6 rounded-sm"
               />
             </div>
             {/* <motion.button
