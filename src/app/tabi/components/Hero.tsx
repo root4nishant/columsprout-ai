@@ -2,7 +2,6 @@ import { FC, ReactNode } from "react";
 import { Button } from "@/components/custom/reusables/button";
 import Section from "@/components/custom/reusables/Section";
 import Tag from "@/components/custom/Tag";
-import Link from "next/link";
 
 interface HeroSectionProps {
   gradientOverlay?: string;
@@ -71,11 +70,11 @@ const HeroSection: FC<HeroSectionProps> = ({
               <p className="text-sm md:text-lg lg:text-lg max-w-5xl mx-auto text-center font-secondary">
                 {description}
               </p>
-              <Link href={buttonLink || "#"}>
+              <a href={buttonLink || "#"} target="_blank">
                 <Button className=" bg-primary-dark hover:bg-black text-white hover:text-white font-semibold py-6 rounded-md">
                   {buttonText}
                 </Button>
-              </Link>
+              </a>
               {/* {additionalButton && (
                 <Button
                   size={additionalButton.size || "lg"}

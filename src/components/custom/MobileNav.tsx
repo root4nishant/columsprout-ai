@@ -60,13 +60,14 @@ export default function MobileNavigation({
           )}
         </li>
         <li className="w-full px-6">
-          <Link
+          <a
             href="https://tabi.columsprout.ai/"
             className="text-black text-xl font-bold"
+            target="_blank"
             onClick={onClose}
           >
             Try Tabi
-          </Link>
+          </a>
         </li>
         <li className="w-full px-6">
           <Link
@@ -77,7 +78,7 @@ export default function MobileNavigation({
             Pricing
           </Link>
         </li>
-        <li className="w-full px-6">
+        {/* <li className="w-full px-6">
           <Link
             href="/blogs"
             className="text-black text-xl font-bold"
@@ -85,7 +86,7 @@ export default function MobileNavigation({
           >
             Blogs
           </Link>
-        </li>
+        </li> */}
         <li className="w-full px-6">
           <Link
             href="https://calendly.com/meghav-columsprout"
