@@ -67,17 +67,17 @@ export default function AnimationSteffanieClio() {
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([]);
-      }, 6000)
+      }, 8000)
     );
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([3]);
-      }, 7000)
+      }, 9000)
     );
     timeoutsRef.current.push(
       window.setTimeout(() => {
         setVisibleSteps([3, 4]);
-      }, 10000)
+      }, 12000)
     );
 
     // At t=4s: Remove Clio => empty, then restart
@@ -87,7 +87,7 @@ export default function AnimationSteffanieClio() {
         setTimeout(() => {
           startCycle();
         }, 300);
-      }, 14000)
+      }, 16000)
     );
   };
 

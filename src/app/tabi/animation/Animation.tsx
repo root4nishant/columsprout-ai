@@ -241,7 +241,7 @@ export default function AnimationFlow() {
               </div>
               <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Men's Running Shoes"</div>
-                <div className="text-primary-dark">Not Tested Today</div>
+                <div className="text-primary-dark">Exude Confidence</div>
               </div>
               <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Leather Dress Shoes"</div>
@@ -305,7 +305,7 @@ export default function AnimationFlow() {
             <div className="lg:px-4 md:px-2 px-1 lg:py-3 md:py-2 py-1 lg:text-sm md:text-[10px] text-[6px]  rounded-lg bg-gray-100 bg-opacity-70">
               <div className="grid grid-cols-2 gap-2 text-gray-700 font-semibold lg:mb-2 mb-1">
                 <div>Products</div>
-                <div>4-word Review</div>
+                <div>3-word Review</div>
               </div>
               <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Men's Running Shoes"</div>
@@ -321,7 +321,7 @@ export default function AnimationFlow() {
               </div>
               <div className="grid grid-cols-2 gap-2 items-center lg:text-sm md:text-[10px] text-[6px] lg:mb-2 mb-1">
                 <div>"Casual Sneakers"</div>
-                <div className="text-primary-dark">Your Everyday Essential</div>
+                <div className="text-primary-dark">Your Daily Essential</div>
               </div>
               {/* Pagination row */}
               <div className="flex items-center justify-between mt-3">

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Section from "./Section";
 import { Button } from "@/components/ui/button";
 
@@ -25,11 +24,11 @@ const Banner: React.FC<BannerProps> = ({
             <span className="text-[#D6CFB6] leading-none">{message2}</span>
           </h2>
           <div className="flex justify-center gap-6">
-            <Link href={buttonLink} passHref>
+            <a href={buttonLink} target="_blank">
               <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px] bg-[#D6CFB6] text-primary-dark rounded-sm lg:text-lg font-bold text-xs shadow-md hover:bg-black hover:text-white transition-colors duration-300">
                 {buttonText}
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
