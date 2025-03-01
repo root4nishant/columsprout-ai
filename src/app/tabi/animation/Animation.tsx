@@ -4,7 +4,10 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { HiOutlineSparkles } from "react-icons/hi2";
+//import { HiOutlineSparkles } from "react-icons/hi2";
+import { IoSparkles } from "react-icons/io5";
+import { FaDownload } from "react-icons/fa";
+
 
 // Reusable card variants, each card can have a "custom" y-offset
 const cardVariants = {
@@ -199,7 +202,7 @@ export default function AnimationFlow() {
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
             <div className="flex items-center lg:gap-3 md:gap-2 gap-1  lg:py-3 py-1">
-              <HiOutlineSparkles className="lg:w-4 md:w-3 w-2 lg:h-4 md:h-3 h-2 text-primary-dark" />
+              <IoSparkles className="lg:w-5 md:w-4 w-3 lg:h-5 md:h-4 h-3 text-primary-dark" />
               <span className="lg:text-sm md:text-[10px] text-[6px] text-black font-bold">
                 Experiment with your prompt
               </span>
@@ -269,7 +272,7 @@ export default function AnimationFlow() {
             className="lg:p-4 md:p-2 p-1 bg-gray-100 bg-opacity-70 rounded-lg shadow-xl"
           >
             <div className="flex items-center lg:gap-3 md:gap-2 gap-1  lg:py-3 py-1">
-              <IconExperiment />
+              <FaDownload className="lg:w-5 md:w-4 w-3 lg:h-5 md:h-4 h-3 text-primary-dark" />
               <span className="lg:text-sm md:text-[10px] text-[6px] text-black font-bold">
                 Export instantly
               </span>
