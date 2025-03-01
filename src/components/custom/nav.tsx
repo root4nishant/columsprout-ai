@@ -56,28 +56,29 @@ export default function Navbar() {
             >
               Pricing
             </Link>
-            <Link
+            {/* <Link
               href="/blogs"
               className="text-gray-300 hover:text-white text-md font-bold hidden lg:block transition-colors duration-300"
             >
               Blogs
-            </Link>
+            </Link> */}
           </div>
           <nav className="hidden lg:flex items-center gap-6">
-            <Link
+            <a
               href="https://tabi.columsprout.ai/"
               className="text-gray-300 hover:text-white text-md font-bold"
+              target="_blank"
             >
               Try Tabi
-            </Link>
-            <Link href="https://calendly.com/meghav-columsprout">
+            </a>
+            <a href="https://calendly.com/meghav-columsprout" target="_blank">
               <Button
                 variant="default"
                 className="text-lg bg-transparent font-bold text-black rounded-sm border-white/20 hover:bg-white bg-secondary py-5 px-4"
               >
                 Contact Us
               </Button>
-            </Link>
+            </a>
           </nav>
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}

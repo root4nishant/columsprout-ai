@@ -4,7 +4,6 @@ import Section from "@/components/custom/reusables/Section";
 // import Tag from "@/components/custom/Tag";
 import Heading from "@/components/custom/reusables/Heading";
 import { Button } from "@/components/custom/reusables/button";
-import Link from "next/link";
 
 const cardData = [
   {
@@ -82,11 +81,11 @@ export default function TabiInAction() {
             </div>
           </Card>
         ))}
-        <Link href="https://tabi.columsprout.ai/">
+        <a href="https://tabi.columsprout.ai/" target="_blank">
           <Button className="lg:p-6 p-4 lg:w-[172px] md:w-[120px] w-[96px] h-[38px] lg:h-[60px] md:h-[44px]  rounded-sm lg:text-lg font-bold text-xs shadow-md bg-primary-dark hover:bg-black text-white hover:text-white transition-colors duration-300">
             Try Tabi
           </Button>
-        </Link>
+        </a>
       </div>
     </Section>
   );
