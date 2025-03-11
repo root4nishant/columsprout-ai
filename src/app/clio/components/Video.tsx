@@ -7,32 +7,65 @@ import AnimationSteffanieClio from "../animation/Animation2";
 
 const VideoWithMessages = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isInView, setIsInView] = useState(false);
-  const [showAnimation, setShowAnimation] = useState(false);
 
+  // Track intersection ratio
+  const [intersectionRatio, setIntersectionRatio] = useState(0);
+  // Track if the video is loaded
+  const [videoHasLoaded, setVideoHasLoaded] = useState(false);
+  // Control animation visibility
+  const [showAnimation, setShowAnimation] = useState(false);
+  // Optional: track whether it's in view, to set `src` only if visible
+  const [isInView, setIsInView] = useState(false);
+
+  // 1) Set up event to track when the video has loaded
   useEffect(() => {
-    const currentVideoRef = videoRef.current;
+    const handleLoadedData = () => {
+      // Optional short delay to ensure video is visibly rendered
+      setTimeout(() => {
+        setVideoHasLoaded(true);
+      }, 500);
+    };
+
+    if (videoRef.current) {
+      videoRef.current.addEventListener("loadeddata", handleLoadedData);
+    }
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener("loadeddata", handleLoadedData);
+      }
+    };
+  }, []);
+
+  // 2) Set up IntersectionObserver to track the intersection ratio
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
-        if (entry.intersectionRatio >= 0.8) {
-          setShowAnimation(true); 
-        }
+        setIntersectionRatio(entry.intersectionRatio);
       },
-      { threshold: [0.1, 0.8] } 
+      {
+        threshold: [0, 0.1, 0.8, 1], // track changes at these ratios
+      }
     );
 
-    if (currentVideoRef) {
-      observer.observe(currentVideoRef);
-    }
+    observer.observe(videoElement);
 
     return () => {
-      if (currentVideoRef) {
-        observer.unobserve(currentVideoRef);
-      }
+      observer.unobserve(videoElement);
     };
   }, []);
+
+  // 3) A separate effect that runs any time the ratio or `videoHasLoaded` changes
+  useEffect(() => {
+    // If the video is at least 80% in the viewport AND it's loaded,
+    // then show the animation
+    if (intersectionRatio >= 0.8 && videoHasLoaded) {
+      setShowAnimation(true);
+    }
+  }, [intersectionRatio, videoHasLoaded]);
 
   return (
     <Section>
@@ -40,6 +73,7 @@ const VideoWithMessages = () => {
         <video
           ref={videoRef}
           className="w-auto object-cover"
+          // Only set src if we want to lazy-load once in view
           src={
             isInView
               ? "https://storage.googleapis.com/cs-website-assets/clio/clio-hero-dd.webm"
@@ -63,6 +97,7 @@ const VideoWithMessages = () => {
           </>
         )}
 
+        {/* Gradient Overlay / Bottom Text */}
         <div className="absolute bottom-0 rounded-md lg:h-60 h-20 w-full bg-gradient-to-t from-black to-transparent text-white flex justify-between">
           <div className="absolute bottom-0 flex justify-between w-full text-[#D6CFB6] lg:py-4 py-2 lg:text-[14px] text-[6px]">
             <div className="text-left flex justify-start w-full lg:ml-8 md:ml-5 ml-3">
