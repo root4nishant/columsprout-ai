@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
         </div>
         <div className="lg:text-xl text-sm">
           <p className="mb-6  ">
-            At <span className="font-semibold">Columsprout</span>, we are
+            At <span className="font-semibold">ColumsproutAI</span>, we are
             committed to protecting your privacy and ensuring the security of
             your personal information. This Privacy Notice outlines how we
             collect, use, and safeguard your data when you use our services.

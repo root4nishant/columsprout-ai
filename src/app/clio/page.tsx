@@ -20,7 +20,7 @@ function Page() {
           title="Clio AI"
           highlightText="Your store's Customer Success AI"
           highlightIcon={<Sparkle />}
-          description="Use Cleo AI to create world-class customer experiences and provide outstanding support"
+          description="Use Clio AI to create world-class customer experiences and provide outstanding support"
           buttonText="Book Demo"
           buttonLink="https://calendly.com/meghav-columsprout"
         />

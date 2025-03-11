@@ -43,7 +43,7 @@ export default function PricingTabs() {
                   <span className="text-primary-dark font-semibold">
                     Process upto 200 rows of data with 100 Free Sprout Tokens
                   </span>
-                  <span className="text-xs">
+                  <span className="text-xs mt-2 mb-2 block">
                     *Sprout Tokens consumed based on data size and prompts used
                   </span>
                 </div>
@@ -146,7 +146,7 @@ export default function PricingTabs() {
                         </li>
                         <li className="flex items-center gap-2 text-sm">
                           <Check className="h-4 w-4" />
-                          Up to xx conversations/month
+                          Up to 100 conversations/month
                         </li>
                         <li className="flex items-center gap-2 text-sm">
                           <Check className="h-4 w-4" />3 team seats

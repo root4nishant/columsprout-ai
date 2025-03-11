@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
         </div> */}
         <div className="lg:text-xl text-sm">
           <p className="mb-6">
-            Welcome to <span className="font-semibold">Columsprout</span>. By
+            Welcome to <span className="font-semibold">ColumsproutAI</span>. By
             accessing our website and services, you agree to be bound by the
             following Terms and Conditions. Please read these terms carefully.
             If you do not agree with these terms, you should not use our
@@ -81,7 +81,7 @@ const TermsAndConditions = () => {
           </h2>
           <p className="mb-6">
             All trademarks, logos, and intellectual property related to
-            Columsprout are owned by Columsprout and its licensors. You may not
+            ColumsproutAI are owned by Columspro AI Inc. and its licensors. You may not
             reproduce, distribute, or create derivative works based on our
             intellectual property without prior written permission.
           </p>
@@ -101,7 +101,7 @@ const TermsAndConditions = () => {
             7. Limitation of Liability
           </h2>
           <p className="mb-6">
-            To the fullest extent permitted by law, Columsprout will not be
+            To the fullest extent permitted by law, ColumsproutAI will not be
             liable for any damages that result from the use of the services.
           </p>
 
@@ -110,7 +110,7 @@ const TermsAndConditions = () => {
           </h2>
           <p className="mb-6">
             These terms shall be governed by and construed in accordance with
-            the laws of the Government of Himachal Pradesh, without regard to
+            the laws of the Government of Karnataka, without regard to
             its conflict of law provisions.
           </p>
 
@@ -119,7 +119,7 @@ const TermsAndConditions = () => {
           </h2>
           <p className="mb-6">
             If you have any questions about these Terms of Service, please
-            contact us at
+            contact us at{" "}
             <a
               href="mailto:connect@columsprout.ai"
               className="text-primary-dark hover:underline"
