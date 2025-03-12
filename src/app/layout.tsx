@@ -2,6 +2,7 @@ import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/custom/nav";
 import Footer from "@/components/custom/Footer";
+import Analytics from "@/components/Analytics"; // Import the client component
 
 export const metadata = {
   title: "AI Agents for eCommerce Growth",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${primaryFont.variable} ${secondaryFont.variable} antialiased min-h-screen flex flex-col`}
       >
+        <Analytics />
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

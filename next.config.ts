@@ -16,13 +16,13 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value: `
-              default-src 'self'; 
-              script-src 'self' 'unsafe-inline';
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
               style-src 'self' 'unsafe-inline'; 
-              img-src 'self' https://storage.googleapis.com;
+              img-src 'self' https://storage.googleapis.com https://www.googletagmanager.com;
               media-src 'self' https://storage.googleapis.com;
-              connect-src 'self'; 
-              font-src 'self';
+              connect-src 'self' https://www.google-analytics.com; 
+              font-src 'self' https://fonts.gstatic.com;
             `.replace(/\s{2,}/g, " ").trim(), // Compact CSP
           },
         ],
