@@ -18,20 +18,19 @@ const VideoWithMessages = () => {
 
   // 1) Listen for video load event
   useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
     const handleLoadedData = () => {
-      // Optionally add a small delay after video loads
       setTimeout(() => {
         setVideoHasLoaded(true);
       }, 1000);
     };
 
-    if (videoRef.current) {
-      videoRef.current.addEventListener("loadeddata", handleLoadedData);
-    }
+    videoElement.addEventListener("loadeddata", handleLoadedData);
+
     return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener("loadeddata", handleLoadedData);
-      }
+      videoElement.removeEventListener("loadeddata", handleLoadedData);
     };
   }, []);
 

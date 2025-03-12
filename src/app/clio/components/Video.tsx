@@ -19,6 +19,9 @@ const VideoWithMessages = () => {
 
   // 1) Set up event to track when the video has loaded
   useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
     const handleLoadedData = () => {
       // Optional short delay to ensure video is visibly rendered
       setTimeout(() => {
@@ -26,13 +29,10 @@ const VideoWithMessages = () => {
       }, 500);
     };
 
-    if (videoRef.current) {
-      videoRef.current.addEventListener("loadeddata", handleLoadedData);
-    }
+    videoElement.addEventListener("loadeddata", handleLoadedData);
+
     return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener("loadeddata", handleLoadedData);
-      }
+      videoElement.removeEventListener("loadeddata", handleLoadedData);
     };
   }, []);
 
@@ -73,7 +73,6 @@ const VideoWithMessages = () => {
         <video
           ref={videoRef}
           className="w-auto object-cover"
-          // Only set src if we want to lazy-load once in view
           src={
             isInView
               ? "https://storage.googleapis.com/cs-website-assets/clio/clio-hero-dd.webm"
